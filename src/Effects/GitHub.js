@@ -97,27 +97,11 @@ export const useGitHubUser = () => {
           bio: user.bio,
           avatar: user.avatar_url,
           profileUrl: user.html_url,
-
           followersCount: user.followers,
-          followers: Array.isArray(followers)
-            ? followers.map((f) => f.login)
-            : [],
-
-          organizations: Array.isArray(orgs)
-            ? orgs.map((o) => o.login)
-            : [],
-
-          starredReposCount: Array.isArray(starred)
-            ? starred.length
-            : 0,
-
-          starredRepos: Array.isArray(starred)
-            ? starred.map((r) => ({
-                name: r.name,
-                url: r.html_url,
-                stars: r.stargazers_count,
-              }))
-            : [],
+          followers: Array.isArray(followers) ? followers.map((f) => f.login) : [],
+          organizations: Array.isArray(orgs) ? orgs.map((o) => o.login) : [],
+          starredReposCount: Array.isArray(starred) ? starred.length : 0,
+          starredRepos: Array.isArray(starred) ? starred.map((r) => ({name: r.name, url: r.html_url, stars: r.stargazers_count,})) : [],
         };
 
         setUserInfo(enriched);
