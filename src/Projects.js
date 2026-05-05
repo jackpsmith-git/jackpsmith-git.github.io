@@ -37,19 +37,28 @@ export const Projects = () => {
       {repos.map((repo) => (
         <Accordion key={repo.name}>
           <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-            {repo.image ? ( repo.image != react && repo.image != uno ?
-                (<img
-                src={repo.image}
-                alt={repo.name}
-                style={{
-                  width: 100,
-                  height: 50,
-                  objectFit: "cover",
-                  borderRadius: 8,
-                  marginRight: 12
-                }}
-              />) : (
-                <img src={repo.image}
+            <div
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                width: '100%'
+              }}
+            >
+              {repo.image ? (repo.image != react && repo.image != uno ? (
+                <img
+                  src={repo.image}
+                  alt={repo.name}
+                  style={{
+                    width: 100,
+                    height: 50,
+                    objectFit: "cover",
+                    borderRadius: 8,
+                    marginRight: 12
+                  }}
+                />
+              ) : (
+                <img
+                  src={repo.image}
                   alt={repo.name}
                   style={{
                     width: 100,
@@ -57,40 +66,60 @@ export const Projects = () => {
                     objectFit: "contain",
                     borderRadius: 8,
                     marginRight: 12
-                  }}/>
-                )
-            ) : (
-              <img src={github}
-                alt="GitHub Logo"
+                  }}
+                />
+              )) : (
+                <img
+                  src={github}
+                  alt="GitHub Logo"
+                  style={{
+                    width: 100,
+                    height: 50,
+                    objectFit: "contain",
+                    borderRadius: 8,
+                    marginRight: 12
+                  }}
+                />
+              )}
+
+              <div
                 style={{
-                  width: 100,
-                  height: 50,
-                  objectFit: "contain",
-                  borderRadius: 8,
-                  marginRight: 12
+                  display: 'flex',
+                  alignItems: 'center',
+                  flex: 1
                 }}
-              />
-            )}
-            
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-              <span><h3 style={{margin: 0, textAlign: 'left'}} className="font-semibold">{repo.name}</h3></span>
-              <span style={{ display: "inline-flex", gap: "6px", flexWrap: "wrap", marginLeft: 15 }}>
-                {repo.languages.slice(0, 12).map((lang) => (
-                  <span
-                    key={lang}
-                    style={{
-                      backgroundColor: LANG_COLS[lang] || "#000000",
-                      color: "white",
-                      padding: "4px 8px",
-                      borderRadius: "999px",
-                      fontSize: "10px",
-                      whiteSpace: "nowrap",
-                    }}
-                  >
-                  {lang}
-                  </span>
-                ))}
-              </span>
+              >
+                <h3 style={{ marginLeft: 0, marginRight: 30 }} className="font-semibold">
+                  {repo.name}
+                </h3>
+
+                <span
+                  style={{
+                    display: "flex",
+                    gap: "6px",
+                    flexWrap: "wrap",
+                    marginLeft: 'auto',
+                    justifyContent: 'flex-end',
+                    textAlign: 'right'
+                  }}
+                >
+                  {repo.languages.slice(0, 12).map((lang) => (
+                    <span
+                      key={lang}
+                      style={{
+                        backgroundColor: LANG_COLS[lang] || "#000000",
+                        color: "white",
+                        padding: "4px 8px",
+                        borderRadius: "999px",
+                        fontSize: "10px",
+                        whiteSpace: "nowrap",
+                      }}
+                    >
+                      {lang}
+                    </span>
+                  ))}
+                </span>
+              </div>
             </div>
           </AccordionSummary>
 

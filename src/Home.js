@@ -33,18 +33,8 @@ const FEATURED_PROJECTS = [
 
 export const Home = () => { return (
 <div className="p-6 graybackground"><div className="page-container">
-  
-  {/* <motion.section initial={{y: 25, opacity: 0}}
-      whileInView={{y: 0, opacity: 1}}
-      transition={{duration: 1, ease: "easeInOut"}} style={{marginTop: 300, marginBottom: 50, padding: '0px 20px'}}>
-    <p style={{textAlign: 'right', lineHeight: .8}}>
-      <h1 style={{fontSize: '10em', marginBottom: 0}}>Jack P Smith</h1>
-      <h3 style={{fontSize: 80, textAlign: 'right', lineHeight: 1, marginTop: 10}}>Software Engineer</h3>
-    </p>
-  </motion.section> */}
-  
   <h2>Featured Projects</h2>
-  <div className="flex-grid">
+  <div className="card-flex-grid">
     {FEATURED_PROJECTS.map(({ name, languages, description, image, link }) => (
       <div className="col" key={name}>
         <ShakeCard href={link}>
