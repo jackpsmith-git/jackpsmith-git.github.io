@@ -1,3 +1,5 @@
+import "./ShakeCard.css"
+
 export const ShakeCard = ({ children, href, className = "" }) => {
   if (href) {
     return (
