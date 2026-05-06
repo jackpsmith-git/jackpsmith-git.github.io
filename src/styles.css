@@ -3,6 +3,16 @@ body {
   font-family: Arial, sans-serif;
 }
 
+h2 {
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
 .page {
   width: 100%;
   max-width: 1000px;
