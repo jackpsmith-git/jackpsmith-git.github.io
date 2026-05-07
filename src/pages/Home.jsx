@@ -53,7 +53,7 @@ return (
       {FEATURED_PROJECTS.map(({ name, languages, description, image, link }) => (
         <div className="flex-col" key={name}>
           <FeaturedCard href={link}>
-            <img src={image} alt="" width="100%" />
+            <img src={image} alt={name} width="100%" />
             <h3 className="featured-card-header">{name} ({languages})</h3>
             <p>{description}</p>
           </FeaturedCard>

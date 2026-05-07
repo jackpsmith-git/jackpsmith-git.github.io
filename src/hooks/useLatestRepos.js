@@ -23,7 +23,7 @@ export const useLatestRepos = () => {
     const fetchRepos = async () => {
       try {
         const res = await fetch(
-          `https://api.github.com/users/jackpsmith-git/repos?sort=updated&per_page=5`
+          `https://api.github.com/users/jackpsmith-git/repos?sort=updated&per_page=6`
         );
         const data = await res.json();
 

@@ -17,12 +17,12 @@ export default function App() {
     offset: ["start end", "end end"]
   });
 
-  const y = useTransform(scrollYProgress, [0, 1], [-200, 0]);
+  const y = useTransform(scrollYProgress, [0, 1], [-5, -95]);
   return (
       <div>
           <div className="scroll-area">
-          <div ref={container} className="relative h-[200vh]">
-          <Navbar />
+          <div ref={container} className="relative">
+            <Navbar />
             <Home />
             <About />
             <Skills />
