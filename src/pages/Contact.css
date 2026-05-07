@@ -1,8 +1,10 @@
 .contact {
-    display: flex;
-    justify-content: center;
-    scroll-margin-top: 80px;
-    background-color: #34445a;
+  display: flex;
+  justify-content: center;
+  scroll-margin-top: 80px;
+  background-color: #34445a;
+  z-index: 10;
+  position: relative;
 }
 
 .centered-row {

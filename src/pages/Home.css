@@ -4,6 +4,8 @@
   color: white;
   justify-content: center;
   scroll-margin-top: 80px;
+  position: relative;
+  z-index: 10;
 }
 
 .model-canvas {
@@ -22,7 +24,8 @@
 .card-flex-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  row-gap: 30px;
+  column-gap: 5x;
   align-items: stretch;
 }
 
@@ -32,7 +35,7 @@
   justify-content: center;
 }
 
-.card-flex-grid .shakecard {
+.card-flex-grid .featuredcard {
   width: 100%;
   max-width: 420px;
   display: flex;
@@ -49,7 +52,7 @@
     justify-content: center;
   }
 
-  .card-flex-grid .shakecard {
+  .card-flex-grid .featuredcard {
     width: 90%;
     max-width: 420px;
     border-radius: 4px;
@@ -63,12 +66,12 @@
     transition: transform 0.2s;
   }
 
-  .card-flex-grid .shakecard:hover {
+  .card-flex-grid .featuredcard:hover {
     animation: shake 0.5s;
   }
 }
 
-.shake-card-header {
+.featured-card-header {
   padding-top: 12px;
   text-align: left;
 }
@@ -86,6 +89,7 @@
   justify-content: center;
   padding-top: 15px;
   padding-bottom: 15px;
+  margin-top: 60px;
 }
 
 .divider {

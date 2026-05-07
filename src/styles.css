@@ -18,6 +18,11 @@ h3 {
   margin-bottom: 0px;
 }
 
+.scroll-area {
+  position: relative;
+  z-index: 10;
+}
+
 .page {
   max-width: 1000px;
   margin-left: auto;

@@ -1,0 +1,18 @@
+.featured-card {
+  border-radius: 8px;
+  padding: 10px;
+  margin-top: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  color: #323232;
+  background-color: rgb(237, 237, 237);
+  min-height: 100%;
+  max-width: fit-content;
+  cursor: pointer;
+  transform: scale(1.0);
+  transition: transform ease;
+}
+
+.featured-card:hover {
+  transform: scale(1.05);
+  transition: transform ease;
+}

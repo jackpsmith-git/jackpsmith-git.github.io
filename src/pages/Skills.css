@@ -1,7 +1,9 @@
 .skills {
-    padding: 24px;
-    scroll-margin-top: 80px;
-    background-color: black;
+  padding: 24px;
+  scroll-margin-top: 80px;
+  background-color: black;
+  position: relative;
+  z-index: 10;
 }
 
 .skills h2 {
@@ -31,12 +33,12 @@
   color: black;
   background-color: white;
   transform: scale(1);
-  transition: transform 0.1s ease-in-out;
+  transition: transform 0.001s ease;
 }
 
 .skills .skill-card:hover {
   transform: scale(1.1);
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.001s ease;
 }
 
 .skills .icon-span {

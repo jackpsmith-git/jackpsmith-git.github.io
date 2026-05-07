@@ -1,10 +1,10 @@
-import "./ShakeCard.css"
+import "./FeaturedCard.css"
 
-export const ShakeCard = ({ children, href, className = "" }) => {
+export const FeaturedCard = ({ children, href, className = "" }) => {
   if (href) {
     return (
       <a href={href} target="_blank" rel="noopener noreferrer">
-        <div className="shakecard">
+        <div className="featured-card">
           {children}
         </div>
       </a>
@@ -12,7 +12,7 @@ export const ShakeCard = ({ children, href, className = "" }) => {
   }
 
   return (
-    <div className="shakecard">
+    <div className="featured-card">
       {children}
     </div>
   );

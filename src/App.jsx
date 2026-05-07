@@ -7,28 +7,30 @@ import { Contact } from "./pages/Contact.jsx";
 import { Skills } from "./pages/Skills.jsx";
 import { Footer } from "./components/Footer.jsx";
 
-export default function App() {
-  return (
-      // <Router>
-      <div>
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 
-        <Navbar />
-        <Home />
-        <About />
-        <Skills />
-        <Projects />
-        <Contact />
-        <body>
-          {/* <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/skills" element={<Skills />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/contact" element={<Contact />} />
-            </Routes> */}
-        </body>
-        <Footer />
+export default function App() {
+  const container = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: container,
+    offset: ["start end", "end end"]
+  });
+
+  const y = useTransform(scrollYProgress, [0, 1], [-200, 0]);
+  return (
+      <div>
+          <div className="scroll-area">
+          <div ref={container} className="relative h-[200vh]">
+          <Navbar />
+            <Home />
+            <About />
+            <Skills />
+            <Projects />
+            <Contact />
+          </div>
+          <Footer yval={y}/>
+        </div>
       </div>
-      // </Router>
     );
 }
