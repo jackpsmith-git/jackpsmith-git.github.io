@@ -1,9 +1,13 @@
 import './Home.css'
 
-import { Button } from '../components/Button.js'
-import { ShakeCard } from '../components/ShakeCard.js'
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"
+import { useMemo, useState, Suspense } from "react";
+import { Canvas } from '@react-three/fiber'
+import { OrbitControls } from '@react-three/drei'
+import { useGLTF } from "@react-three/drei";
 import { motion } from "framer-motion"
+
+import { Button } from '../components/Button.jsx'
+import { ShakeCard } from '../components/ShakeCard.jsx'
 
 import cataclysm from "../assets/images/Cataclysm.png"
 import shaderSandbox from "../assets/images/ShaderSandbox.png"
@@ -33,10 +37,20 @@ const FEATURED_PROJECTS = [
   },
 ]
 
-export const Home = () => { return (
-<div className="home">
+function Model(props) {
+  const { scene } = useGLTF("/scene.gltf");
+  return <primitive object={scene} {...props} />;
+}
+
+export const Home = () => { 
+useGLTF.preload("/scene.gltf")
+return (
+<section id="home" className="home">
   <div className="page">
     <h2>Featured Projects</h2>
+
+    {/* <ScrollCarousel /> */}
+
     <div className="card-flex-grid">
       {FEATURED_PROJECTS.map(({ name, languages, description, image, link }) => (
         <div className="flex-col" key={name}>
@@ -50,8 +64,9 @@ export const Home = () => { return (
     </div>
 
     <div className='center-button'>
-      <div className="shake"><Link to="/Projects"><Button><h3 className="see-more-text">See More</h3></Button></Link></div>
+      <div className="shake"><a href="#projects"><Button><h3 className="see-more-text">See More</h3></Button></a></div>
     </div>
+    
     <hr className='divider'/>
 
     <div className='quote'>
@@ -67,6 +82,19 @@ export const Home = () => { return (
         transition={{duration: 1, ease: "easeInOut"}} style={{ margin: 0, color: "GrayText", marginTop: 5 }}>Co-Founder, iD Software</motion.p>
     </div>
 
+    <div className="model-canvas" >
+      <Canvas camera={{ position: [0, 0, 6], fov: 50, near: 0.1, far: 100 }}>
+        <ambientLight intensity={0.5} color="white" />
+
+        <Suspense fallback={null}>
+          <Model position={[0, 0, 0]} scale={40} />
+        </Suspense>
+
+        <OrbitControls enableZoom={false} />
+      </Canvas>
+    </div>
+    <p className="attribution"><sup>1</sup>"Three.js Logo — 3D Model" (<a href="https://skfb.ly/pFQEy" target="_blank" rel="noopener noreferrer">https://skfb.ly/pFQEy</a>) by Alex human is licensed under Creative Commons Attribution (<a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">http://creativecommons.org/licenses/by/4.0/</a>).</p>
+
   </div>
-</div>
+</section>
 );};

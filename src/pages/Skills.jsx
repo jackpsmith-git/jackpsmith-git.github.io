@@ -6,8 +6,6 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Badge from '@mui/material/Badge';
 
-import { Shake } from '../components/Shake.js';
-
 import cpp from "../assets/images/cpp.png"
 import csharp from "../assets/images/csharp.png"
 import java from "../assets/images/java.png"
@@ -99,15 +97,15 @@ const SECTIONS = {
 }
 
 export const Skills = () => { return (
-<div className="skills">
+<div id="skills" className="skills">
   <div className="page">
     <h2>Skills</h2>
 
     {Object.entries(SECTIONS).map(([sectionKey, sectionValue]) => (
       <div key={sectionKey}>
-        <Accordion defaultExpanded slotProps={{ heading: { component: 'h2' } }}>
+        <Accordion defaultExpanded slotProps={{ heading: { component: 'h2' } }} style={{backgroundColor: "black"}}>
           <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
+            expandIcon={<ExpandMoreIcon sx={{ color: 'white' }} />}
             aria-controls="panel1-content"
             id="panel1-header"
           >
@@ -118,7 +116,7 @@ export const Skills = () => { return (
             <div className="skills-grid">
               {Object.entries(sectionValue).map(([key, value]) => (
                 <div key={key}><div className="skill-card">
-                  <span className='icon-span'><Shake><img src={value} width="30" /></Shake></span>
+                  <span className='icon-span'><img src={value} width="30" /></span>
                   <span><h4 className='skill-name'>{key}</h4></span>
                 </div></div>
               ))}

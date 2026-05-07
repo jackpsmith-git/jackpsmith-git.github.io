@@ -1,5 +1,6 @@
 .about {
     padding: 24px;
+    scroll-margin-top: 80px;
 }
 
 .headshot {
@@ -71,4 +72,8 @@
 
 .followers {
     margin-top: 5px;
+}
+
+.about p {
+    color: black;
 }

@@ -2,8 +2,21 @@
   padding: 24px;
   background-color: #323232;
   color: white;
-  display: flex;
   justify-content: center;
+  scroll-margin-top: 80px;
+}
+
+.model-canvas {
+  width: 100%;
+  height: 300px;
+  display: block;
+  align-items: center;
+}
+
+.attribution {
+  text-align: center;
+  font-size: small;
+  color: lightslategray;
 }
 
 .card-flex-grid {
@@ -83,4 +96,13 @@
 .quote {
   text-align: center;
   padding: 60px 20px;
+}
+
+a {
+  color: lightslategray;
+  text-decoration: none;;
+}
+
+a:hover {
+  text-decoration: underline;
 }

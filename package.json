@@ -17,13 +17,16 @@
     "@fontsource/roboto": "^5.2.10",
     "@mui/icons-material": "^9.0.0",
     "@mui/material": "^9.0.0",
+    "@react-three/drei": "^10.7.7",
+    "@react-three/fiber": "^9.6.1",
     "motion": "^12.38.0",
     "octokit": "^5.0.5",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
     "react-github-btn": "^1.4.0",
     "react-router-dom": "^7.14.0",
-    "react-scripts": "^5.0.1"
+    "react-scripts": "^5.0.1",
+    "three": "^0.184.0"
   },
   "browserslist": {
     "production": [

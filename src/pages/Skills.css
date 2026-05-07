@@ -1,16 +1,22 @@
 .skills {
     padding: 24px;
+    scroll-margin-top: 80px;
+    background-color: black;
 }
 
-.skills-grid {
+.skills h2 {
+  color: white;
+}
+
+.skills .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 12px;
   row-gap: 0;
 }
 
-.skill-card {
-  border-radius: 12px;
+.skills .skill-card {
+  border-radius: 99px;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 0px;
@@ -22,13 +28,22 @@
   margin-bottom: 10px;
   max-width: 1000px;
   box-shadow: inset 0 2px 8px rgba(0,0,0,0.1);
+  color: black;
+  background-color: white;
+  transform: scale(1);
+  transition: transform 0.1s ease-in-out;
 }
 
-.icon-span {
+.skills .skill-card:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.skills .icon-span {
     margin-right: 5px;
 }
 
-.skill-name {
+.skills .skill-name {
     text-align: center;
     padding-top: 0px;
     padding-bottom: 0px;

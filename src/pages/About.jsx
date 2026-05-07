@@ -1,6 +1,6 @@
 import "./About.css"
 import { useGitHubUser } from '../hooks/useGitHubUser.js';
-import { Shake } from '../components/Shake.js'
+import { Shake } from '../components/Shake.jsx'
 
 import headshot from "../assets/images/headshot.jpeg"
 import github from "../assets/images/github.png"
@@ -9,7 +9,7 @@ export const About = () => {
   const user = useGitHubUser();
 
   return (
-  <div className="about">
+  <section id="about" className="about">
     <div className="page">
       <h2>About Me</h2>
       <div className="headshot"><img src={headshot} alt="Headshot" width={200} /></div>
@@ -34,6 +34,6 @@ export const About = () => {
         </div>
       )}
     </div>
-  </div>
+  </section>
   );
 };

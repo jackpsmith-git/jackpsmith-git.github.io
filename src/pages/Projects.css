@@ -2,6 +2,7 @@
     display: flex;
     justify-content: center;
     padding: 24px;
+    scroll-margin-top: 80px;
 }
 
 .summary {
@@ -10,7 +11,7 @@
     width: 100%;
 }
 
-.latest-projects {
+/* .latest-projects {
     display: flex;
     justify-content: center;
 }
@@ -21,9 +22,9 @@
     object-fit: cover;
     border-radius: 8px;
     margin-right: 12px;
-}
+} */
 
-.contain {
+/* .contain {
     object-fit: contain;
 }
 
@@ -36,9 +37,9 @@
 .project-name {
     margin-left: 0px;
     margin-right: 30px;
-}
+} */
 
-.languages-span {
+/* .languages-span {
     display: flex;
     gap: 6px;
     flex-wrap: wrap;
@@ -54,7 +55,7 @@
     border-radius: 999px;
     font-size: 10px;
     white-space: nowrap;
-}
+} */
 
 .summary-divider {
     margin-top: 0px;

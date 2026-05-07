@@ -1,6 +1,8 @@
 .contact {
     display: flex;
     justify-content: center;
+    scroll-margin-top: 80px;
+    background-color: #34445a;
 }
 
 .centered-row {
@@ -10,10 +12,9 @@
     padding-top: 15px;
 }
 
-.floatingtile {
-  background-color: #eaeaea;
+.contact-info {
+  background-color: #34445a;
   border-radius: 4px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   margin-top: 12px;
   margin-bottom: 12px;
   margin-left: 24px;
@@ -25,6 +26,7 @@
   padding-right: 48px;
   width: auto;
   flex-grow: 1;
+  color: white;
 }
 
 .round-headshot {
@@ -48,7 +50,7 @@
 }
 
 .contact-link a {
-  color: black;
+  color: white;
   text-decoration: none;
   font-weight: 600;
 }
