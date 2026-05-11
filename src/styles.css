@@ -49,7 +49,7 @@ h3 {
 
 @media (max-width: 600px) {
   .flex-col {
-    flex: 100%;
+    flex: 1;
     min-width: 100%;
-  }
+  }  
 }

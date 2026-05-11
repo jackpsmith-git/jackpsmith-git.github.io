@@ -38,6 +38,10 @@ import mysql from "../assets/images/mysql.png"
 import cmake from "../assets/images/cmake.png"
 import claude from "../assets/images/claude-color.png"
 
+import photoshop from "../assets/images/photoshop.png"
+import illustrator from "../assets/images/illustrator.png"
+import figma from "../assets/images/figma.png"
+
 import windows from "../assets/images/windows.png"
 import linux from "../assets/images/linux.png"
 import apple from "../assets/images/apple.png"
@@ -56,44 +60,51 @@ const PROGRAMMING_LANGUAGES = {
 }
 
 const FRAMEWORKS = {
-    "OpenGL" : opengl,
-    "Vulkan" : vulkan,
-    "React" : react,
-    "Bootstrap" : bootstrap,
-    "Tailwind" : tailwind,
-    ".NET" : dotnet,
-    "node.js" : nodejs,
-    "Three.js" : threejs,
-    "FastAPI" : fastapi,
-    "Qt" : qt,
+  "OpenGL" : opengl,
+  "Vulkan" : vulkan,
+  "React" : react,
+  "Bootstrap" : bootstrap,
+  "Tailwind" : tailwind,
+  ".NET" : dotnet,
+  "node.js" : nodejs,
+  "Three.js" : threejs,
+  "FastAPI" : fastapi,
+  "Qt" : qt,
 }
 
 const DEVTOOLS = {
-    "VS 2022" : visualstudio,
-    "VS Code" : vscode,
-    "Git" : git,
-    "GitHub" : github,
-    "Claude" : claude,
-    "Unity" : unity,
-    "Unreal"  : unreal,
-    "Docker" : docker,
-    "MySQL" : mysql,
-    "CMake" : cmake,
+  "VS 2022" : visualstudio,
+  "VS Code" : vscode,
+  "Git" : git,
+  "GitHub" : github,
+  "Claude" : claude,
+  "Unity" : unity,
+  "Unreal"  : unreal,
+  "Docker" : docker,
+  "MySQL" : mysql,
+  "CMake" : cmake,
+}
+
+const CREATIVE_TOOLS = {
+  "Photoshop" : photoshop,
+  "Illustrator" : illustrator,
+  "Figma" : figma
 }
 
 const OPERATING_SYSTEMS = {
-    "Windows" : windows,
-    "Unix/Linux" : linux,
-    "MacOS" : apple,
-    "iOS" : apple,
-    "Android" : android,
+  "Windows" : windows,
+  "Unix/Linux" : linux,
+  "MacOS" : apple,
+  "iOS" : apple,
+  "Android" : android,
 }
 
 const SECTIONS = {
-    "Programming Languages" : PROGRAMMING_LANGUAGES,
-    "Frameworks/Libraries" : FRAMEWORKS,
-    "Development Tools" : DEVTOOLS,
-    "Operating Systems" : OPERATING_SYSTEMS,
+  "Programming Languages" : PROGRAMMING_LANGUAGES,
+  "Frameworks/Libraries" : FRAMEWORKS,
+  "Development Tools" : DEVTOOLS,
+  "Creative Tools" : CREATIVE_TOOLS,
+  "Operating Systems" : OPERATING_SYSTEMS,
 }
 
 export const Skills = () => { return (
@@ -116,7 +127,7 @@ export const Skills = () => { return (
             <div className="skills-grid">
               {Object.entries(sectionValue).map(([key, value]) => (
                 <div key={key}><div className="skill-card">
-                  <span className='icon-span'><img src={value} width="30" /></span>
+                  <span className='icon-span'><img src={value} height="30" /></span>
                   <span><h4 className='skill-name'>{key}</h4></span>
                 </div></div>
               ))}

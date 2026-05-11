@@ -80,7 +80,7 @@ return (
         transition={{duration: 1, ease: "easeInOut"}} style={{ margin: 0, color: "GrayText", marginTop: 5 }}>Co-Founder, iD Software</motion.p>
     </div>
 
-    {/* <div className="model-canvas" >
+    <div className="model-canvas" >
       <Canvas camera={{ position: [0, 0, 6], fov: 50, near: 0.1, far: 100 }}>
         <ambientLight intensity={0.5} color="white" />
 
@@ -91,7 +91,7 @@ return (
         <OrbitControls enableZoom={false} />
       </Canvas>
     </div>
-    <p className="attribution"><sup>1</sup>"Three.js Logo — 3D Model" (<a href="https://skfb.ly/pFQEy" target="_blank" rel="noopener noreferrer">https://skfb.ly/pFQEy</a>) by Alex human is licensed under Creative Commons Attribution (<a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">http://creativecommons.org/licenses/by/4.0/</a>).</p> */}
+    <p className="attribution"><sup>1</sup>"Three.js Logo — 3D Model" (<a href="https://skfb.ly/pFQEy" target="_blank" rel="noopener noreferrer">https://skfb.ly/pFQEy</a>) by Alex human is licensed under Creative Commons Attribution (<a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">http://creativecommons.org/licenses/by/4.0/</a>).</p>
 
   </div>
 </section>
