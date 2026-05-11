@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "/static/css/main.800edd5d.css",
-    "main.js": "/static/js/main.1e68139e.js",
+    "main.css": "/static/css/main.dee0bcaa.css",
+    "main.js": "/static/js/main.b41eb6dd.js",
     "static/media/TermProject.png": "/static/media/TermProject.b84324385c2d5a0be57d.png",
+    "static/media/figma.png": "/static/media/figma.4e836049aea2748f9b04.png",
     "static/media/PointCloudRenderer.png": "/static/media/PointCloudRenderer.c5c688ce331c151e4670.png",
     "static/media/headshot.jpeg": "/static/media/headshot.fa3e5ff25cfbd1aba5a5.jpeg",
     "static/media/html.png": "/static/media/html.2cd5d05c9660ec55992e.png",
@@ -11,6 +12,7 @@
     "static/media/linux.png": "/static/media/linux.30b87c36aaec73885fd2.png",
     "static/media/bootstrap.png": "/static/media/bootstrap.7ec629589d73f8a028c5.png",
     "static/media/cpp.png": "/static/media/cpp.2c87791d6a4c6e3d36b8.png",
+    "static/media/photoshop.png": "/static/media/photoshop.72d45bcd967b4387dd02.png",
     "static/media/android.png": "/static/media/android.b170bf1d65316576de7b.png",
     "static/media/python.png": "/static/media/python.65c0e9243c20520b4fdf.png",
     "static/media/docker.png": "/static/media/docker.46be1b6c4d9d78cb161b.png",
@@ -25,12 +27,13 @@
     "static/media/threejs.png": "/static/media/threejs.3957c3c42b26f4233fd5.png",
     "static/media/react.png": "/static/media/react.98ff38735baa4c1b0381.png",
     "static/media/unity.png": "/static/media/unity.3bfc3216d2afbeb578bd.png",
+    "static/media/illustrator.png": "/static/media/illustrator.39b0cf134caad7817e33.png",
     "index.html": "/index.html",
-    "main.800edd5d.css.map": "/static/css/main.800edd5d.css.map",
-    "main.1e68139e.js.map": "/static/js/main.1e68139e.js.map"
+    "main.dee0bcaa.css.map": "/static/css/main.dee0bcaa.css.map",
+    "main.b41eb6dd.js.map": "/static/js/main.b41eb6dd.js.map"
   },
   "entrypoints": [
-    "static/css/main.800edd5d.css",
-    "static/js/main.1e68139e.js"
+    "static/css/main.dee0bcaa.css",
+    "static/js/main.b41eb6dd.js"
   ]
 }
