@@ -187,20 +187,21 @@ export const ScrollCarousel = () => {
                                 </span>
                               </div>
                             </div>
+
                             <a
-                            href={repo.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            onClick={(e) => e.stopPropagation()}
-                            style={{
-                              position: "absolute",
-                              top: 16,
-                              right: 16,
-                              zIndex: 5,
-                            }}
-                          >
-                            <ExternalButton size={30}/>
-                          </a>
+                              href={repo.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              onClick={(e) => e.stopPropagation()}
+                              style={{
+                                position: "absolute",
+                                top: 16,
+                                right: 16,
+                                zIndex: 5,
+                              }}
+                            >
+                              <ExternalButton size={30}/>
+                            </a>
                           </div>
                         </div>
                       }
