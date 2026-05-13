@@ -1,0 +1,18 @@
+.icon-button-link {
+    display: inline-block;
+    background-color: white;
+    border-radius: 5px;
+    padding: 8px;
+    box-shadow: 0px 2px 5px 0px #000000a9;
+}
+
+.icon-button-image {
+    display: block;
+    transform: scale(1);
+    transition: transform 0.001s ease;
+}
+
+.icon-button-link:hover .icon-button-image {
+    transform: scale(1.2);
+    transition: transform 0.001s ease;
+}

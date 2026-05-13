@@ -1,49 +1,43 @@
 import './Home.css'
-
 import { useMemo, useState, Suspense } from "react";
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
 import { useGLTF } from "@react-three/drei";
 import { motion } from "framer-motion"
-
 import { Button } from '../components/Button.jsx'
 import { FeaturedCard } from '../components/FeaturedCard.jsx'
-
-import cataclysm from "../assets/images/Cataclysm.png"
-import shaderSandbox from "../assets/images/ShaderSandbox.png"
-import pcr from "../assets/images/PointCloudRenderer.png"
 
 const FEATURED_PROJECTS = [
   {
     "name" : "Cataclysm",
     "languages" : "C/C++, C#, OpenGL, GLSL",
     "description" : "2D rendering & game development engine powered by OpenGL",
-    "image" : cataclysm,
+    "image" : "assets/images/Cataclysm.png",
     "link" : "https://www.github.com/jackpsmith-git/Cataclysm"
   },
   {
     "name" : "Shader Sandbox",
     "languages" : "C/C++, OpenGL, GLSL",
     "description" : "Portable Windows tool for testing GLSL shaders",
-    "image" : shaderSandbox,
+    "image" : "assets/images/ShaderSandbox.png",
     "link" : "https://www.github.com/jackpsmith-git/ShaderSandbox"
   },
   {
     "name" : "Point-Cloud Renderer",
     "languages" : "C/C++, Vulkan, GLSL",
     "description" : "3D, point-cloud, Vulkan renderer",
-    "image" : pcr,
+    "image" : "assets/images/PointCloudRenderer.png",
     "link" : "https://www.github.com/jackpsmith-git/PointCloudRenderer"
   },
 ]
 
 function Model(props) {
-  const { scene } = useGLTF("/scene.gltf");
+  const { scene } = useGLTF("assets/scenes/scene.gltf");
   return <primitive object={scene} {...props} />;
 }
 
 export const Home = () => { 
-useGLTF.preload("/scene.gltf")
+useGLTF.preload("assets/scenes/scene.gltf")
 return (
 <section id="home" className="home">
   <div className="page">
@@ -55,7 +49,7 @@ return (
           <FeaturedCard href={link}>
             <img src={image} alt={name} width="100%" />
             <h3 className="featured-card-header">{name} ({languages})</h3>
-            <p>{description}</p>
+            <p className="featured-card-description">{description}</p>
           </FeaturedCard>
         </div>
       ))}

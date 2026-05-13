@@ -1,19 +1,12 @@
 import { useState, useEffect } from "react";
 
-import cataclysm from "../assets/images/Cataclysm.png"
-import shadersandbox from "../assets/images/ShaderSandbox.png"
-import pcr from "../assets/images/PointCloudRenderer.png"
-import forge from "../assets/images/forge.png"
-import uno from "../assets/images/TermProject.png"
-import react from "../assets/images/react.png"
-
 const REPO_IMAGES = {
-  "ShaderSandbox" : shadersandbox,
-  "Cataclysm" : cataclysm,
-  "PointCloudRenderer" : pcr,
-  "Forge" : forge,
-  "TermProject" : uno,
-  "jackpsmith-git.github.io" : react
+  "ShaderSandbox" : "assets/images/ShaderSandbox.png",
+  "Cataclysm" : "assets/images/Cataclysm.png",
+  "PointCloudRenderer" : "assets/images/PointCloudRenderer.png",
+  "Forge" : "assets/images/forge.png",
+  "TermProject" : "assets/images/TermProject.png",
+  "jackpsmith-git.github.io" : "assets/images/react.png"
 }
 
 export const useLatestRepos = () => {

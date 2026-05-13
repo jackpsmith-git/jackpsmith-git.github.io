@@ -1,102 +1,60 @@
 import "./Skills.css"
-
 import Accordion from '@mui/material/Accordion';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Badge from '@mui/material/Badge';
 
-import cpp from "../assets/images/cpp.png"
-import csharp from "../assets/images/csharp.png"
-import java from "../assets/images/java.png"
-import python from "../assets/images/python.png"
-import javascript from "../assets/images/javascript.png"
-import html from "../assets/images/html.png"
-import css from "../assets/images/css.png"
-import php from "../assets/images/php.png"
-import lua from "../assets/images/lua.png"
-
-import opengl from "../assets/images/opengl.png"
-import nodejs from "../assets/images/nodejs.png"
-import react from "../assets/images/react.png"
-import bootstrap from "../assets/images/bootstrap.png"
-import tailwind from "../assets/images/tailwind.png"
-import vulkan from "../assets/images/vulkan.png"
-import dotnet from "../assets/images/dotnet-logo.png"
-import fastapi from "../assets/images/FastAPI.png"
-import threejs from "../assets/images/threejs.png"
-import qt from "../assets/images/qt.png"
-
-import visualstudio from "../assets/images/visualstudio.png"
-import vscode from "../assets/images/vscode.png"
-import git from "../assets/images/git.png"
-import github from "../assets/images/github.png"
-import unity from "../assets/images/unity.png"
-import unreal from "../assets/images/unreal.png"
-import docker from "../assets/images/docker.png"
-import mysql from "../assets/images/mysql.png"
-import cmake from "../assets/images/cmake.png"
-import claude from "../assets/images/claude-color.png"
-
-import photoshop from "../assets/images/photoshop.png"
-import illustrator from "../assets/images/illustrator.png"
-import figma from "../assets/images/figma.png"
-
-import windows from "../assets/images/windows.png"
-import linux from "../assets/images/linux.png"
-import apple from "../assets/images/apple.png"
-import android from "../assets/images/android.png"
-
 const PROGRAMMING_LANGUAGES = {
-  "C/C++" : cpp,
-  "Python" : python,
-  "Java" : java,
-  "C#" : csharp,
-  "JavaScript" : javascript,
-  "HTML" : html,
-  "CSS" : css,
-  "Lua" : lua,
-  "PHP" : php,
+  "C/C++" : "assets/images/cpp.png",
+  "Python" : "assets/images/python.png",
+  "Java" : "assets/images/java.png",
+  "C#" : "assets/images/csharp.png",
+  "JavaScript" : "assets/images/javascript.png",
+  "HTML" : "assets/images/html.png",
+  "CSS" : "assets/images/css.png",
+  "Lua" : "assets/images/lua.png",
+  "PHP" : "assets/images/php.png",
 }
 
 const FRAMEWORKS = {
-  "OpenGL" : opengl,
-  "Vulkan" : vulkan,
-  "React" : react,
-  "Bootstrap" : bootstrap,
-  "Tailwind" : tailwind,
-  ".NET" : dotnet,
-  "node.js" : nodejs,
-  "Three.js" : threejs,
-  "FastAPI" : fastapi,
-  "Qt" : qt,
+  "OpenGL" : "assets/images/opengl.png",
+  "Vulkan" : "assets/images/vulkan.png",
+  "React" : "assets/images/react.png",
+  "Bootstrap" : "assets/images/bootstrap.png",
+  "Tailwind" : "assets/images/tailwind.png",
+  ".NET" : "assets/images/dotnet-logo.png",
+  "node.js" : "assets/images/nodejs.png",
+  "Three.js" : "assets/images/threejs.png",
+  "FastAPI" : "assets/images/FastAPI.png",
+  "Qt" : "assets/images/qt.png",
 }
 
 const DEVTOOLS = {
-  "VS 2022" : visualstudio,
-  "VS Code" : vscode,
-  "Git" : git,
-  "GitHub" : github,
-  "Claude" : claude,
-  "Unity" : unity,
-  "Unreal"  : unreal,
-  "Docker" : docker,
-  "MySQL" : mysql,
-  "CMake" : cmake,
+  "VS 2022" : "assets/images/visualstudio.png",
+  "VS Code" : "assets/images/vscode.png",
+  "Git" : "assets/images/git.png",
+  "GitHub" : "assets/images/github.png",
+  "Claude" : "assets/images/claude-color.png",
+  "Unity" : "assets/images/unity.png",
+  "Unreal"  : "assets/images/unreal.png",
+  "Docker" : "assets/images/docker.png",
+  "MySQL" : "assets/images/mysql.png",
+  "CMake" : "assets/images/cmake.png",
 }
 
 const CREATIVE_TOOLS = {
-  "Photoshop" : photoshop,
-  "Illustrator" : illustrator,
-  "Figma" : figma
+  "Photoshop" : "assets/images/photoshop.png",
+  "Illustrator" : "assets/images/illustrator.png",
+  "Figma" : "assets/images/figma.png"
 }
 
 const OPERATING_SYSTEMS = {
-  "Windows" : windows,
-  "Unix/Linux" : linux,
-  "MacOS" : apple,
-  "iOS" : apple,
-  "Android" : android,
+  "Windows" : "assets/images/windows.png",
+  "Unix/Linux" : "assets/images/linux.png",
+  "MacOS" : "assets/images/apple.png",
+  "iOS" : "assets/images/apple.png",
+  "Android" : "assets/images/android.png",
 }
 
 const SECTIONS = {

@@ -1,11 +1,5 @@
 import "./Footer.css"
-
 import { motion, useScroll, useTransform } from "framer-motion";
-
-import github from "../assets/images/github.png"
-import nuget from "../assets/images/nuget.png"
-import linkedin from "../assets/images/linkedin.png"
-import headshot from "../assets/images/headshot.jpeg"
 
 export const Footer = ({yval}) => { 
   return (

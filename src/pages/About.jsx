@@ -1,11 +1,7 @@
 import "./About.css"
-
 import { useGitHubUser } from '../hooks/useGitHubUser.js'
 import { Shake } from '../components/Shake.jsx'
 import CountUp from 'react-countup';
-
-import headshot from "../assets/images/headshot.jpeg"
-import github from "../assets/images/github.png"
 
 export const About = () => {
   const user = useGitHubUser();
@@ -14,7 +10,7 @@ export const About = () => {
   <section id="about" className="about">
     <div className="page">
       <h2>About Me</h2>
-      <div className="headshot"><img src={headshot} alt="Headshot" width={200} /></div>
+      <div className="headshot"><img src="assets/images/headshot.jpeg" alt="Headshot" width={200} /></div>
       {user && (<div><p className="bio">{user.bio}</p></div>)}
       <p className="projects">Click on the 'Projects' tab in the upper right to browse my current and past projects, or navigate to the 'Skills' section to learn more about me.</p>
 
@@ -30,18 +26,18 @@ export const About = () => {
 
       {user && (
         <div className="inset-card">
-          <a href="https://www.github.com/jackpsmith-git" target="_blank"><img src={github} className="github-icon"></img></a>
+          <a href="https://www.github.com/jackpsmith-git" target="_blank"><img src="assets/images/github.png" className="github-icon"></img></a>
           <p className="github-info" style={{fontSize: '15pt', marginTop: 5, marginBottom: 5}}>{user.username}</p>
           <p className="github-info" style={{fontSize: '30pt', marginTop: 0}}>
               <CountUp 
               start={0} 
-              end={user.followersCount} 
+              end={user?.followersCount ?? 0} 
               duration={2.75} 
               enableScrollSpy={true}
             /> followers 
             | <CountUp 
               start={0} 
-              end={user.starredReposCount} 
+              end={user?.starredReposCount ?? 0} 
               duration={2.75} 
               enableScrollSpy={true}
             /> starred repos

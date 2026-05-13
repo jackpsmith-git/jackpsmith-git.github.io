@@ -1,5 +1,4 @@
 import "./Navbar.css"
-// import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 export const Navbar = () => { return (
   <header className="header">

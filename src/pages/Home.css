@@ -72,8 +72,16 @@
 }
 
 .featured-card-header {
-  padding-top: 12px;
+  padding-top: 5px;
   text-align: left;
+  font-size: medium;
+  font-weight: boldest;
+}
+
+.featured-card-description {
+  margin-top: 5px;
+  margin-bottom: 0px;
+  font-size: small;
 }
 
 .see-more-text {
