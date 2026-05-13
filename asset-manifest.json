@@ -1,39 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.dee0bcaa.css",
-    "main.js": "/static/js/main.b41eb6dd.js",
-    "static/media/TermProject.png": "/static/media/TermProject.b84324385c2d5a0be57d.png",
-    "static/media/figma.png": "/static/media/figma.4e836049aea2748f9b04.png",
-    "static/media/PointCloudRenderer.png": "/static/media/PointCloudRenderer.c5c688ce331c151e4670.png",
-    "static/media/headshot.jpeg": "/static/media/headshot.fa3e5ff25cfbd1aba5a5.jpeg",
-    "static/media/html.png": "/static/media/html.2cd5d05c9660ec55992e.png",
-    "static/media/vulkan.png": "/static/media/vulkan.42814758408f1fe4955c.png",
-    "static/media/Cataclysm.png": "/static/media/Cataclysm.88a62dcbcd3904ce1afc.png",
-    "static/media/linux.png": "/static/media/linux.30b87c36aaec73885fd2.png",
-    "static/media/bootstrap.png": "/static/media/bootstrap.7ec629589d73f8a028c5.png",
-    "static/media/cpp.png": "/static/media/cpp.2c87791d6a4c6e3d36b8.png",
-    "static/media/photoshop.png": "/static/media/photoshop.72d45bcd967b4387dd02.png",
-    "static/media/android.png": "/static/media/android.b170bf1d65316576de7b.png",
-    "static/media/python.png": "/static/media/python.65c0e9243c20520b4fdf.png",
-    "static/media/docker.png": "/static/media/docker.46be1b6c4d9d78cb161b.png",
-    "static/media/opengl.png": "/static/media/opengl.9c92e9061da3b619d353.png",
-    "static/media/vscode.png": "/static/media/vscode.c451d51c85d02c2a3841.png",
-    "static/media/forge.png": "/static/media/forge.cb93e111867fc74e5295.png",
-    "static/media/git.png": "/static/media/git.8d37adcd9121c2aba1e0.png",
-    "static/media/php.png": "/static/media/php.47ef190b3fc4f67ce062.png",
-    "static/media/java.png": "/static/media/java.00c3be7f346b2c00213d.png",
-    "static/media/linkedin.png": "/static/media/linkedin.7edc3e1079b59e128c49.png",
-    "static/media/unreal.png": "/static/media/unreal.676d4922b7abe7589f5e.png",
-    "static/media/threejs.png": "/static/media/threejs.3957c3c42b26f4233fd5.png",
-    "static/media/react.png": "/static/media/react.98ff38735baa4c1b0381.png",
-    "static/media/unity.png": "/static/media/unity.3bfc3216d2afbeb578bd.png",
-    "static/media/illustrator.png": "/static/media/illustrator.39b0cf134caad7817e33.png",
+    "main.css": "/static/css/main.dd184848.css",
+    "main.js": "/static/js/main.343a21f6.js",
     "index.html": "/index.html",
-    "main.dee0bcaa.css.map": "/static/css/main.dee0bcaa.css.map",
-    "main.b41eb6dd.js.map": "/static/js/main.b41eb6dd.js.map"
+    "main.dd184848.css.map": "/static/css/main.dd184848.css.map",
+    "main.343a21f6.js.map": "/static/js/main.343a21f6.js.map"
   },
   "entrypoints": [
-    "static/css/main.dee0bcaa.css",
-    "static/js/main.b41eb6dd.js"
+    "static/css/main.dd184848.css",
+    "static/js/main.343a21f6.js"
   ]
 }
