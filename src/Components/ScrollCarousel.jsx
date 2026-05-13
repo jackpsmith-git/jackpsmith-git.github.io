@@ -187,6 +187,20 @@ export const ScrollCarousel = () => {
                                 </span>
                               </div>
                             </div>
+                            <a
+                            href={repo.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={(e) => e.stopPropagation()}
+                            style={{
+                              position: "absolute",
+                              top: 16,
+                              right: 16,
+                              zIndex: 5,
+                            }}
+                          >
+                            <ExternalButton size={30}/>
+                          </a>
                           </div>
                         </div>
                       }
@@ -228,13 +242,18 @@ export const ScrollCarousel = () => {
                       color: "white",
                     }}
                   >
-                    <h2
-                      style={{
-                        margin: 0,
-                      }}
-                    >
-                      SEE ALL
-                    </h2>
+                    <span className="languages-span" style={{gap: 15}}>
+                      <span>
+                          <h2
+                          style={{
+                            margin: 0,
+                          }}
+                          >
+                          SEE ALL
+                        </h2>
+                      </span>
+                      <span><img src="assets/icons/external.svg" style={{filter: "brightness(0) invert(1)" }}/></span>
+                    </span>
                   </div>
                 </a>
                 </motion.div>
