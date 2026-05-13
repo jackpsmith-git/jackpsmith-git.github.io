@@ -26,6 +26,11 @@
   overflow: hidden;
 }
 
+.carouselWrapper {
+  transform-origin: center center;
+  will-change: transform;
+}
+
 .carousel {
   display: flex;
   gap: 1rem;

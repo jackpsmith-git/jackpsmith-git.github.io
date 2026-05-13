@@ -49,6 +49,7 @@ return (
           <FeaturedCard href={link}>
             <img src={image} alt={name} width="100%" />
             <h3 className="featured-card-header">{name} ({languages})</h3>
+            <hr />
             <p className="featured-card-description">{description}</p>
           </FeaturedCard>
         </div>
