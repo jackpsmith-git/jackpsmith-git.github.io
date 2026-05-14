@@ -107,7 +107,7 @@ export const ScrollCarousel = () => {
                             </h2>
 
                             <span className="languages-span">
-                              {repo.languages.slice(0, 12).map((lang) => (
+                              {repo.languages.slice(0, 5).map((lang) => (
                                 <span
                                   key={lang}
                                   className="language"
@@ -173,7 +173,7 @@ export const ScrollCarousel = () => {
                             </div>
 
                             <div style={{ color: "white" }}>
-                              <div className="github-info">
+                              <div className="github-info-scroll">
                                 <span className="stars-span">
                                   <strong className="github-info-icon">★</strong> {repo.stars}
                                 </span>

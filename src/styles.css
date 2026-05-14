@@ -6,6 +6,7 @@ html {
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  background: black;
 }
 
 h2 {
@@ -32,6 +33,7 @@ h3 {
   padding-right: 40px;
   padding-top: 20px;
   padding-bottom: 40px;
+  background-color: transparent;
 }
 
 .flex-grid {

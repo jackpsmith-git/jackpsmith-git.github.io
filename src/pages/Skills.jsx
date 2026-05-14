@@ -72,7 +72,7 @@ export const Skills = () => { return (
 
     {Object.entries(SECTIONS).map(([sectionKey, sectionValue]) => (
       <div key={sectionKey}>
-        <Accordion defaultExpanded slotProps={{ heading: { component: 'h2' } }} style={{backgroundColor: "black"}}>
+        <Accordion defaultExpanded slotProps={{ heading: { component: 'h2' } }} style={{backgroundColor: "transparent"}}>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon sx={{ color: 'white' }} />}
             aria-controls="panel1-content"

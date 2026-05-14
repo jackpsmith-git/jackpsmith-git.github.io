@@ -33,6 +33,7 @@ export const useGitHubUser = () => {
           avatar: user.avatar_url,
           profileUrl: user.html_url,
           followersCount: user.followers,
+          followingCount: user.following,
           followers: Array.isArray(followers) ? followers.map((f) => f.login) : [],
           organizations: Array.isArray(orgs) ? orgs.map((o) => o.login) : [],
           starredReposCount: Array.isArray(starred) ? starred.length : 0,

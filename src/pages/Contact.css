@@ -2,21 +2,28 @@
   display: flex;
   justify-content: center;
   scroll-margin-top: 80px;
-  background-color: #34445a;
+  background-color: black;
   z-index: 10;
   position: relative;
 }
 
 .centered-row {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 15px;
-    gap: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 15px;
+  gap: 8px;
+}
+
+.contact-city {
+  margin: 0px;
+  margin-bottom: 15px;
+  font-size: small;
+  color: gray;
 }
 
 .contact-info {
-  background-color: #34445a;
+  background-color: black;
   border-radius: 4px;
   margin-top: 12px;
   margin-bottom: 12px;
@@ -33,15 +40,15 @@
 }
 
 .round-headshot {
-    border-radius: 90%;
-    aspect-ratio: 1/1;
-    object-fit: cover;
-    object-position: top;
-    width: 100px;
+  border-radius: 90%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  object-position: top;
+  width: 100px;
 }
 
 .contact-name {
-    padding: 15px;
+  padding-top: 15px;
 }
 
 .contact-link {
@@ -63,5 +70,5 @@
 }
 
 .right-gap {
-    margin-right: 10px;
+  margin-right: 10px;
 }

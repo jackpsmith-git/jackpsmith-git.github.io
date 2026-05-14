@@ -1,6 +1,7 @@
 // import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import { Navbar } from './components/Navbar.jsx';
 import { Home } from './pages/Home.jsx';
+import { Hero } from './pages/Hero.jsx';
 import { About } from './pages/About.jsx';
 import { Projects } from './pages/Projects.jsx'
 import { Contact } from "./pages/Contact.jsx";
@@ -23,13 +24,14 @@ export default function App() {
           <div className="scroll-area">
           <div ref={container} className="relative">
             <Navbar />
+            <Hero />
             <Home />
             <About />
             <Skills />
             <Projects />
             <Contact />
           </div>
-          <Footer yval={y}/>
+          {/* <Footer yval={y}/> */}
         </div>
       </div>
     );
