@@ -135,6 +135,26 @@
   margin-bottom: 8px;
 }
 
+.see-all-span {
+  background: black;
+  color: white;
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 30px;
+}
+
+.see-all-span:hover {
+  filter: invert(100%);
+}
+
 .center-button {
   display: flex;
   align-items: center;

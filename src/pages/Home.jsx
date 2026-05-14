@@ -1,7 +1,5 @@
 import './Home.css'
 import { useMemo, useState, Suspense } from "react";
-import { Canvas } from '@react-three/fiber'
-import { OrbitControls } from '@react-three/drei'
 import { useGLTF } from "@react-three/drei";
 import { motion } from "framer-motion"
 import { Button } from '../components/Button.jsx'
@@ -50,73 +48,54 @@ const LANG_COLS = {
   "GLSL" : '#25ad49'
 };
 
-function Model(props) {
-  const { scene } = useGLTF("assets/scenes/scene.gltf");
-  return <primitive object={scene} {...props} />;
-}
-
 export const Home = () => { 
-useGLTF.preload("assets/scenes/scene.gltf")
 return (
 <section id="home" className="home">
   <div className="page">
-
     <motion.div
-        initial={{y: 25, opacity: 0}}
-        whileInView={{y: 0, opacity: 1}}
-        viewport={{ amount: .4 }}
-        transition={{duration: 1, ease: "easeInOut"}}>
+      initial={{y: 25, opacity: 0}}
+      whileInView={{y: 0, opacity: 1}}
+      viewport={{ amount: .2 }}
+      transition={{duration: 1, ease: "easeInOut"}}
+    >
       <div className="card-flex-grid">
-      {FEATURED_PROJECTS.map(({ name, languages, description, image, link }) => (
-        <div className="flex-col" key={name}>
-          <FeaturedCard href={link}>
-            <img src={image} alt={name} width="100%" />
-            <h3 className="featured-card-header">{name}</h3>
-            <span className="languages-span" style={{marginBottom: 15}}>
-              {languages.slice(0, 12).map((lang) => (
-                <span
-                  key={lang}
-                  className="language"
-                  style={{
-                    backgroundColor: LANG_COLS[lang] || "#000000",
-                  }}
-                >
-                  {lang}
-                </span>
-              ))}
-            </span>
-            <hr />
-            <p className="featured-card-description">{description}</p>
-          </FeaturedCard>
-        </div>
-      ))}
-    </div>
-    <div className='center-button'>
-      <div className="shake"><a href="#projects"><Button><h3 className="see-more-text">See More</h3></Button></a></div>
-    </div>
+        {FEATURED_PROJECTS.map(({ name, languages, description, image, link }) => (
+          <div className="flex-col" key={name}>
+            <FeaturedCard href={link}>
+              <img src={image} alt={name} width="100%" />
+              <h3 className="featured-card-header">{name}</h3>
+              <span className="languages-span" style={{marginBottom: 15}}>
+                {languages.slice(0, 12).map((lang) => (
+                  <span
+                    key={lang}
+                    className="language"
+                    style={{
+                      backgroundColor: LANG_COLS[lang] || "#000000",
+                    }}
+                  >
+                    {lang}
+                  </span>
+                ))}
+              </span>
+              <hr />
+              <p className="featured-card-description">{description}</p>
+            </FeaturedCard>
+          </div>
+        ))}
+      </div>
+
+      <div className='center-button'>
+        <div className="shake"><a href="#projects"><Button><h3 className="see-more-text">See More</h3></Button></a></div>
+      </div>
     
-    <hr className='divider'/>
-
-    <div className='quote'>
-      <h1>"You might not think that programmers are artists, but programming is an extremely creative profession."</h1>
-      <h3 style={{ margin: 0 }}>- John Romero</h3>
-      <p style={{ margin: 0, color: "GrayText", marginTop: 5 }}>Co-Founder, iD Software</p>
-    </div>
+      <hr className='divider'/>
+      <div className='quote'>
+        <h1>"You might not think that programmers are artists, but programming is an extremely creative profession."</h1>
+        <h3 style={{ margin: 0 }}>- John Romero</h3>
+        <p style={{ margin: 0, color: "GrayText", marginTop: 5 }}>Co-Founder, iD Software</p>
+      </div>
+      <hr className='divider'/>
     </motion.div>
-
-    {/* <div className="model-canvas" >
-      <Canvas camera={{ position: [0, 0, 6], fov: 50, near: 0.1, far: 100 }}>
-        <ambientLight intensity={0.5} color="white" />
-
-        <Suspense fallback={null}>
-          <Model position={[0, 0, 0]} scale={40} />
-        </Suspense>
-
-        <OrbitControls enableZoom={false} />
-      </Canvas>
-    </div>
-    <p className="attribution"><sup>1</sup>"Three.js Logo — 3D Model" (<a href="https://skfb.ly/pFQEy" target="_blank" rel="noopener noreferrer">https://skfb.ly/pFQEy</a>) by Alex human is licensed under Creative Commons Attribution (<a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">http://creativecommons.org/licenses/by/4.0/</a>).</p> */}
-
   </div>
 </section>
 );};

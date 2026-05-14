@@ -216,9 +216,7 @@ export const ScrollCarousel = () => {
                 viewport={{ amount: 0.8, once: false }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
               >
-                <a 
-                  href="https://github.com/jackpsmith-git"
-                  target="_blank"
+                <div 
                   style={{
                   color: "black",
                   width: cardWidth,
@@ -241,20 +239,23 @@ export const ScrollCarousel = () => {
                       color: "white",
                     }}
                   >
-                    <span className="languages-span" style={{gap: 15}}>
-                      <span>
-                          <h2
-                          style={{
-                            margin: 0,
-                          }}
-                          >
-                          SEE ALL
-                        </h2>
+                    <a href="https://github.com/jackpsmith-git"
+                  target="_blank">
+                      <span className="see-all-span" style={{gap: 15}}>
+                        <span>
+                            <h2
+                            style={{
+                              margin: 0,
+                            }}
+                            >
+                            SEE ALL
+                          </h2>
+                        </span>
+                        <span><img src="assets/icons/external.svg" style={{filter: "brightness(0) invert(1)" }}/></span>
                       </span>
-                      <span><img src="assets/icons/external.svg" style={{filter: "brightness(0) invert(1)" }}/></span>
-                    </span>
+                    </a>
                   </div>
-                </a>
+                </div>
                 </motion.div>
             </motion.div>
         </div>

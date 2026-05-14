@@ -14,7 +14,7 @@ export const Hero = () => {
         scrollTrigger: {
           trigger: "#hero",
           start: "top top",
-          end: "+=350%",
+          end: "+=200%",
           scrub: 1.2,
           pin: true,
           anticipatePin: 1,
@@ -48,7 +48,6 @@ export const Hero = () => {
           <img src="assets/images/HeroImage.png" />
         </div>
       </div>
-
       <div className="hero-content">
         <div className="wrapper">
           <div className="width-adjust" />
