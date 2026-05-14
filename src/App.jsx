@@ -4,7 +4,6 @@ import { Home } from './pages/Home.jsx';
 import { Hero } from './pages/Hero.jsx';
 import { About } from './pages/About.jsx';
 import { Projects } from './pages/Projects.jsx'
-import { Contact } from "./pages/Contact.jsx";
 import { Skills } from "./pages/Skills.jsx";
 import { Footer } from "./components/Footer.jsx";
 
@@ -29,9 +28,8 @@ export default function App() {
             <About />
             <Skills />
             <Projects />
-            <Contact />
           </div>
-          {/* <Footer yval={y}/> */}
+          <Footer yval={y}/>
         </div>
       </div>
     );

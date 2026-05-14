@@ -68,8 +68,6 @@ const SECTIONS = {
 export const Skills = () => { return (
 <div id="skills" className="skills">
   <div className="page">
-    <h2>Skills</h2>
-
     {Object.entries(SECTIONS).map(([sectionKey, sectionValue]) => (
       <div key={sectionKey}>
         <Accordion defaultExpanded slotProps={{ heading: { component: 'h2' } }} style={{backgroundColor: "transparent"}}>

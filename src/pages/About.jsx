@@ -9,7 +9,6 @@ export const About = () => {
   return (
   <section id="about" className="about">
     <div className="page">
-      <h2>About Me</h2>
       <div className="headshot"><img src="assets/images/headshot.jpeg" alt="Headshot" width={200} /></div>
       <div className="plain-card">
         {user && (<div><p className="bio">{user.bio} Click on the 'Projects' tab in the upper right to browse my current and past projects, or navigate to the 'Skills' section to learn more about me.</p></div>)}

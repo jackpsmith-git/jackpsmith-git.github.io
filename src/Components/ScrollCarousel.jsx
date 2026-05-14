@@ -220,7 +220,7 @@ export const ScrollCarousel = () => {
                   href="https://github.com/jackpsmith-git"
                   target="_blank"
                   style={{
-                  color: "#34445a",
+                  color: "black",
                   width: cardWidth,
                   height: cardWidth,
                   borderRadius: 20,
@@ -230,7 +230,6 @@ export const ScrollCarousel = () => {
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  background: "#34445a",
                 }}>
                   <div
                     style={{
@@ -260,6 +259,7 @@ export const ScrollCarousel = () => {
             </motion.div>
         </div>
       </section>
+      <div id="contact" />
     </div>
   );
 };

@@ -68,6 +68,19 @@ export function FlipCard({
     color: "#fff",
     border: "1px solid rgba(255,255,255,0.08)",
     boxShadow: "0 10px 30px rgba(0,0,0,0.18)",
+    
+    color: '#fff',
+
+    background: 'rgba(20, 20, 20, 0.55)',
+    WebkitBackdropFilter: blur('14px'),
+    backdropFilter: blur('14px'),
+
+    border: "1px solid rgba(255, 255, 255, 0.12)",
+
+    boxShadow: "0px 0px 0px rgba(0, 0, 0, 0.0)",
+
+    minHeight: '100%',
+    cursor: 'pointer',
   };
 
   return (
