@@ -12,8 +12,7 @@ export const About = () => {
       <h2>About Me</h2>
       <div className="headshot"><img src="assets/images/headshot.jpeg" alt="Headshot" width={200} /></div>
       <div className="plain-card">
-        {user && (<div><p className="bio">{user.bio}</p></div>)}
-        <p className="projects">Click on the 'Projects' tab in the upper right to browse my current and past projects, or navigate to the 'Skills' section to learn more about me.</p>
+        {user && (<div><p className="bio">{user.bio} Click on the 'Projects' tab in the upper right to browse my current and past projects, or navigate to the 'Skills' section to learn more about me.</p></div>)}
       </div>
 
       <div className="plain-card">

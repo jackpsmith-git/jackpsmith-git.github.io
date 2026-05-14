@@ -1,6 +1,6 @@
 .home {
   padding: 24px;
-  background-color: #323232;
+  background-color: black;
   color: white;
   justify-content: center;
   scroll-margin-top: 80px;
@@ -72,14 +72,14 @@
 }
 
 .featured-card-header {
-  padding-top: 5px;
+  padding-top: 10px;
   text-align: center;
   font-size: 10pt;
   font-weight: boldest;
 }
 
 .featured-card-description {
-  margin-top: 5px;
+  margin-top: 10px;
   margin-bottom: 0px;
   font-size: small;
   text-align: center;

@@ -42,11 +42,10 @@ export const ScrollCarousel = () => {
               { repos.map((repo) => (
                 <div
                   style={{
-                    // minHeight: "100vh",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    background: "white",
+                    background: "transparent",
                     padding: 10,
                     flex: "0 0 auto"
                   }}

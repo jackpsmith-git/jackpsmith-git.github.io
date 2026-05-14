@@ -2,7 +2,8 @@
   padding-top: 24px;
   padding-bottom: 0px;
   scroll-margin-top: 80px;
-  background-color: white;
+  background-color: black;
+  color: white;
   z-index: 10;
   position: relative;
 }
@@ -99,5 +100,5 @@
 }
 
 .about p {
-  color: black;
+  color: white;
 }

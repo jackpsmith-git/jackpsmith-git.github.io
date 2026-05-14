@@ -6,7 +6,7 @@ export const Footer = ({yval}) => {
 <footer>
   <motion.div style={{yval}}>
     <nav className="nav-links-grid">
-        <div className="f-nav-links"><a href="#hero">Home</a></div>
+        <div className="f-nav-links"><a href="#">Home</a></div>
         <div className="f-nav-links"><a href="#about">About</a></div>
         <div className="f-nav-links"><a href="#skills">Skills</a></div>
         <div className="f-nav-links"><a href="#projects">Projects</a></div>

@@ -60,15 +60,19 @@ useGLTF.preload("assets/scenes/scene.gltf")
 return (
 <section id="home" className="home">
   <div className="page">
-    <h2>Featured Projects</h2>
 
-    <div className="card-flex-grid">
+    <motion.div
+        initial={{y: 25, opacity: 0}}
+        whileInView={{y: 0, opacity: 1}}
+        viewport={{ amount: .4 }}
+        transition={{duration: 1, ease: "easeInOut"}}>
+      <div className="card-flex-grid">
       {FEATURED_PROJECTS.map(({ name, languages, description, image, link }) => (
         <div className="flex-col" key={name}>
           <FeaturedCard href={link}>
             <img src={image} alt={name} width="100%" />
             <h3 className="featured-card-header">{name}</h3>
-            <span className="languages-span">
+            <span className="languages-span" style={{marginBottom: 15}}>
               {languages.slice(0, 12).map((lang) => (
                 <span
                   key={lang}
@@ -87,7 +91,6 @@ return (
         </div>
       ))}
     </div>
-
     <div className='center-button'>
       <div className="shake"><a href="#projects"><Button><h3 className="see-more-text">See More</h3></Button></a></div>
     </div>
@@ -95,19 +98,13 @@ return (
     <hr className='divider'/>
 
     <div className='quote'>
-      <motion.h1
-        initial={{y: 25, opacity: 0}}
-        whileInView={{y: 0, opacity: 1}}
-        transition={{duration: 1, ease: "easeInOut"}}>"You might not think that programmers are artists, but programming is an extremely creative profession."</motion.h1>
-      <motion.h3 initial={{y: 25, opacity: 0}}
-        whileInView={{y: 0, opacity: 1}}
-        transition={{duration: 1, ease: "easeInOut"}} style={{ margin: 0 }}>- John Romero</motion.h3>
-      <motion.p initial={{y: 25, opacity: 0}}
-        whileInView={{y: 0, opacity: 1}}
-        transition={{duration: 1, ease: "easeInOut"}} style={{ margin: 0, color: "GrayText", marginTop: 5 }}>Co-Founder, iD Software</motion.p>
+      <h1>"You might not think that programmers are artists, but programming is an extremely creative profession."</h1>
+      <h3 style={{ margin: 0 }}>- John Romero</h3>
+      <p style={{ margin: 0, color: "GrayText", marginTop: 5 }}>Co-Founder, iD Software</p>
     </div>
+    </motion.div>
 
-    <div className="model-canvas" >
+    {/* <div className="model-canvas" >
       <Canvas camera={{ position: [0, 0, 6], fov: 50, near: 0.1, far: 100 }}>
         <ambientLight intensity={0.5} color="white" />
 
@@ -118,7 +115,7 @@ return (
         <OrbitControls enableZoom={false} />
       </Canvas>
     </div>
-    <p className="attribution"><sup>1</sup>"Three.js Logo — 3D Model" (<a href="https://skfb.ly/pFQEy" target="_blank" rel="noopener noreferrer">https://skfb.ly/pFQEy</a>) by Alex human is licensed under Creative Commons Attribution (<a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">http://creativecommons.org/licenses/by/4.0/</a>).</p>
+    <p className="attribution"><sup>1</sup>"Three.js Logo — 3D Model" (<a href="https://skfb.ly/pFQEy" target="_blank" rel="noopener noreferrer">https://skfb.ly/pFQEy</a>) by Alex human is licensed under Creative Commons Attribution (<a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">http://creativecommons.org/licenses/by/4.0/</a>).</p> */}
 
   </div>
 </section>

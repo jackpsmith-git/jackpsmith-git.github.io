@@ -13,7 +13,7 @@ export const Projects = () => {
   return (
   <div id="projects" className='projects'>
     <div className="page">
-      <div className="latest-projects">
+      <div>
         <ScrollCarousel />
       </div>
     </div>

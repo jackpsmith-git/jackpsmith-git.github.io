@@ -19,6 +19,7 @@ export function FlipCard({
     cursor: "pointer",
     position: "relative",
     overflow: "visible",
+    backgroundColor: "transparent",
     ...style,
   };
 
