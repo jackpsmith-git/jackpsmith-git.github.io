@@ -1,8 +1,60 @@
 #hero {
   position: relative;
-  height: 100dvh;
   overflow: hidden;
-  transform: scaleY(1.02);
+}
+
+@media (min-width: 768px) {
+  #hero {
+    transform: scaleY(1.02);
+    height: 100dvh;
+  }
+
+  #hero .mask img {
+    object-fit: cover;
+    height: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  #hero {
+    width: 100vw;
+    height: 265px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .media {
+    position: absolute;
+    inset: 0;
+  }
+
+  .mask,
+  .media video {
+    position: absolute;
+    left: 0;
+    width: 100vw;
+  }
+
+  .mask {
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  .mask img {
+    height: 265px;
+    display: block;
+  }
+
+  .media video {
+    top: 50%;
+    transform: translateY(-50%);
+
+    height: auto;
+    width: 100vw;
+
+    object-fit: cover; /* crop behavior */
+    object-position: center;
+  }
 }
 
 #hero .media {
@@ -29,8 +81,6 @@
 
 #hero .mask img {
   /* width: 100%; */
-  height: 100%;
-  object-fit: cover;
   transform: scale(1);
   transform-origin: center;
 }

@@ -7,28 +7,39 @@ gsap.registerPlugin(ScrollTrigger);
 
 export const Hero = () => {
   useGSAP(() => {
-
     const ctx = gsap.context(() => {
+      const mm = gsap.matchMedia();
 
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: "#hero",
-          start: "top top",
-          end: "+=200%",
-          scrub: 1.2,
-          pin: true,
-          anticipatePin: 1,
-        }
+      mm.add("(min-width: 768px)", () => {
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: "#hero",
+            start: "top top",
+            end: "+=200%",
+            scrub: 1.2,
+            pin: true,
+            anticipatePin: 1,
+          }
+        });
+
+        tl.fromTo(
+          ".mask",
+          { scale: 80 },
+          { scale: 1, ease: "power1.inOut" }
+        );
+
+        return () => {
+          tl.scrollTrigger?.kill();
+          tl.kill();
+        };
       });
 
-      tl.fromTo(
-        ".mask",
-        { scale: 80 },
-        { scale: 1, ease: "power1.inOut" }
-      );
-    });
+      mm.add("(max-width: 767px)", () => {
+        gsap.set(".mask", { scale: 1 });
+      });
 
-    ScrollTrigger.refresh();
+      ScrollTrigger.refresh();
+    });
 
     return () => ctx.revert();
   }, []);
