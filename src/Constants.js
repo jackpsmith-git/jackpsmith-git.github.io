@@ -3,22 +3,22 @@ export const FEATURED_PROJECTS = [
     "name" : "Cataclysm",
     "languages" : ["C", "C++", "C#", "OpenGL", "GLSL"],
     "description" : "2D rendering & game development engine powered by OpenGL",
-    "image" : "assets/images/Cataclysm.png",
+    "image" : "./assets/images/Cataclysm.png",
     "link" : "https://www.github.com/jackpsmith-git/Cataclysm"
   },
   {
     "name" : "Shader Sandbox",
     "languages" : ["C", "C++", "OpenGL", "GLSL"],
     "description" : "Portable Windows tool for testing GLSL shaders",
-    "image" : "assets/images/ShaderSandbox.png",
+    "image" : "./assets/images/ShaderSandbox.png",
     "link" : "https://www.github.com/jackpsmith-git/ShaderSandbox"
   },
   {
     "name" : "Point-Cloud Renderer",
     "languages" : ["C", "C++", "Vulkan", "GLSL"],
-    "description" : "3D, point-cloud, Vulkan renderer",
-    "image" : "assets/images/PointCloudRenderer.png",
-    "link" : "https://www.github.com/jackpsmith-git/PointCloudRenderer"
+    "description" : '3D, point-cloud, Vulkan renderer',
+    "image" : './assets/images/PointCloudRenderer.png',
+    "link" : 'https://www.github.com/jackpsmith-git/PointCloudRenderer'
   },
 ]
 

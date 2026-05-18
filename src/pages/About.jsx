@@ -19,7 +19,7 @@ export const About = () => {
         <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'start'}}>
           <Float>
             <div className="headshot">
-                <img src="assets/images/headshot.jpeg" alt="Headshot" width={200} />
+                <img src="./assets/images/headshot.jpeg" alt="Headshot" width={200} />
             </div>
           </Float>
         </div>
@@ -28,7 +28,7 @@ export const About = () => {
             <div className="plain-card" style={{marginTop: 0, paddingTop: 0}}>
               <p className="school"><strong>Pace University, Seidenberg School of Computer Science and Information Systems</strong> | Pleasantville, NY</p>
               <div className="thin-paragraph">Bachelor of Science (BS) in Computer Science</div>
-              <div className="thin-paragraph"><strong>GPA</strong>: 3.91 | <strong>Honors:</strong> Dean's List (First Honors) x2, Outstanding Academic Achievement Award, Tau Sigma National Honor Society</div>
+              <div className="thin-paragraph"><strong>GPA</strong>: 3.93 | <strong>Honors:</strong> Dean's List (First Honors) x2, Outstanding Academic Achievement Award, Tau Sigma National Honor Society</div>
               <p className="school"><strong>SUNY Westchester Community College, School of Business and Professional Careers</strong> | Valhalla, NY</p>
               <div className="thin-paragraph">Associate of Applied Science (AAS) in Interactive Technologies, Concentration in Computer Animation and Game Design</div>
               <div className="thin-paragraph"><strong>GPA</strong>: 3.44</div>
