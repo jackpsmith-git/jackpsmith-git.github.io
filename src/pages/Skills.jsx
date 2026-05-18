@@ -4,6 +4,7 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Badge from '@mui/material/Badge';
+import { motion } from "framer-motion"
 
 const PROGRAMMING_LANGUAGES = {
   "C/C++" : "assets/images/cpp.png",
@@ -69,7 +70,12 @@ export const Skills = () => { return (
 <div id="skills" className="skills">
   <div className="page">
     {Object.entries(SECTIONS).map(([sectionKey, sectionValue]) => (
-      <div key={sectionKey}>
+      <motion.div
+        initial={{y: 25, opacity: 0}}
+        whileInView={{y: 0, opacity: 1}}
+        viewport={{ amount: .2 }}
+        transition={{duration: 1, ease: "easeInOut"}}
+      ><div key={sectionKey}>
         <Accordion defaultExpanded slotProps={{ heading: { component: 'h2' } }} style={{backgroundColor: "transparent"}}>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon sx={{ color: 'white' }} />}
@@ -90,7 +96,7 @@ export const Skills = () => { return (
             </div>
           </AccordionDetails>
         </Accordion>
-      </div>
+      </div></motion.div>
     ))}
   </div>
 </div>

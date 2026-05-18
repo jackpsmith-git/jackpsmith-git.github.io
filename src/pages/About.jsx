@@ -2,6 +2,7 @@ import "./About.css"
 import { useGitHubUser } from '../hooks/useGitHubUser.js'
 import { Shake } from '../components/Shake.jsx'
 import CountUp from 'react-countup';
+import { motion } from "framer-motion"
 
 export const About = () => {
   const user = useGitHubUser();
@@ -9,23 +10,43 @@ export const About = () => {
   return (
   <section id="about" className="about">
     <div className="page">
-      <div className="headshot"><img src="assets/images/headshot.jpeg" alt="Headshot" width={200} /></div>
-      <div className="plain-card">
+      <motion.div
+        initial={{y: 25, opacity: 0}}
+        whileInView={{y: 0, opacity: 1}}
+        viewport={{ amount: .2 }}
+        transition={{duration: 1, ease: "easeInOut"}}
+      ><div className="headshot"><img src="assets/images/headshot.jpeg" alt="Headshot" width={200} /></div></motion.div>
+      <motion.div
+        initial={{y: 25, opacity: 0}}
+        whileInView={{y: 0, opacity: 1}}
+        viewport={{ amount: .2 }}
+        transition={{duration: 1, ease: "easeInOut"}}
+      ><div className="plain-card">
         {user && (<div><p className="bio">{user.bio} Click on the 'Projects' tab in the upper right to browse my current and past projects, or navigate to the 'Skills' section to learn more about me.</p></div>)}
-      </div>
+      </div></motion.div>
 
-      <div className="plain-card">
+      <motion.div
+        initial={{y: 25, opacity: 0}}
+        whileInView={{y: 0, opacity: 1}}
+        viewport={{ amount: .2 }}
+        transition={{duration: 1, ease: "easeInOut"}}
+      ><div className="plain-card">
         <h3 className="education-heading">Education</h3>
         <p className="school"><strong>Pace University, Seidenberg School of Computer Science and Information Systems</strong> | Pleasantville, NY</p>
         <div className="thin-paragraph">Bachelor of Science (BS) in Computer Science</div>
-        <div className="thin-paragraph"><strong>GPA</strong>: 3.89 | <strong>Honors:</strong> Dean's List (First Honors) x2, Outstanding Academic Achievement Award, Tau Sigma National Honor Society</div>
+        <div className="thin-paragraph"><strong>GPA</strong>: 3.91 | <strong>Honors:</strong> Dean's List (First Honors) x2, Outstanding Academic Achievement Award, Tau Sigma National Honor Society</div>
         <p className="school"><strong>SUNY Westchester Community College, School of Business and Professional Careers</strong> | Valhalla, NY</p>
         <div className="thin-paragraph">Associate of Applied Science (AAS) in Interactive Technologies, Concentration in Computer Animation and Game Design</div>
         <div className="thin-paragraph"><strong>GPA</strong>: 3.44</div>
-      </div>
+      </div></motion.div>
 
       {user && (
-        <div className="card">
+        <motion.div
+        initial={{y: 25, opacity: 0}}
+        whileInView={{y: 0, opacity: 1}}
+        viewport={{ amount: .2 }}
+        transition={{duration: 1, ease: "easeInOut"}}
+      ><div className="card">
           <div style={{display: 'flex', alignItems: "center", gap: "16px"}}>
             <div>
               <a style={{display: "block"}} href="https://www.github.com/jackpsmith-git" target="_blank"><img style={{backgroundColor: "#34445a", border: "2px solid #34445a"}} src={user.avatar} className="github-icon"></img></a>
@@ -54,7 +75,7 @@ export const About = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div></motion.div>
       )}
     </div>
   </section>
