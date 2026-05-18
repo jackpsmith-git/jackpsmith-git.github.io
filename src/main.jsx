@@ -1,7 +1,7 @@
 import ReactDOM from 'react-dom/client'
 import { StrictMode } from 'react'
 
-import './styles.css'
+import './index.css'
 
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
