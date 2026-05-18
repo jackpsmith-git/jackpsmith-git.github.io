@@ -1,0 +1,11 @@
+Model Information:
+* title:	Three.js Logo — 3D Model
+* source:	https://sketchfab.com/3d-models/threejs-logo-3d-model-f53e7a3e686d434483477471aca944b7
+* author:	Alex human (https://sketchfab.com/alex-human)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Three.js Logo — 3D Model" (https://sketchfab.com/3d-models/threejs-logo-3d-model-f53e7a3e686d434483477471aca944b7) by Alex human (https://sketchfab.com/alex-human) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

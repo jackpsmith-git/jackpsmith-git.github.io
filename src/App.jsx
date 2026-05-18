@@ -6,7 +6,7 @@ import { Skills } from "./pages/Skills.jsx";
 import { Projects } from './pages/Projects.jsx'
 import { Footer } from "./components/Footer.jsx";
 
-import { motion, useScroll, useTransform } from "framer-motion";
+import { useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
 export default function App() {
@@ -19,18 +19,16 @@ export default function App() {
 
   const y = useTransform(scrollYProgress, [0, 1], [-5, -95]);
     return (
-      <div>
-        <div className="scroll-area">
-          <div ref={container} className="relative">
-            <Navbar />
-            <Hero />
-            <Home />
-            <About />
-            <Skills />
-            <Projects />
-          </div>
-          <Footer yval={y}/>
+      <div className="scroll-area">
+        <div ref={container} className="relative">
+          <Navbar />
+          <Hero />
+          <Home />
+          <About />
+          <Skills />
+          <Projects />
         </div>
+        <Footer yval={y}/>
       </div>
     );
 }
