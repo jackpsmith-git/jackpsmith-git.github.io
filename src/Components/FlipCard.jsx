@@ -89,8 +89,12 @@ export function FlipCard({
       onClick={() => setFlipped((v) => !v)}
     >
       <div style={innerStyle}>
-        <div style={frontStyle}>{frontContent}</div>
-        <div style={backStyle}>{backContent}</div>
+        <div style={frontStyle}>
+        {frontContent}
+        </div>
+        <div style={backStyle}>
+          {backContent}
+        </div>
       </div>
     </div>
   );

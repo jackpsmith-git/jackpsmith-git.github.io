@@ -11,7 +11,7 @@
 
   #hero .mask img {
     object-fit: cover;
-    height: 100%;
+    height: 100dvh;
   }
 }
 
@@ -63,8 +63,8 @@
 }
 
 #hero video {
-  width: 101%;
-  height: 101%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   object-position: center;
 }
