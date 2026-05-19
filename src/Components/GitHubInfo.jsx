@@ -11,7 +11,7 @@ export const GitHubInfo = ({
 }) => {
   return (
     <Float>
-      <div className="flex items-center gap-3 pb-4">
+      <div className="flex items-center gap-3 pb-4 w-full">
         <a
           href="https://github.com/jackpsmith-git"
           target="_blank"
@@ -28,10 +28,20 @@ export const GitHubInfo = ({
           href="https://github.com/jackpsmith-git"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-sm font-semibold hover:underline"
+          className="text-sm font-semibold hover:underline whitespace-nowrap flex-shrink-0"
         >
-          {username}
+          jackpsmith-git
         </a>
+
+        <div className="ml-auto shrink-0">
+          <img
+            src="assets/images/github.png"
+            className="brightness-0 invert"
+            width={30}
+            alt="github"
+          />
+        </div>
+
       </div>
       <div className="h-px w-full bg-white/10 mb-4" />
       <div className="grid grid-cols-4 gap-6 text-center">
@@ -70,8 +80,8 @@ export const GitHubInfo = ({
             organizations
           </span>
         </div>
-
       </div>
+
     </Float>
   );
 };

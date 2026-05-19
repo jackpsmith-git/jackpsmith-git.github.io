@@ -28,27 +28,21 @@ export function FlipCard({ repo, width = 300, height = 300 }) {
       >
 
         <div
-          className="border border-white/10"
+          className="
+            absolute inset-0
+            border border-white/10
+            rounded-[20px]
+            overflow-hidden
+            [backface-visibility:hidden]
+            bg-cover bg-center
+            text-white p-5
+            flex flex-col justify-between
+          "
           style={{
-            position: "absolute",
-            inset: 0,
-            borderRadius: 20,
-            overflow: "hidden",
-            backfaceVisibility: "hidden",
-            WebkitBackfaceVisibility: "hidden",
-
             backgroundImage: `
-              linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
+              linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)),
               url(${repo.image})
             `,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-
-            color: "white",
-            padding: 20,
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "space-between",
           }}
         >
           <a
@@ -61,10 +55,13 @@ export function FlipCard({ repo, width = 300, height = 300 }) {
             <ExternalButton size={28} />
           </a>
 
-          <div className="grid h-screen place-items-center">
-            <h2 className="m-0 justify-center text-center position-middle text-xl font-bold">{repo.name}</h2>
-            <div className="flex flex-wrap position-middle gap-[6px] mb-[10px]">
-              {repo.languages.slice(0, 5).map(lang => (
+          <div className="flex flex-1 flex-col items-center justify-center text-center">
+            <h2 className="m-0 text-xl font-bold">
+              {repo.name}
+            </h2>
+
+            <div className="mt-3 flex flex-wrap justify-center gap-[6px]">
+              {repo.languages.slice(0, 5).map((lang) => (
                 <span
                   key={lang}
                   style={{
@@ -81,46 +78,25 @@ export function FlipCard({ repo, width = 300, height = 300 }) {
           </div>
         </div>
 
-        <div
-          className="border border-white/10"
-          style={{
-            position: "absolute",
-            inset: 0,
-            borderRadius: 20,
-            overflow: "hidden",
-            backfaceVisibility: "hidden",
-            WebkitBackfaceVisibility: "hidden",
-            transform: "rotateY(180deg)",
-
-            background: "rgb(20, 20, 20)",
-            backdropFilter: "blur(14px)",
-            WebkitBackdropFilter: "blur(14px)",
-
-            color: "white",
-            padding: 20,
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "space-between",
-          }}
-        >
+        <div className="border border-white/10 text-center absolute inset-0 rounded-[20px] overflow-hidden [backface-visibility:hidden] [transform:rotateY(180deg)] bg-[rgb(20,20,20)] backdrop-blur-[14px] text-white p-5 flex flex-col justify-between">
           <a
             href={repo.url}
             target="_blank"
             rel="noopener noreferrer"
             onClick={(e) => e.stopPropagation()}
-            style={{ position: "absolute", top: 16, right: 16 }}
+            className="absolute top-4 right-4"
           >
             <ExternalButton size={28} />
           </a>
 
           <div>
-            <h2 style={{ margin: 0 }}>{repo.name}</h2>
-            <p style={{ marginTop: 12, lineHeight: 1.6 }}>
+            <h2 className="font-semibold mt-3">{repo.name}</h2>
+            <p className='mt-12 leading-[1.6]'>
               {repo.description}
             </p>
           </div>
 
-          <div>
+          <div className="mb-3">
             ★ {repo.stars} &nbsp; 👁 {repo.watchers} &nbsp; ⚠ {repo.issues}
           </div>
         </div>

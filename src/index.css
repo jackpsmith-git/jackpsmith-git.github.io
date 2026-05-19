@@ -1,12 +1,6 @@
 @import "tailwindcss";
 @config "../tailwind.config.js";
 
-.flex-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
 .flex-col {
   flex: 1;
   width: auto;
@@ -19,4 +13,15 @@
     flex: 1;
     min-width: 100%;
   }  
+}
+
+.react-terminal-wrapper,
+.react-terminal {
+  height: 100%;
+  overflow-y: auto;
+}
+
+.react-terminal-output {
+  max-height: 100%;
+  overflow-y: auto;
 }

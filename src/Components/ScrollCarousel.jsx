@@ -1,9 +1,8 @@
-import "./ScrollCarousel.css"
 import { motion, useTransform, useScroll, useMotionValueEvent } from "framer-motion"
 import { useRef, useState } from "react"
 import { useLatestRepos } from '../hooks/useLatestRepos.js'
 import { FlipCard } from './FlipCard.jsx'
-import { LANG_COLS } from '../Constants.js'
+import { LANG_COLS } from '../Constants.jsx'
 
 export const ScrollCarousel = () => {
   const repos = useLatestRepos();
@@ -26,14 +25,7 @@ export const ScrollCarousel = () => {
               { repos.map((repo) => (
                 <div
                   key={repo.name} 
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    background: "transparent",
-                    padding: 10,
-                    flex: "0 0 auto"
-                  }}
+                  className="flex items-center justify-center bg-transparent p-[10px] flex none"
                 >
                   <motion.div
                     className="origin-center will-change-transform"
@@ -60,11 +52,11 @@ export const ScrollCarousel = () => {
                 >
                   <div className="w-full h-full flex items-center justify-center text-white">
                     <a href="https://github.com/jackpsmith-git" target="_blank">
-                      <span className="see-all-span" style={{gap: 15}}>
+                      <span className="bg-black text-white flex flex-wrap items-center justify-center gap-[12px] text-center px-3 py-2 rounded-[30px] hover:invert">
                         <span>
-                          <h2 className="m-0">SEE ALL</h2>
+                          <h2 className="m-0 font-semibold text-lg">SEE ALL</h2>
                         </span>
-                        <span><img src="assets/icons/external.svg" style={{filter: "brightness(0) invert(1)" }}/></span>
+                        <span><img src="assets/icons/external.svg" className="brightness-0 invert"/></span>
                       </span>
                     </a>
                   </div>

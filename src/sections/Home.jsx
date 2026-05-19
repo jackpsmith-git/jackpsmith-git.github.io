@@ -2,16 +2,13 @@ import { Button } from '../components/Button.jsx'
 import { Float } from '../components/Float.jsx'
 import { GitHubInfo } from '../components/GitHubInfo.jsx'
 import { BentoGrid, BentoProject, BentoButton, BentoTile, BentoSkill, BentoHeading } from '../components/Bento.jsx'
-import { FEATURED_PROJECTS, LANG_COLS, SECTIONS } from "../Constants.js"
+import { FEATURED_PROJECTS, LANG_COLS, SECTIONS } from '../Constants.jsx'
+import { COMMANDS } from '../Commands.jsx'
 import { useGitHubUser } from '../hooks/useGitHubUser.js'
 import { ReactTerminal } from 'react-terminal'
 
 export const Home = () => {
   const user = useGitHubUser();
-  const commands = {
-    test: "Hello World!",
-    echo: (...args) => args.join(" "),
-  }
 
   return (
     <section
@@ -34,10 +31,10 @@ export const Home = () => {
           </BentoButton>
 
           <BentoTile size="xxl">
-            <div className="text-center py-[40px] px-[20px] text-sm">
-              <h1 className="text-xl font-bold">"You might not think that programmers are artists, but programming is an extremely creative profession."</h1>
-              <h3 className="m-0 mt-[5px]">- John Romero</h3>
-              <p className="m-0 text-gray-400">Co-Founder, id Software</p>
+            <div className="text-sm text-center py-[40px] px-[20px]">
+              <p className="text-xl font-bold">"You might not think that programmers are artists, but programming is an extremely creative profession."</p>
+              <p className="mt-[5px]">- John Romero</p>
+              <p className="text-gray-400">Co-Founder, id Software</p>
             </div>
           </BentoTile>
 
@@ -50,7 +47,7 @@ export const Home = () => {
           <BentoTile size='lg'>
             {user && (
               <p className="text-center px-[15px] font-semibold mx-10 p-[18px]">
-                {user.bio} Click on the 'Projects' tab in the upper right to browse my current and past projects, or navigate to the 'Skills' section to learn more about me.
+                {user.bio} Click on the 'Projects' tab to browse my current and past projects, or navigate to the 'Skills' section to learn more about me.
               </p>
             )}
           </BentoTile>
@@ -81,20 +78,44 @@ export const Home = () => {
             ))
           )}
 
-          <BentoTile size='xxl'>
-            <ReactTerminal 
-              commands = {commands}
-              themes = {{
-                "dark-mode": {
-                  themeBGColor: "transparent",
-                  themeColor: "#FFFEFC",
-                  themePromptColor: "#08e500"
-                }
-              }}
-              theme='dark-mode'
-              showControlBar={false}
-              welcomeMessage='commands: [clear][test][echo]'
-            />
+          <BentoTile size="xxl" minHeight='min-h-[300px]'>
+            <div className="w-full h-full flex-1 font-light text-xs">
+              <div className='w-full h-full'>
+                <div className="bg-black w-full px-4 py-1 rounded-t-xl flex items-center gap-2">
+                  <img
+                    src="/assets/images/terminal.png"
+                    className="h-4 w-4 object-contain brightness-100 invert"
+                    alt="terminal icon"
+                  />
+                  <p className="text-sm font-medium">Terminal</p>
+                </div>
+
+                <div id='terminal' className='flex-1 overflow-hidden whitespace-pre-wrap'>
+                  <ReactTerminal
+                    commands={COMMANDS}
+                    themes={{
+                      "dark-mode": {
+                        themeBGColor: "transparent",
+                        themeColor: "#FFFEFC",
+                        themePromptColor: "#08e500",
+                      },
+                    }}
+                    prompt={`JS https://jackpsmith.git-github.io >`}
+                    theme="dark-mode"
+                    showControlBar={false}
+                    errorMessage="Command not recognized."
+                    welcomeMessage={
+                      <div>
+                        https://jackpsmith.git-github.io
+                        <br />
+                        Terminal initialized...<br/>
+                        Run 'help' to view commands.
+                      </div>
+                    }
+                  />
+                </div>
+              </div>
+            </div>
           </BentoTile>
 
         </BentoGrid>
