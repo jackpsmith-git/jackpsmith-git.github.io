@@ -51,7 +51,7 @@ export const useLatestRepos = () => {
     };
 
     fetchRepos();
-  }, ["jackpsmith-git"]);
+  }, []);
 
   return repos;
 };

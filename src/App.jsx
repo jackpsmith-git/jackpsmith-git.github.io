@@ -1,13 +1,11 @@
-import { Navbar } from './components/Navbar.jsx';
-import { Hero } from './pages/Hero.jsx';
-import { Home } from './pages/Home.jsx';
-import { About } from './pages/About.jsx';
-import { Skills } from "./pages/Skills.jsx";
-import { Projects } from './pages/Projects.jsx'
-import { Footer } from "./components/Footer.jsx";
+import { useScroll, useTransform } from 'framer-motion'
+import { useRef } from 'react'
 
-import { useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
+import { Navbar } from './components/Navbar.jsx'
+import { Hero } from './sections/Hero.jsx'
+import { Home } from './sections/Home.jsx'
+import { Projects } from './sections/Projects.jsx'
+import { Footer } from './components/Footer.jsx'
 
 export default function App() {
 
@@ -19,13 +17,11 @@ export default function App() {
 
   const y = useTransform(scrollYProgress, [0, 1], [-5, -95]);
     return (
-      <div className="scroll-area">
+      <div className="relative z-10">
         <div ref={container} className="relative">
           <Navbar />
           <Hero />
           <Home />
-          <About />
-          <Skills />
           <Projects />
         </div>
         <Footer yval={y}/>

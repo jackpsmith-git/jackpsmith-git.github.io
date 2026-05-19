@@ -1,100 +1,130 @@
 import { useState } from "react";
+import { ExternalButton } from "./ExternalButton";
+import { LANG_COLS } from "../Constants";
 
-export function FlipCard({
-  frontContent,
-  backContent,
-  width = 300,
-  height = 200,
-  borderRadius = 20,
-  perspective = 1200,
-  flipDuration = 600,
-  style = {},
-}) {
+export function FlipCard({ repo, width = 300, height = 300 }) {
   const [flipped, setFlipped] = useState(false);
-
-  const containerStyle = {
-    width,
-    height,
-    perspective,
-    cursor: "pointer",
-    position: "relative",
-    overflow: "visible",
-    backgroundColor: "transparent",
-    ...style,
-  };
-
-  const innerStyle = {
-    width: "100%",
-    height: "100%",
-    position: "relative",
-    WebkitTransformStyle: "preserve-3d",
-    transition: `transform ${flipDuration}ms cubic-bezier(0.22, 1, 0.36, 1)`,
-    transform: flipped
-      ? "translateZ(0) rotateY(180deg)"
-      : "translateZ(0) rotateY(0deg)",    
-    willChange: "transform",
-  };
-
-  const sideStyle = {
-    position: "absolute",
-    inset: 0,
-    width: "100%",
-    height: "100%",
-    backfaceVisibility: "hidden",
-    WebkitBackfaceVisibility: "hidden",
-    transformStyle: "preserve-3d",
-    WebkitTransformStyle: "preserve-3d",
-    outline: "1px solid transparent",
-    borderRadius,
-    overflow: "hidden",
-    display: "flex",
-    flexDirection: "column",
-    boxSizing: "border-box",
-  };
-
-  const frontStyle = {
-    ...sideStyle,
-    transform: "rotateY(0deg) translateZ(0.1px)",
-    background: "#ffffff",
-    color: "#111",
-    border: "1px solid rgba(0,0,0,0.08)",
-    boxShadow: "0 10px 30px rgba(0,0,0,0.12)",
-  };
-
-  const backStyle = {
-    ...sideStyle,
-    transform: "rotateY(180deg) translateZ(0.1px)",
-    background: "#111827",
-    color: "#fff",
-    border: "1px solid rgba(255,255,255,0.08)",
-    boxShadow: "0 10px 30px rgba(0,0,0,0.18)",
-    
-    color: '#fff',
-
-    background: 'rgba(20, 20, 20, 0.55)',
-    WebkitBackdropFilter: blur('14px'),
-    backdropFilter: blur('14px'),
-
-    border: "1px solid rgba(255, 255, 255, 0.12)",
-
-    boxShadow: "0px 0px 0px rgba(0, 0, 0, 0.0)",
-
-    minHeight: '100%',
-    cursor: 'pointer',
-  };
 
   return (
     <div
-      style={containerStyle}
-      onClick={() => setFlipped((v) => !v)}
+      onClick={() => setFlipped(v => !v)}
+      style={{
+        width,
+        height,
+        perspective: 1200,
+        cursor: "pointer",
+      }}
     >
-      <div style={innerStyle}>
-        <div style={frontStyle}>
-        {frontContent}
+      <div
+        style={{
+          width: "100%",
+          height: "100%",
+          position: "relative",
+          transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)",
+          transition: "transform 600ms cubic-bezier(0.22, 1, 0.36, 1)",
+          transformStyle: "preserve-3d",
+          willChange: "transform",
+        }}
+      >
+
+        <div
+          className="border border-white/10"
+          style={{
+            position: "absolute",
+            inset: 0,
+            borderRadius: 20,
+            overflow: "hidden",
+            backfaceVisibility: "hidden",
+            WebkitBackfaceVisibility: "hidden",
+
+            backgroundImage: `
+              linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
+              url(${repo.image})
+            `,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+
+            color: "white",
+            padding: 20,
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-between",
+          }}
+        >
+          <a
+            href={repo.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()}
+            style={{ position: "absolute", top: 16, right: 16 }}
+          >
+            <ExternalButton size={28} />
+          </a>
+
+          <div className="grid h-screen place-items-center">
+            <h2 className="m-0 justify-center text-center position-middle text-xl font-bold">{repo.name}</h2>
+            <div className="flex flex-wrap position-middle gap-[6px] mb-[10px]">
+              {repo.languages.slice(0, 5).map(lang => (
+                <span
+                  key={lang}
+                  style={{
+                    fontSize: 12,
+                    padding: "2px 6px",
+                    borderRadius: 4,
+                    background: LANG_COLS[lang] || "#000",
+                  }}
+                >
+                  {lang}
+                </span>
+              ))}
+            </div>
+          </div>
         </div>
-        <div style={backStyle}>
-          {backContent}
+
+        <div
+          className="border border-white/10"
+          style={{
+            position: "absolute",
+            inset: 0,
+            borderRadius: 20,
+            overflow: "hidden",
+            backfaceVisibility: "hidden",
+            WebkitBackfaceVisibility: "hidden",
+            transform: "rotateY(180deg)",
+
+            background: "rgb(20, 20, 20)",
+            backdropFilter: "blur(14px)",
+            WebkitBackdropFilter: "blur(14px)",
+
+            color: "white",
+            padding: 20,
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-between",
+          }}
+        >
+          <a
+            href={repo.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()}
+            style={{ position: "absolute", top: 16, right: 16 }}
+          >
+            <ExternalButton size={28} />
+          </a>
+
+          <div>
+            <h2 style={{ margin: 0 }}>{repo.name}</h2>
+            <p style={{ marginTop: 12, lineHeight: 1.6 }}>
+              {repo.description}
+            </p>
+          </div>
+
+          <div>
+            ★ {repo.stars} &nbsp; 👁 {repo.watchers} &nbsp; ⚠ {repo.issues}
+          </div>
         </div>
+
       </div>
     </div>
   );

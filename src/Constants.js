@@ -40,3 +40,63 @@ export const LANG_COLS = {
   "OpenGL" : '#0B6623',
   "GLSL" : '#25ad49'
 };
+
+const PROGRAMMING_LANGUAGES = {
+  "C/C++" : "assets/images/cpp.png",
+  "Python" : "assets/images/python.png",
+  "Java" : "assets/images/java.png",
+  "C#" : "assets/images/csharp.png",
+  "JavaScript" : "assets/images/javascript.png",
+  "HTML" : "assets/images/html.png",
+  "CSS" : "assets/images/css.png",
+  "Lua" : "assets/images/lua.png",
+  "PHP" : "assets/images/php.png",
+}
+
+const FRAMEWORKS = {
+  "OpenGL" : "assets/images/opengl.png",
+  "Vulkan" : "assets/images/vulkan.png",
+  "React" : "assets/images/react.png",
+  "Bootstrap" : "assets/images/bootstrap.png",
+  "Tailwind" : "assets/images/tailwind.png",
+  ".NET" : "assets/images/dotnet-logo.png",
+  "node.js" : "assets/images/nodejs.png",
+  "Three.js" : "assets/images/threejs.png",
+  "FastAPI" : "assets/images/FastAPI.png",
+  "Qt" : "assets/images/qt.png",
+}
+
+const DEVTOOLS = {
+  "VS 2022" : "assets/images/visualstudio.png",
+  "VS Code" : "assets/images/vscode.png",
+  "Git" : "assets/images/git.png",
+  "GitHub" : "assets/images/github.png",
+  "Claude" : "assets/images/claude-color.png",
+  "Unity" : "assets/images/unity.png",
+  "Unreal"  : "assets/images/unreal.png",
+  "Docker" : "assets/images/docker.png",
+  "MySQL" : "assets/images/mysql.png",
+  "CMake" : "assets/images/cmake.png",
+}
+
+const CREATIVE_TOOLS = {
+  "Photoshop" : "assets/images/photoshop.png",
+  "Illustrator" : "assets/images/illustrator.png",
+  "Figma" : "assets/images/figma.png"
+}
+
+const OPERATING_SYSTEMS = {
+  "Windows" : "assets/images/windows.png",
+  "Unix/Linux" : "assets/images/linux.png",
+  "MacOS" : "assets/images/apple.png",
+  "iOS" : "assets/images/apple.png",
+  "Android" : "assets/images/android.png",
+}
+
+export const SECTIONS = {
+  "Programming Languages" : PROGRAMMING_LANGUAGES,
+  "Frameworks/Libraries" : FRAMEWORKS,
+  "Development Tools" : DEVTOOLS,
+  "Creative Tools" : CREATIVE_TOOLS,
+  "Operating Systems" : OPERATING_SYSTEMS,
+}

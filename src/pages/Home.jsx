@@ -3,7 +3,7 @@ import { useMemo, useState, Suspense } from "react";
 import { useGLTF } from "@react-three/drei";
 import { Float } from '../components/Float.jsx';
 import { Button } from '../components/Button.jsx';
-import { FeaturedCard } from '../components/FeaturedCard.jsx';
+import { BentoProject } from '../components/FeaturedCard.jsx';
 import { FEATURED_PROJECTS, LANG_COLS } from '../Constants.js';
 
 
@@ -15,7 +15,7 @@ return (
         {FEATURED_PROJECTS.map(({ name, languages, description, image, link }) => (
           <div className="flex-col" key={name}>
             <Float>
-              <FeaturedCard href={link}>
+              <BentoProject href={link}>
                 <img src={image} alt={name} width="100%" />
                 <h3 className="featured-card-header">{name}</h3>
                 <span className="languages-span" style={{marginBottom: 15}}>
@@ -33,7 +33,7 @@ return (
                 </span>
                 <hr />
                 <p className="featured-card-description">{description}</p>
-              </FeaturedCard>
+              </BentoProject>
             </Float>
           </div>
         ))}
