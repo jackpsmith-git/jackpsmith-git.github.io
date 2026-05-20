@@ -57,7 +57,6 @@ export const ThemeToggle = () => {
         dark:shadow-[0_8px_30px_rgba(0,0,0,0.6)]
       "
     >
-      {/* ambient ripple */}
       <span
         className={`
           absolute inset-0 rounded-full
@@ -67,7 +66,6 @@ export const ThemeToggle = () => {
         `}
       />
 
-      {/* inner orb */}
       <div
         className={`
           relative w-full h-full flex items-center justify-center

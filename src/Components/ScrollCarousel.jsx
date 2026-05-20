@@ -56,7 +56,7 @@ export const ScrollCarousel = () => {
             <a href="https://github.com/jackpsmith-git" target="_blank">
               <div
                 style={{ width: cardWidth, height: cardWidth }}
-                className=" bg-[linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6))] dark:bg-black text-white font-semibold rounded-[20px] flex items-center justify-center"
+                className=" bg-[linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6))] dark:bg-black text-white font-semibold rounded-[20px] flex items-center justify-center transition-colors duration-700 ease-in-out"
               >
                 SEE ALL →
               </div>
