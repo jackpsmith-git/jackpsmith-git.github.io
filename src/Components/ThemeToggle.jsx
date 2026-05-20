@@ -3,32 +3,21 @@ import { useState } from "react"
 
 const SunCore = () => (
   <div className="relative flex items-center justify-center scale-80">
-
-    {/* rays (slightly larger) */}
     <div className="absolute w-12 h-12 opacity-60">
       <svg viewBox="0 0 100 100" className="w-full h-full text-yellow-400">
         <g stroke="currentColor" strokeWidth="3" strokeLinecap="round">
-
-          {/* main axes */}
           <line x1="50" y1="2"  x2="50" y2="16" />
           <line x1="50" y1="84" x2="50" y2="98" />
           <line x1="2"  y1="50" x2="16" y2="50" />
           <line x1="84" y1="50" x2="98" y2="50" />
-
-          {/* diagonals */}
           <line x1="20" y1="20" x2="32" y2="32" />
           <line x1="68" y1="68" x2="80" y2="80" />
           <line x1="20" y1="80" x2="32" y2="68" />
           <line x1="68" y1="32" x2="80" y2="20" />
-
         </g>
       </svg>
     </div>
-
-    {/* glow */}
     <div className="absolute w-6 h-6 bg-yellow-400 rounded-full blur-md opacity-70" />
-
-    {/* core */}
     <div className="relative z-10 w-3.5 h-3.5 bg-yellow-300 rounded-full" />
   </div>
 )

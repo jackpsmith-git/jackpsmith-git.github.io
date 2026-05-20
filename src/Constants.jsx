@@ -7,6 +7,13 @@ export const FEATURED_PROJECTS = [
     "link" : "https://www.github.com/jackpsmith-git/Cataclysm"
   },
   {
+    "name" : "React Portfolio",
+    "languages" : ["JavaScript", "React", "Tailwind", "HTML", "CSS"],
+    "description" : "Modern, responsive portfolio powered by React and Tailwind",
+    "image" : "./assets/images/portfolioscreenshot.png",
+    "link" : "https://github.com/jackpsmith-git/jackpsmith-git.github.io"
+  },
+  {
     "name" : "Shader Sandbox",
     "languages" : ["C", "C++", "OpenGL", "GLSL"],
     "description" : "Portable Windows tool for testing GLSL shaders",
@@ -20,6 +27,13 @@ export const FEATURED_PROJECTS = [
     "image" : './assets/images/PointCloudRenderer.png',
     "link" : 'https://www.github.com/jackpsmith-git/PointCloudRenderer'
   },
+  {
+    "name" : "Forge Password Management Utility",
+    "languages" : ["C#", "WinForms"],
+    "description" : 'Offline password manager with secure encryption',
+    "image" : './assets/images/forge.png',
+    "link" : 'https://www.github.com/jackpsmith-git/Forge'
+  },
 ]
 
 export const LANG_COLS = {
@@ -28,7 +42,7 @@ export const LANG_COLS = {
   "C++" : '#041e42',
   "Objective-C++" : '#041e42',
   "C#": '#68217A',
-  "JavaScript": 'darkorange',
+  "JavaScript": '#833e2c',
   "Python": '#0B6623',
   "Lua": '#6e6a39',
   "Batchfile" : "#000000",
@@ -38,7 +52,10 @@ export const LANG_COLS = {
   "Java" : '#007396',
   "Vulkan" : '#E34C26',
   "OpenGL" : '#0B6623',
-  "GLSL" : '#25ad49'
+  "GLSL" : '#25ad49',
+  "React" : '#3a0bd4',
+  "Tailwind" : '#9b1111',
+  "WinForms" : '#5d2626'
 };
 
 const PROGRAMMING_LANGUAGES = {

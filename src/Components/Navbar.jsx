@@ -45,6 +45,7 @@ export const Navbar = () => {
           <a className="hover:bg-white/10 px-3 py-1 rounded-full transition" href="#about">About</a>
           <a className="hover:bg-white/10 px-3 py-1 rounded-full transition" href="#skills">Skills</a>
           <a className="hover:bg-white/10 px-3 py-1 rounded-full transition" href="#projects">Projects</a>
+          <a className="hover:bg-white/10 px-3 py-1 rounded-full transition" href="#widgets">Widgets</a>
           <a className="hover:bg-white/10 px-3 py-1 rounded-full transition" href="#contact">Contact</a>
         </nav>
       </div>

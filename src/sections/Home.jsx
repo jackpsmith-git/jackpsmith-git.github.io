@@ -1,10 +1,13 @@
 import { Float } from '../components/Float.jsx'
 import { GitHubInfo } from '../components/GitHubInfo.jsx'
 import { BentoGrid, BentoProject, BentoButton, BentoTile, BentoSkill, BentoHeading } from '../components/Bento.jsx'
+import { BouncyOrb } from '../components/BouncyOrb.jsx'
 import { FEATURED_PROJECTS, LANG_COLS, SECTIONS } from '../Constants.jsx'
 import { COMMANDS } from '../Commands.jsx'
 import { useGitHubUser } from '../hooks/useGitHubUser.js'
 import { ReactTerminal } from 'react-terminal'
+import { TicTacToe } from '../components/TicTacToe.jsx'
+import { GameOfLife } from '../components/GameOfLife.jsx'
 
 export const Home = () => {
   const user = useGitHubUser();
@@ -14,22 +17,10 @@ export const Home = () => {
       id="home"
       className="relative z-10 bg-transparent bg-fixed text-white p-6 scroll-mt-[80px]"
     >
-      <div className="max-w-[1000px] mx-auto">
+      <div className="max-w-[1000px] mx-auto mb-[120px]">
         <BentoGrid>
-          
-          {FEATURED_PROJECTS.map((project) => (
-            <BentoProject
-              key={project.name}
-              {...project}
-              langColors={LANG_COLS}
-            />
-          ))}
 
-          <BentoButton link='#projects' target="_self" rel="">
-            <h3>See More</h3>
-          </BentoButton>
-
-          <BentoTile size="xxl">
+          <BentoTile size="lg">
             <div className="text-sm text-center py-[40px] px-[20px]">
               <p className="text-xl font-bold">"You might not think that programmers are artists, but programming is an extremely creative profession."</p>
               <p className="mt-[5px]">- John Romero</p>
@@ -43,7 +34,7 @@ export const Home = () => {
             <img src="./assets/images/headshot.jpeg" alt="Headshot" className='p-5'/>
           </BentoTile>
           
-          <BentoTile size='lg'>
+          <BentoTile size='md'>
             {user && (
               <p className="text-center px-[15px] font-semibold mx-10 p-[18px]">
                 {user.bio} Click on the 'Projects' tab to browse my current and past projects, or navigate to the 'Skills' section to learn more about me.
@@ -51,7 +42,7 @@ export const Home = () => {
             )}
           </BentoTile>
 
-          <BentoTile size="xxl">
+          <BentoTile size="lg">
             <div className=" rounded-xl p-[18px] mx-auto w-fit">
               <p className="px-[15px] mb-0"><strong>Pace University, Seidenberg School of Computer Science and Information Systems</strong> | Pleasantville, NY</p>
               <div className="px-[15px] my-0">Bachelor of Science (BS) in Computer Science</div>
@@ -63,7 +54,7 @@ export const Home = () => {
             </div>
           </BentoTile>
 
-          <BentoTile size='xxl' className='px-[18px] py-[18px]'>
+          <BentoTile size='lg' className='px-[18px] py-[18px]'>
             {user && (
               <GitHubInfo username = {user.username} avatar={user.avatar} followingCount={user.followingCount} followersCount={user.followersCount} starredReposCount={user.starredReposCount} organizationsCount={user.organizationsCount}/>
             )}
@@ -77,7 +68,43 @@ export const Home = () => {
             ))
           )}
 
-          <BentoTile size="xxl" minHeight='min-h-[300px]'>
+          <BentoHeading id='projects' name='All Projects'/>
+
+          {FEATURED_PROJECTS.map((project) => (
+            <BentoProject
+              key={project.name}
+              {...project}
+              langColors={LANG_COLS}
+            />
+          ))}
+
+          <BentoHeading id='widgets' name='Fun Stuff'/>
+
+          <BentoTile size="md" minHeight='min-h-[300px]'>
+            <div className="w-full h-full p-1">
+              <div className="w-full h-full bg-white dark:bg-black rounded-lg transition-colors duration-700 ease-in-out">
+                <BouncyOrb />
+              </div>
+            </div>
+          </BentoTile>
+
+          <BentoTile size="sm" minHeight='min-h-[300px]'>
+            <div className="w-full h-full p-1">
+              <div className="w-full h-full bg-white dark:bg-black rounded-lg transition-colors duration-700 ease-in-out">
+                <TicTacToe />
+              </div>
+            </div>
+          </BentoTile>
+
+          <BentoTile size="sm" minHeight='min-h-[300px]'>
+            <div className="w-full h-full p-1">
+              <div className="w-full h-full bg-white dark:bg-black rounded-lg transition-colors duration-700 ease-in-out">
+                <GameOfLife />
+              </div>
+            </div>
+          </BentoTile>
+
+          <BentoTile size="md" minHeight='min-h-[300px]'>
             <div className="w-full h-full flex-1 font-light text-xs">
               <div className='w-full h-full'>
                 <div className="dark:bg-transparent w-full px-4 py-1 rounded-t-xl flex items-center gap-2">

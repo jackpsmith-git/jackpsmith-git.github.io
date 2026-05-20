@@ -23,8 +23,8 @@ export default function App() {
           <Navbar />
           <Hero />
           <div className='bg-gradient-to-b from-white dark:from-black to-purple-950/80 dark:to-purple-950/60 bg-contain bg-center'>
-            <Home />
             <Projects />
+            <Home />
           </div>
           <Footer/>
           <ThemeToggle />
