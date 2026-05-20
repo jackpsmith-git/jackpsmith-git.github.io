@@ -18,11 +18,11 @@ export default function App() {
 
   const y = useTransform(scrollYProgress, [0, 1], [-5, -95]);
     return (
-      <div className="relative z-10 min-h-screen dark:bg-black bg-white">
+      <div className="relative z-10 min-h-screen dark:bg-black bg-white transition-colors duration-700">
         <div ref={container} className="relative">
           <Navbar />
           <Hero />
-          <div className='bg-gradient-to-b from-white dark:from-black to-purple-950/100 bg-contain bg-center'>
+          <div className='bg-gradient-to-b from-white dark:from-black to-purple-950/80 dark:to-purple-950/60 bg-contain bg-center'>
             <Home />
             <Projects />
           </div>
