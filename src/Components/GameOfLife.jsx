@@ -1,4 +1,8 @@
 import { useEffect, useRef, useState } from "react"
+import PlayArrowRoundedIcon from '@mui/icons-material/PlayArrowRounded'
+import PauseRoundedIcon from '@mui/icons-material/PauseRounded'
+import ShuffleRoundedIcon from '@mui/icons-material/ShuffleRounded'
+import ReplayRoundedIcon from '@mui/icons-material/ReplayRounded'
 
 const ROWS = 24
 const COLS = 24
@@ -99,34 +103,43 @@ export const GameOfLife = () => {
           <button
             onClick={() => setRunning(v => !v)}
             className="
-              flex-1 text-xs px-2 py-1 rounded-md
+              flex-1 flex items-center justify-center
+              py-1 rounded-md
               bg-black text-white
-              dark:bg-white dark:text-black transition-colors duration-700 ease-in-out
+              dark:bg-white dark:text-black
+              transition-colors duration-700 ease-in-out
             "
           >
-            {running ? "Pause" : "Start"}
+            {running
+              ? <PauseRoundedIcon fontSize="small" />
+              : <PlayArrowRoundedIcon fontSize="small" />
+            }
           </button>
 
           <button
             onClick={randomize}
             className="
-              flex-1 text-xs px-2 py-1 rounded-md
+              flex-1 flex items-center justify-center
+              py-1 rounded-md
               border border-black/10 dark:border-white/10
-              text-black dark:text-white transition-colors duration-700 ease-in-out
+              text-black dark:text-white
+              transition-colors duration-700 ease-in-out
             "
           >
-            Random
+            <ShuffleRoundedIcon fontSize="small" />
           </button>
 
           <button
             onClick={clear}
             className="
-              flex-1 text-xs px-2 py-1 rounded-md
+              flex-1 flex items-center justify-center
+              py-1 rounded-md
               border border-black/10 dark:border-white/10
-              text-black dark:text-white transition-colors duration-700 ease-in-out
+              text-black dark:text-white
+              transition-colors duration-700 ease-in-out
             "
           >
-            Clear
+            <ReplayRoundedIcon fontSize="small" />
           </button>
 
         </div>

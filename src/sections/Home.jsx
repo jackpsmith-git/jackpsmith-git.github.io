@@ -80,7 +80,7 @@ export const Home = () => {
 
           <BentoHeading id='widgets' name='Fun Stuff'/>
 
-          <BentoTile size="md" minHeight='min-h-[300px]'>
+          <BentoTile size="sm" minHeight='min-h-[300px]'>
             <div className="w-full h-full p-1">
               <div className="w-full h-full bg-white dark:bg-black rounded-lg transition-colors duration-700 ease-in-out">
                 <BouncyOrb />
@@ -104,7 +104,7 @@ export const Home = () => {
             </div>
           </BentoTile>
 
-          <BentoTile size="md" minHeight='min-h-[300px]'>
+          <BentoTile size="lg" minHeight='min-h-[300px]'>
             <div className="w-full h-full flex-1 font-light text-xs">
               <div className='w-full h-full'>
                 <div className="dark:bg-transparent w-full px-4 py-1 rounded-t-xl flex items-center gap-2">
