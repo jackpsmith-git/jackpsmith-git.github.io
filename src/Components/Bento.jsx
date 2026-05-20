@@ -3,7 +3,7 @@ import { Float } from './Float.jsx'
 const sizeClasses = {
   xs: "col-span-3 sm:col-span-2 md:col-span-1",
   sm: "col-span-3 sm:col-span-2",
-  md: "col-span-3 sm:col-span-4 md:col-span-4",
+  md: "col-span-3 sm:col-span-4 md:col-span-4 sm:text-lg text-sm",
   lg: "col-span-6 sm:col-span-6 md:col-span-6",
 }
 
@@ -12,10 +12,10 @@ export const BentoGrid = ({children, className=""}) => {
     <div className={`
     ${className}
     items-stretch justify-center
-    max-w-[1000px] mx-auto px-4 sm:px-6 lg:px-10
+    max-w-[1000px] mx-auto
+    px-4 sm:px-6 lg:px-10
     grid gap-4
-
-    grid-cols-[repeat(6,minmax(80px,1fr))]
+    grid-cols-[repeat(6,minmax(0,1fr))]
   `}>
       {children}
     </div>
@@ -50,7 +50,7 @@ export const BentoTile = ({
   return (
     <Float
       id={id}
-      className={`${className} ${sizeClasses[size]} ${minHeight} border border-white/10 bg-[rgba(20,20,20,0.55)] hover:bg-[rgba(20,20,20,0.99)] rounded-xl scale-100 transition-all duration-200 ease-in-out hover:scale-105 hover:shadow-[4px_4px_12px_rgba(0,0,0,0.3)]`}
+      className={`${className} ${sizeClasses[size]} ${minHeight} min-w-0 border border-white/10 bg-[rgba(20,20,20,0.55)] hover:bg-[rgba(20,20,20,0.99)] rounded-xl scale-100 transition-all duration-200 ease-in-out hover:scale-105 hover:shadow-[4px_4px_12px_rgba(0,0,0,0.3)]`}
     >
       <div className="h-full w-full flex items-center justify-center">
         {children}
