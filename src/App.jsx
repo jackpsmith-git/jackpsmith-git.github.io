@@ -17,14 +17,16 @@ export default function App() {
 
   const y = useTransform(scrollYProgress, [0, 1], [-5, -95]);
     return (
-      <div className="relative z-10">
+      <div className="relative z-10 min-h-screen bg-black">
         <div ref={container} className="relative">
           <Navbar />
           <Hero />
-          <Home />
-          <Projects />
+          <div className='bg-gradient-to-b from-to-zinc-950 to-purple-950/20 bg-contain bg-center'>
+            <Home />
+            <Projects />
+          </div>
+          <Footer/>
         </div>
-        <Footer yval={y}/>
       </div>
     );
 }

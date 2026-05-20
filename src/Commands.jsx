@@ -1,31 +1,75 @@
-import { SECTIONS } from './Constants.jsx'
+import { SECTIONS, FEATURED_PROJECTS } from './Constants.jsx'
 
 const FILESYSTEM = {
   name: "jackpsmith-git",
   type: "dir",
   children: {
-    images: {
-      name: "images",
+
+    hero: {
+      name: "hero",
       type: "dir",
       children: {
-        "headshot.jpeg": {
+        "HeroVideo.mp4" : {
+          name: "HeroVideo.mp4",
+          type: "video",
+          src: "/assets/videos/HeroVideo.mp4"
+        },
+        "title.txt" : {
+          name: "title.txt",
+          type: "text",
+          content: "Jack P Smith - Software Developer"
+        },
+      }
+    },
+
+    home: {
+      name: "home",
+      type: "dir",
+      children: {
+        "Cataclysm.png" : {
+          name: "Cataclysm.png",
+          type: "image",
+          src: "/assets/images/Cataclysm.png"
+        },
+        "ShaderSandbox.png" : {
+          name: "ShaderSandbox.png",
+          type: "image",
+          src: "/assets/images/ShaderSandbox.png"
+        },
+        "PointCloudRenderer.png" : {
+          name: "PointCloudRenderer.png",
+          type: "image",
+          src: "/assets/images/PointCloudRenderer.png"
+        },
+      }
+    },
+
+    about : {
+      name: "about",
+      type: "dir",
+      children: {
+        "bio.txt" : {
+          name: "bio.txt",
+          type: "text",
+          content: "Hi, I'm Jack! I am currently a student at Pace University pursuing a Bachelor of Science in Computer Science. Click on the 'Projects' tab to browse my current and past projects, or navigate to the 'Skills' section to learn more about me.",
+        },
+        "headshot.jpeg" : {
           name: "headshot.jpeg",
           type: "image",
           src: "/assets/images/headshot.jpeg",
         },
-      },
+        "quote.txt" : {
+          name: "quote.txt",
+          type: "text",
+          content: '\"You might not think that programmers are artists, but programming is an extremely creative profession.\" - John Romero, Co-Founder, id Software',
+        },
+      }
     },
 
-    icons: {
-      name: "icons",
-      type: "dir",
-      children: {
-        "favicon.svg": {
-          name: "favicon.svg",
-          type: "image",
-          src: "/assets/icons/favicon.svg",
-        },
-      },
+    "favicon.svg": {
+      name: "favicon.svg",
+      type: "image",
+      src: "/assets/icons/favicon.svg",
     },
 
     "helloworld.txt": {
@@ -46,6 +90,13 @@ const colorize = (node) => {
       );
 
     case "image":
+      return (
+        <span className="text-green-400">
+          {node.name}
+        </span>
+      );
+
+    case "video":
       return (
         <span className="text-green-400">
           {node.name}
@@ -249,14 +300,6 @@ const SKILLS = () => (
 
 const ECHO = async (...args) => args.join(" ")
 
-const GITHUB = async () => {
-  window.open("https://github.com/jackpsmith-git")
-}
-
-const LINKEDIN = async () => {
-  window.open("https://www.linkedin.com/in/jackpetersmith")
-}
-
 const EMAIL = async () => {
   window.open("mailto:jpsmith8603@gmail.com")
 }
@@ -270,39 +313,25 @@ const GOTO = async (section) => {
   element?.scrollIntoView({ behavior: "smooth", block: "start" })
 }
 
-const HEADSHOT = (
-  <img src="assets/images/headshot.jpeg" alt="headshot" width={100}/>
-)
-
 const HELP = (
   <p>
-    [about]
     [cd]
     [clear]
+    [coinflip]
     [contact]
     [echo {"<string>"}]
     [email]
     [favicon]
-    [github]
     [goto {"<section>"}]
-    [headshot]
-    [helloworld]
     [help]
-    [linkedin]
     [ls]
-    [nuget]
     [pwd]
     [run {"<file>"}]
     [skills]
     [socials]
     [tree {"<directory>"}]
-    [whoami]
   </p>
 )
-
-const NUGET = async () => {
-  window.open("https://www.nuget.org/profiles/jackpsmith");
-}
 
 const SOCIALS = (
   <div>
@@ -315,8 +344,6 @@ const SOCIALS = (
 )
 
 const SUDO = async () => "root privileges denied"
-
-const WHOAMI = "Jack P Smith - Software Developer, Game Developer, Full-Stack Web Developer"
 
 const RUN = (args = "") => {
   const input = args.trim();
@@ -348,7 +375,18 @@ const RUN = (args = "") => {
       <img
         src={node.src}
         alt={node.name}
-        className="max-w-xs rounded"
+        className="max-w-xs"
+      />
+    );
+  }
+
+  if (node.type === "video") {
+    return (
+      <video
+        src={node.src}
+        alt={node.name}
+        className="max-w-xs"
+        autoPlay muted loop playsInline
       />
     );
   }
@@ -364,27 +402,22 @@ const RUN = (args = "") => {
   return `run: unsupported file type: ${node.type}`;
 };
 
-const ABOUT = "Hi, I'm Jack! I am currently a student at Pace University pursuing a Bachelor of Science in Computer Science. Click on the 'Projects' tab to browse my current and past projects, or navigate to the 'Skills' section to learn more about me."
+const COINFLIP = () => (Math.random() < 0.5 ? "heads" : "tails")
 
 export const COMMANDS = {
-  about: ABOUT,
   cd: CD,
+  coinflip: COINFLIP,
   contact: CONTACT,
   echo: ECHO,
   email: EMAIL,
   favicon: FAVICON,
-  github: GITHUB,
   goto: GOTO,
-  headshot: HEADSHOT,
   help: HELP,
-  linkedin: LINKEDIN,
   ls: LS,
-  nuget: NUGET,
   pwd: PWD,
   run: RUN,
   skills: SKILLS,
   socials: SOCIALS,
   sudo: SUDO,
   tree: TREE,
-  whoami: WHOAMI,
 }

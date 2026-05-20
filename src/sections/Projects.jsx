@@ -1,9 +1,8 @@
-import { Button } from '../components/Button.jsx';
 import { ScrollCarousel } from "../components/ScrollCarousel.jsx";
 
 export const Projects = () => {
   return (
-  <div id="projects" className='flex justify-center p-6 pb-0 mt-0 mb-0 scroll-mt-20 relative z-10 bg-black'>
+  <div id="projects" className='flex justify-center p-6 pb-0 mt-0 mb-0 scroll-mt-20 relative z-10 bg-transparent'>
     <div className="max-w-[1000px] mx-auto px-10 py-5 bg-transparent">
       <div>
         <ScrollCarousel />

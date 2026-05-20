@@ -1,71 +1,71 @@
-import { motion, useTransform, useScroll, useMotionValueEvent } from "framer-motion"
-import { useRef, useState } from "react"
-import { useLatestRepos } from '../hooks/useLatestRepos.js'
-import { FlipCard } from './FlipCard.jsx'
-import { LANG_COLS } from '../Constants.jsx'
+import { useRef, useLayoutEffect } from "react"
+import gsap from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { useLatestRepos } from "../hooks/useLatestRepos.js"
+import { FlipCard } from "./FlipCard.jsx"
+
+gsap.registerPlugin(ScrollTrigger)
 
 export const ScrollCarousel = () => {
-  const repos = useLatestRepos();
-  const targetRef = useRef(null);
+  const repos = useLatestRepos()
+  const sectionRef = useRef(null)
+  const trackRef = useRef(null)
 
-  const { scrollYProgress } = useScroll({
-    target: targetRef,
-    offset: ["center center", "end start"]
-  });
+  const cardWidth = 320
+  const gap = 16
 
-  const scale = useTransform(scrollYProgress, [0, 0.5, 1], [0.85, 1, 0.9]);
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-100%"]);
-  const cardWidth = 320;
+  useLayoutEffect(() => {
+    const track = trackRef.current
+
+    const totalX = (repos.length + 1) * (cardWidth + gap)
+
+    const ctx = gsap.context(() => {
+      gsap.to(track, {
+        x: -totalX,
+        ease: "none",
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top top",
+          end: () => `+=${totalX}`,
+          scrub: 1,
+          pin: true
+        }
+      })
+    }, sectionRef)
+
+    return () => ctx.revert()
+  }, [repos])
 
   return (
-    <div>
-      <section ref={targetRef} className="relative h-[300vh] w-auto">
-        <div className="sticky top-0 flex h-screen items-center overflow-hidden">
-            <motion.div style={{ x }} className="flex gap-4 pl-[50vw] pr-[50vw]">
-              { repos.map((repo) => (
-                <div
-                  key={repo.name} 
-                  className="flex items-center justify-center bg-transparent p-[10px] flex none"
-                >
-                  <motion.div
-                    className="origin-center will-change-transform"
-                    initial={{ scale: 0.85, opacity: 0.6 }}
-                    whileInView={{ scale: 1, opacity: 1 }}
-                    viewport={{ amount: 0.8, once: false }}
-                    transition={{ duration: 0.6, ease: "easeOut" }}
-                  >
-                    <FlipCard repo={repo} width={cardWidth} height={cardWidth}/>
-                  </motion.div>
-                </div>
-              ))}
+    <section ref={sectionRef}>
+      <div className="flex items-center h-screen overflow-hidden">
 
-              <motion.div
-                className="origin-center will-change-transform"
-                initial={{ scale: 0.85, opacity: 0.6 }}
-                whileInView={{ scale: 1, opacity: 1 }}
-                viewport={{ amount: 0.8, once: false }}
-                transition={{ duration: 0.6, ease: "easeOut" }}
+        <div ref={trackRef} className="flex gap-4 pl-[50vw] pr-[50vw]">
+
+          {repos.map((repo) => (
+            <div key={repo.name} className="p-[10px]">
+              <FlipCard
+                repo={repo}
+                width={cardWidth}
+                height={cardWidth}
+              />
+            </div>
+          ))}
+
+          <div className="p-[10px]">
+            <a href="https://github.com/jackpsmith-git" target="_blank">
+              <div
+                style={{ width: cardWidth, height: cardWidth }}
+                className="bg-black text-white rounded-[20px] flex items-center justify-center"
               >
-                <div 
-                  style={{ width: cardWidth, height: cardWidth }}
-                  className="text-black rounded-[20px] m-[15px] relative overflow-visible flex items-center justify-center"
-                >
-                  <div className="w-full h-full flex items-center justify-center text-white">
-                    <a href="https://github.com/jackpsmith-git" target="_blank">
-                      <span className="bg-black text-white flex flex-wrap items-center justify-center gap-[12px] text-center px-3 py-2 rounded-[30px] hover:invert">
-                        <span>
-                          <h2 className="m-0 font-semibold text-lg">SEE ALL</h2>
-                        </span>
-                        <span><img src="assets/icons/external.svg" className="brightness-0 invert"/></span>
-                      </span>
-                    </a>
-                  </div>
-                </div>
-                </motion.div>
-            </motion.div>
+                SEE ALL →
+              </div>
+            </a>
+          </div>
+
         </div>
-      </section>
-      <div id="contact" />
-    </div>
-  );
-};
+
+      </div>
+    </section>
+  )
+}

@@ -2,15 +2,14 @@ import './Home.css';
 import { useMemo, useState, Suspense } from "react";
 import { useGLTF } from "@react-three/drei";
 import { Float } from '../components/Float.jsx';
-import { Button } from '../components/Button.jsx';
 import { BentoProject } from '../components/FeaturedCard.jsx';
 import { FEATURED_PROJECTS, LANG_COLS } from '../Constants.js';
 
 
 export const Home = () => { 
 return (
-<section id="home" className="home">
-  <div className="page">
+<section id="home" className="min-h-screen w-full bg-cover bg-center bg-[url('/assets/images/react.png')]">
+  <div>
       <div className="card-flex-grid">
         {FEATURED_PROJECTS.map(({ name, languages, description, image, link }) => (
           <div className="flex-col" key={name}>

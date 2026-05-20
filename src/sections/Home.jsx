@@ -1,4 +1,3 @@
-import { Button } from '../components/Button.jsx'
 import { Float } from '../components/Float.jsx'
 import { GitHubInfo } from '../components/GitHubInfo.jsx'
 import { BentoGrid, BentoProject, BentoButton, BentoTile, BentoSkill, BentoHeading } from '../components/Bento.jsx'
@@ -13,7 +12,7 @@ export const Home = () => {
   return (
     <section
       id="home"
-      className="relative z-10 bg-black text-white p-6 scroll-mt-[80px]"
+      className="relative z-10 bg-transparent bg-fixed text-white p-6 scroll-mt-[80px]"
     >
       <div className="max-w-[1000px] mx-auto">
         <BentoGrid>
@@ -100,16 +99,16 @@ export const Home = () => {
                         themePromptColor: "#08e500",
                       },
                     }}
-                    prompt={`JS https://jackpsmith.git-github.io >`}
+                    prompt={`jackpsmith.git-github.io >`}
                     theme="dark-mode"
                     showControlBar={false}
                     errorMessage="Command not recognized."
                     welcomeMessage={
                       <div>
-                        https://jackpsmith.git-github.io
-                        <br />
+                        https://jackpsmith.git-github.io<br />
                         Terminal initialized...<br/>
-                        Run 'help' to view commands.
+                        Run 'help' to view commands.<br/>
+                        ㅤ
                       </div>
                     }
                   />

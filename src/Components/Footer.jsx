@@ -1,11 +1,10 @@
-import { motion, useScroll, useTransform } from "framer-motion";
 import { IconButton } from "./IconButton.jsx";
 
-export const Footer = ({yval}) => { 
+export const Footer = () => { 
   return (
 <footer className="w-full bg-black p-0 pb-[10px] m-0 flex justify-center bottom-0">
     <div className="flex flex-col justify-center scroll-mt-[80px] bg-black relative">
-      <hr className="my-5 w-full border-0 border-t border-white/10"/>
+      {/* <hr className="my-5 w-full border-0 border-t border-white/10"/> */}
       <div className="flex items-center justify-center">
         <div className="bg-black rounded-[4px] my-[12px] mx-[24px] text-center py-6 px-12 w-auto flex-grow text-white">
           <img className="h-[100px] w-[100px] mx-auto rounded-full aspect-square object-cover object-top" src="./assets/images/headshot.jpeg"></img>

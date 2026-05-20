@@ -1,4 +1,5 @@
 export default {
+  darkmode: 'class',
   theme: {
     extend: {
       keyframes: {
