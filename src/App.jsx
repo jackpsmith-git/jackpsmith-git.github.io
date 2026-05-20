@@ -6,6 +6,7 @@ import { Hero } from './sections/Hero.jsx'
 import { Home } from './sections/Home.jsx'
 import { Projects } from './sections/Projects.jsx'
 import { Footer } from './components/Footer.jsx'
+import { ThemeToggle } from './components/ThemeToggle.jsx'
 
 export default function App() {
 
@@ -17,15 +18,16 @@ export default function App() {
 
   const y = useTransform(scrollYProgress, [0, 1], [-5, -95]);
     return (
-      <div className="relative z-10 min-h-screen bg-black">
+      <div className="relative z-10 min-h-screen dark:bg-black bg-white">
         <div ref={container} className="relative">
           <Navbar />
           <Hero />
-          <div className='bg-gradient-to-b from-to-zinc-950 to-purple-950/20 bg-contain bg-center'>
+          <div className='bg-gradient-to-b from-white dark:from-black to-purple-950/100 bg-contain bg-center'>
             <Home />
             <Projects />
           </div>
           <Footer/>
+          <ThemeToggle />
         </div>
       </div>
     );

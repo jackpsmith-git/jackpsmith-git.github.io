@@ -1,5 +1,6 @@
 export default {
-  darkmode: 'class',
+  darkMode: 'class',
+  content: ["./src/**/*.{js,jsx}"],
   theme: {
     extend: {
       keyframes: {

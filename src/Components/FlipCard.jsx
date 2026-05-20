@@ -29,21 +29,21 @@ export function FlipCard({ repo, width = 300, height = 300 }) {
 
         <div
           className="
-            absolute inset-0
-            border border-white/10
-            rounded-[20px]
-            overflow-hidden
-            [backface-visibility:hidden]
-            bg-cover bg-center
-            text-white p-5
-            flex flex-col justify-between
-          "
-          style={{
-            backgroundImage: `
-              linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)),
-              url(${repo.image})
-            `,
-          }}
+          absolute inset-0
+          border border-white/10
+          rounded-[20px]
+          overflow-hidden
+          [backface-visibility:hidden]
+          bg-cover bg-center
+          text-white p-5
+          flex flex-col justify-between
+          bg-[linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),var(--bg)]
+          dark:bg-[linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.85)),var(--bg)]
+          will-change-transform
+        "
+        style={{
+          "--bg": `url(${repo.image})`,
+        }}
         >
           <a
             href={repo.url}
@@ -78,7 +78,17 @@ export function FlipCard({ repo, width = 300, height = 300 }) {
           </div>
         </div>
 
-        <div className="border border-white/10 text-center absolute inset-0 rounded-[20px] overflow-hidden [backface-visibility:hidden] [transform:rotateY(180deg)] bg-[rgb(20,20,20)] backdrop-blur-[14px] text-white p-5 flex flex-col justify-between">
+        <div className="absolute inset-0
+          border border-white/10
+          rounded-[20px]
+          overflow-hidden
+          [backface-visibility:hidden]
+          [transform:rotateY(180deg)]
+          bg-zinc-600
+          dark:bg-zinc-900
+          text-white
+          p-5 flex flex-col justify-between text-center
+          will-change-transform">
           <a
             href={repo.url}
             target="_blank"

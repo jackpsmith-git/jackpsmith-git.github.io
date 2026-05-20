@@ -17,7 +17,7 @@ export const ScrollCarousel = () => {
   useLayoutEffect(() => {
     const track = trackRef.current
 
-    const totalX = (repos.length + 1) * (cardWidth + gap)
+    const totalX = (repos.length + 2) * (cardWidth + gap)
 
     const ctx = gsap.context(() => {
       gsap.to(track, {
@@ -56,7 +56,7 @@ export const ScrollCarousel = () => {
             <a href="https://github.com/jackpsmith-git" target="_blank">
               <div
                 style={{ width: cardWidth, height: cardWidth }}
-                className="bg-black text-white rounded-[20px] flex items-center justify-center"
+                className=" bg-[linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6))] dark:bg-black text-white font-semibold rounded-[20px] flex items-center justify-center"
               >
                 SEE ALL →
               </div>

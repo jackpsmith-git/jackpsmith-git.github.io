@@ -80,7 +80,7 @@ export const Home = () => {
           <BentoTile size="xxl" minHeight='min-h-[300px]'>
             <div className="w-full h-full flex-1 font-light text-xs">
               <div className='w-full h-full'>
-                <div className="bg-black w-full px-4 py-1 rounded-t-xl flex items-center gap-2">
+                <div className="dark:bg-transparent w-full px-4 py-1 rounded-t-xl flex items-center gap-2">
                   <img
                     src="/assets/images/terminal.png"
                     className="h-4 w-4 object-contain brightness-100 invert"
@@ -88,7 +88,7 @@ export const Home = () => {
                   />
                   <p className="text-sm font-medium">Terminal</p>
                 </div>
-
+                <hr className='border-white/50'/>
                 <div id='terminal' className='flex-1 overflow-hidden whitespace-pre-wrap'>
                   <ReactTerminal
                     commands={COMMANDS}
