@@ -98,7 +98,6 @@ export const Navbar = () => {
                   href={link.href}
                   className="
                     hover:bg-white/10
-                    hover:text-cyan-300
                     px-3 py-1 rounded-full
                     transition-all duration-700 ease-in-out
                   "
