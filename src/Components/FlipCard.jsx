@@ -105,9 +105,11 @@ export function FlipCard({ repo, width = 300, height = 300 }) {
               {repo.description}
             </p>
           </div>
-
-          <div className="mb-3">
-            ★ {repo.stars} &nbsp; 👁 {repo.watchers} &nbsp; ⚠ {repo.issues}
+          <div>
+            {/* <hr className="border-gray-500"/> */}
+            <div className="my-3">
+              ★ {repo.stars} &nbsp; 👁 {repo.watchers} &nbsp; ⚠ {repo.issues}
+            </div>
           </div>
         </div>
 

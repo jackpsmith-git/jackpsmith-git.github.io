@@ -2,6 +2,7 @@ import { Float } from '../components/Float.jsx'
 import { GitHubInfo } from '../components/GitHubInfo.jsx'
 import { BentoGrid, BentoProject, BentoButton, BentoTile, BentoSkill, BentoHeading } from '../components/Bento.jsx'
 import { BouncyOrb } from '../components/BouncyOrb.jsx'
+import { FlappyWidget } from '../components/FlappyWidget.jsx'
 import { FEATURED_PROJECTS, LANG_COLS, SECTIONS } from '../Constants.jsx'
 import { COMMANDS } from '../Commands.jsx'
 import { useGitHubUser } from '../hooks/useGitHubUser.js'
@@ -30,11 +31,11 @@ export const Home = () => {
 
           <BentoHeading id='about' name='About'/>
 
-          <BentoTile size='sm'>
-            <img src="./assets/images/headshot.jpeg" alt="Headshot" className='p-5'/>
+          <BentoTile size='smd'>
+            <img src="./assets/images/headshot.jpeg" alt="Headshot" className='p-5 max-h-[320px]'/>
           </BentoTile>
           
-          <BentoTile size='md'>
+          <BentoTile size='smmd'>
             {user && (
               <p className="text-center px-[15px] font-semibold mx-10 p-[18px]">
                 {user.bio} Click on the 'Projects' tab to browse my current and past projects, or navigate to the 'Skills' section to learn more about me.
@@ -100,6 +101,14 @@ export const Home = () => {
             <div className="w-full h-full p-1">
               <div className="w-full h-full bg-white dark:bg-black rounded-lg transition-colors duration-700 ease-in-out">
                 <GameOfLife />
+              </div>
+            </div>
+          </BentoTile>
+
+          <BentoTile size="lg" minHeight='min-h-[300px]'>
+            <div className="w-full h-full p-1">
+              <div className="w-full h-full bg-white dark:bg-black rounded-lg transition-colors duration-700 ease-in-out">
+                <FlappyWidget />
               </div>
             </div>
           </BentoTile>

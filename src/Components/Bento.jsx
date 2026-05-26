@@ -3,6 +3,8 @@ import { Float } from './Float.jsx'
 const sizeClasses = {
   xs: "col-span-3 sm:col-span-2 md:col-span-1",
   sm: "col-span-3 sm:col-span-2",
+  smd: "col-span-6 sm:col-span-2",
+  smmd: "col-span-6 sm:col-span-4 sm:text-lg text-md",
   md: "col-span-3 sm:col-span-4 md:col-span-4 sm:text-lg text-sm",
   lg: "col-span-6 sm:col-span-6 md:col-span-6",
 }
