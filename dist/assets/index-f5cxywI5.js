@@ -177,7 +177,6 @@ To suppress this warning, you need to explicitly provide the \`palette.${t}Chann
             ${e?`opacity-100 translate-y-0 pointer-events-auto`:`opacity-0 -translate-y-[10px] pointer-events-none`}
           `,children:[(0,Q.jsx)(`div`,{className:`hidden md:flex gap-[28px] px-6 py-3`,children:(0,Q.jsx)(`nav`,{className:`flex gap-6 text-white`,children:a.map(e=>(0,Q.jsx)(`a`,{href:e.href,className:`\r
                     hover:bg-white/10\r
-                    hover:text-cyan-300\r
                     px-3 py-1 rounded-full\r
                     transition-all duration-700 ease-in-out\r
                   `,children:e.name},e.name))})}),(0,Q.jsxs)(`div`,{className:`md:hidden relative`,children:[(0,Q.jsx)(`button`,{onClick:()=>r(!n),className:`\r
@@ -350,4 +349,4 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             absolute transition-all duration-500
             ${i?`opacity-100 scale-100`:`opacity-0 scale-50 blur-sm`}
           `,children:(0,Q.jsx)(vk,{})})]})]})};function bk(){let e=(0,b.useRef)(null),{scrollYProgress:t}=Zx({target:e,offset:[`start end`,`end end`]});return tS(t,[0,1],[-5,-95]),(0,Q.jsx)(`div`,{className:`relative z-10 min-h-screen dark:bg-black bg-white transition-colors duration-700 ease-in-out`,children:(0,Q.jsxs)(`div`,{ref:e,className:`relative`,children:[(0,Q.jsx)(oO,{}),(0,Q.jsx)(pO,{}),(0,Q.jsxs)(`div`,{className:`bg-gradient-to-b from-white dark:from-black to-purple-950/80 dark:to-purple-950/60 bg-contain bg-center transition-colors duration-700 ease-in-out`,children:[(0,Q.jsx)(pk,{}),(0,Q.jsx)(sk,{})]}),(0,Q.jsx)(hk,{}),(0,Q.jsx)(yk,{})]})})}Yo.registerPlugin(X),x.createRoot(document.getElementById(`root`)).render((0,Q.jsx)(b.StrictMode,{children:(0,Q.jsx)(Bt,{children:(0,Q.jsx)(bk,{})})}));
-//# sourceMappingURL=index-D7pRc022.js.map
+//# sourceMappingURL=index-f5cxywI5.js.map
