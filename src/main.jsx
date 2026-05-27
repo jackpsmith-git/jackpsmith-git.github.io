@@ -2,6 +2,9 @@ import ReactDOM from 'react-dom/client'
 import { TerminalContextProvider } from "react-terminal";
 import { StrictMode } from 'react'
 
+import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/react"
+
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
@@ -15,6 +18,8 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <StrictMode>
     <TerminalContextProvider>
       <App />
+      <Analytics />
+      <SpeedInsights />
     </TerminalContextProvider>
   </StrictMode>
 )
