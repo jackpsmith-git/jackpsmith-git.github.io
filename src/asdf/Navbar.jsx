@@ -60,7 +60,7 @@ export const Navbar = () => {
     <>
       <div
         className={`
-          fixed inset-0 z-[900]
+          fixed inset-0 z-900
           bg-black/20
           backdrop-blur-sm
           transition-all duration-700
@@ -73,7 +73,7 @@ export const Navbar = () => {
         `}
       />
 
-      <header className="fixed top-[20px] w-full flex justify-center z-[1000] px-4">
+      <header className="fixed top-5 w-full flex justify-center z-1000 px-4">
         <div
           ref={menuRef}
           className={`
@@ -86,11 +86,11 @@ export const Navbar = () => {
             ${
               isVisible
                 ? "opacity-100 translate-y-0 pointer-events-auto"
-                : "opacity-0 -translate-y-[10px] pointer-events-none"
+                : "opacity-0 -translate-y-2.5 pointer-events-none"
             }
           `}
         >
-          <div className="hidden md:flex gap-[28px] px-6 py-3">
+          <div className="hidden md:flex gap-7 px-6 py-3">
             <nav className="flex gap-6 text-white">
               {links.map((link) => (
                 <a
