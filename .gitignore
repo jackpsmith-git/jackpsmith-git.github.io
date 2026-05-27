@@ -1,7 +1,9 @@
 # dependencies
 /node_modules
+/.vercel
+/vercel
 
 # environments
 .env
 .env.local
-.local
+.vercel
