@@ -1,4 +1,4 @@
-import { ScrollCarousel } from "../asdf/ScrollCarousel.js";
+import { ScrollCarousel } from "../components/ScrollCarousel.js";
 
 export const Projects = () => {
   return (

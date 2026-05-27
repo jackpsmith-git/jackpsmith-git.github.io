@@ -1,14 +1,14 @@
-import { Float } from '../asdf/Float.jsx'
-import { GitHubInfo } from '../asdf/GitHubInfo.js'
-import { BentoGrid, BentoProject, BentoButton, BentoTile, BentoSkill, BentoHeading } from '../asdf/Bento.jsx'
-import { BouncyOrb } from '../asdf/BouncyOrb.js'
-import { FlappyWidget } from '../asdf/FlappyWidget.js'
+import { Float } from '../components/Float.jsx'
+import { GitHubInfo } from '../components/GitHubInfo.js'
+import { BentoGrid, BentoProject, BentoButton, BentoTile, BentoSkill, BentoHeading } from '../components/Bento.jsx'
+import { BouncyOrb } from '../components/BouncyOrb.js'
+import { FlappyWidget } from '../components/FlappyWidget.js'
 import { FEATURED_PROJECTS, LANG_COLS, SECTIONS } from '../Constants.jsx'
 import { COMMANDS } from '../Commands.jsx'
 import { useGitHubUser } from '../hooks/useGitHubUser.js'
 import { ReactTerminal } from 'react-terminal'
-import { TicTacToe } from '../asdf/TicTacToe.js'
-import { GameOfLife } from '../asdf/GameOfLife.jsx'
+import { TicTacToe } from '../components/TicTacToe.jsx'
+import { GameOfLife } from '../components/GameOfLife.jsx'
 
 export const Home = () => {
   const user = useGitHubUser();

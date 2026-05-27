@@ -1,12 +1,12 @@
 import { useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
 
-import { Navbar } from './asdf/Navbar.jsx'
+import { Navbar } from './components/Navbar.jsx'
 import { Hero } from './sections/Hero.jsx'
 import { Home } from './sections/Home.jsx'
 import { Projects } from './sections/Projects.jsx'
-import { Footer } from './asdf/Footer.js'
-import { ThemeToggle } from './asdf/ThemeToggle.jsx'
+import { Footer } from './components/Footer.js'
+import { ThemeToggle } from './components/ThemeToggle.jsx'
 
 export default function App() {
 
