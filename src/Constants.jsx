@@ -94,6 +94,7 @@ const DEVTOOLS = {
   "Docker" : "assets/images/docker.png",
   "MySQL" : "assets/images/mysql.png",
   "CMake" : "assets/images/cmake.png",
+  "Vercel" : "assets/icons/vercel.svg"
 }
 
 const CREATIVE_TOOLS = {
