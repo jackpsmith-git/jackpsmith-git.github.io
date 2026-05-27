@@ -5,7 +5,7 @@ import { Navbar } from './components/Navbar.jsx'
 import { Hero } from './sections/Hero.jsx'
 import { Home } from './sections/Home.jsx'
 import { Projects } from './sections/Projects.jsx'
-import { Footer } from './components/Footer.js'
+import { Footer } from './components/Footer.jsx'
 import { ThemeToggle } from './components/ThemeToggle.jsx'
 
 export default function App() {
