@@ -1,0 +1,11 @@
+{
+  "remoteName": "origin",
+  "projects": [
+    {
+      "id": "prj_uCF3JniUI9s9ZSbQ80a7jnnFhPi3",
+      "name": "jackpsmith-git-github-io",
+      "directory": ".",
+      "orgId": "team_n2j5ee3Gf3FfXNigKJAEKDwP"
+    }
+  ]
+}

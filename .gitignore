@@ -3,3 +3,5 @@
 
 # environments
 .env
+.env.local
+.local
