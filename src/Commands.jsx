@@ -274,11 +274,11 @@ const TREE = (args = "") => {
 
 const CONTACT = (
   <div>
-    <a href="mailto:jpsmith8603@gmail.com" target="_blank" rel="noopener no referrer">Gmail</a>
+    <a href="mailto:jpsmith8603@gmail.com" target="_blank" rel="noopener no referrer">Gmail - jpsmith8603@gmail.com</a>
     <br />
-    <a href="mailto:jackpsmith@jackpsmith.com" target="_blank" rel="noopener no referrer">Titan</a>
+    <a href="mailto:jackpsmith@jackpsmith.com" target="_blank" rel="noopener no referrer">Titan - jackpsmith@jackpsmith.com</a>
     <br />
-    <a href="mailto:jack.p.smith@pace.edu" target="_blank" rel="noopener noreferrer">Pace</a>
+    <a href="mailto:jack.p.smith@pace.edu" target="_blank" rel="noopener noreferrer">Pace - jack.p.smith@pace.edu</a>
   </div>
 )
 
@@ -298,6 +298,16 @@ const SKILLS = () => (
   </div>
 );
 
+const PROJECTS = () => (
+  <div>
+    {FEATURED_PROJECTS.map((project) => (
+      <div key={project.name}>
+        {project.name} ({project.languages.join(', ')}): {project.description}
+      </div>
+    ))}
+  </div>
+);
+
 const ECHO = async (...args) => args.join(" ")
 
 const EMAIL = async () => {
@@ -308,11 +318,6 @@ const FAVICON = (
   <img src="assets/icons/favicon.svg" alt="favicon"/>
 )
 
-const GOTO = async (section) => {
-  const element = document.getElementById(section);
-  element?.scrollIntoView({ behavior: "smooth", block: "start" })
-}
-
 const HELP = (
   <p>
     [cd]
@@ -321,10 +326,11 @@ const HELP = (
     [contact]
     [echo {"<string>"}]
     [email]
+    [exit]
     [favicon]
-    [goto {"<section>"}]
     [help]
     [ls]
+    [projects]
     [pwd]
     [run {"<file>"}]
     [skills]
@@ -403,6 +409,7 @@ const RUN = (args = "") => {
 };
 
 const COINFLIP = () => (Math.random() < 0.5 ? "heads" : "tails")
+const EXIT = () => {window.location.href='/'; return "exiting terminal mode..."}
 
 export const COMMANDS = {
   cd: CD,
@@ -410,10 +417,11 @@ export const COMMANDS = {
   contact: CONTACT,
   echo: ECHO,
   email: EMAIL,
+  exit: EXIT,
   favicon: FAVICON,
-  goto: GOTO,
   help: HELP,
   ls: LS,
+  projects: PROJECTS,
   pwd: PWD,
   run: RUN,
   skills: SKILLS,

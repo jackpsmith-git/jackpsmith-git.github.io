@@ -1,4 +1,5 @@
 import { Float } from './Float.jsx'
+import { Link } from 'react-router-dom'
 
 const sizeClasses = {
   xs: "col-span-1",
@@ -99,6 +100,16 @@ export const BentoButton = ({children, link, minHeight, target, rel}) => {
   return (
     <BentoTile minHeight='0px' size="lg" link={link} target={target} rel={rel} className='rounded-md font-semibold py-3'>
       {children}
+    </BentoTile>
+  )
+}
+
+export const BentoRoute = ({children, to, minHeight, target, rel}) => {
+  return (
+    <BentoTile minHeight='0px' size="lg" className='rounded-md font-semibold py-3'>
+      <Link to={to} className='w-full h-full text-center'>
+          {children}
+      </Link>
     </BentoTile>
   )
 }

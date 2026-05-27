@@ -1,12 +1,10 @@
 import { Float } from '../components/Float.jsx'
 import { GitHubInfo } from '../components/GitHubInfo.jsx'
-import { BentoGrid, BentoProject, BentoButton, BentoTile, BentoSkill, BentoHeading } from '../components/Bento.jsx'
+import { BentoGrid, BentoProject, BentoButton, BentoTile, BentoSkill, BentoHeading, BentoRoute } from '../components/Bento.jsx'
 import { BouncyOrb } from '../components/BouncyOrb.jsx'
 import { FlappyWidget } from '../components/FlappyWidget.jsx'
 import { FEATURED_PROJECTS, LANG_COLS, SECTIONS } from '../Constants.jsx'
-import { COMMANDS } from '../Commands.jsx'
 import { useGitHubUser } from '../hooks/useGitHubUser.js'
-import { ReactTerminal } from 'react-terminal'
 import { TicTacToe } from '../components/TicTacToe.jsx'
 import { GameOfLife } from '../components/GameOfLife.jsx'
 
@@ -113,7 +111,11 @@ export const Home = () => {
             </div>
           </BentoTile>
 
-          <BentoTile size="lg" minHeight='min-h-[300px]'>
+          <BentoRoute size='lg' to="/terminal">
+            Enter Terminal Mode
+          </BentoRoute>
+
+          {/* <BentoTile size="lg" minHeight='min-h-[300px]'>
             <div className="w-full h-full flex-1 font-light text-xs">
               <div className='w-full h-full'>
                 <div className="dark:bg-transparent w-full px-4 py-1 rounded-t-xl flex items-center gap-2">
@@ -151,7 +153,7 @@ export const Home = () => {
                 </div>
               </div>
             </div>
-          </BentoTile>
+          </BentoTile> */}
 
         </BentoGrid>
       </div>
