@@ -1,7 +1,7 @@
 import { Float } from './Float.jsx'
 
 const sizeClasses = {
-  xs: "col-span-3 sm:col-span-2 md:col-span-1",
+  xs: "col-span-1",
   sm: "col-span-3 sm:col-span-2",
   smd: "col-span-6 sm:col-span-2",
   smmd: "col-span-6 sm:col-span-4 sm:text-lg text-md",
@@ -14,10 +14,10 @@ export const BentoGrid = ({children, className=""}) => {
     <div className={`
     ${className}
     items-stretch justify-center
-    max-w-[1000px] mx-auto
+    max-w-250 mx-auto
     px-4 sm:px-6 lg:px-10
     grid gap-4
-    grid-cols-[repeat(6,minmax(0,1fr))]
+    grid-cols-6
   `}>
       {children}
     </div>
@@ -105,10 +105,10 @@ export const BentoButton = ({children, link, minHeight, target, rel}) => {
 
 export const BentoSkill = ({name, image, className="", id=""}) => {
   return (
-    <BentoTile size='xs' minHeight='min-h-[0px]' className={className} id={id}>
+    <BentoTile size='xs' minHeight='min-h-[0px]' className={`${className}`} id={id}>
       <div className='flex flex-row items-center justify-center gap-2 text-center my-3'>
-        <img src={image} alt={name} className='h-[30px] w-[30px] object-contain' />
-        <h4 className='text-sm font-medium whitespace-nowrap'>{name}</h4>
+        <img src={image} alt={name} className='h-7.5 w-7.5 object-contain' />
+        <h4 className='hidden md:block text-sm font-medium whitespace-nowrap'>{name}</h4>
       </div>
     </BentoTile>
   )
