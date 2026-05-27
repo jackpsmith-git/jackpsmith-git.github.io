@@ -3,3 +3,5 @@
 
 # environments
 .env
+.vercel
+.env*
