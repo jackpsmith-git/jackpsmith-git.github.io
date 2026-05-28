@@ -282,8 +282,6 @@ export const Terminal = () => {
     <div>
       <a href="mailto:jpsmith8603@gmail.com" target="_blank" rel="noopener no referrer">Gmail - jpsmith8603@gmail.com</a>
       <br />
-      <a href="mailto:jackpsmith@jackpsmith.com" target="_blank" rel="noopener no referrer">Titan - jackpsmith@jackpsmith.com</a>
-      <br />
       <a href="mailto:jack.p.smith@pace.edu" target="_blank" rel="noopener noreferrer">Pace - jack.p.smith@pace.edu</a>
     </div>
   )
