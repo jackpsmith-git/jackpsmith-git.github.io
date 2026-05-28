@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ExternalButton } from "./ExternalButton";
 import { LANG_COLS } from "../Constants";
 
-export function FlipCard({ repo, width = 300, height = 300 }) {
+export function FlipCard({ project, width = 300, height = 300 }) {
   const [flipped, setFlipped] = useState(false);
 
   return (
@@ -33,7 +33,7 @@ export function FlipCard({ repo, width = 300, height = 300 }) {
           border border-white/10
           rounded-[20px]
           overflow-hidden
-          [backface-visibility:hidden]
+          [backface-hidden]
           bg-cover bg-center
           text-white p-5
           flex flex-col justify-between
@@ -42,11 +42,11 @@ export function FlipCard({ repo, width = 300, height = 300 }) {
           will-change-transform transition-colors duration-700 
         "
         style={{
-          "--bg": `url(${repo.image})`,
+          "--bg": `url(${project.image})`,
         }}
         >
           <a
-            href={repo.url}
+            href={project.link}
             target="_blank"
             rel="noopener noreferrer"
             onClick={(e) => e.stopPropagation()}
@@ -57,11 +57,11 @@ export function FlipCard({ repo, width = 300, height = 300 }) {
 
           <div className="flex flex-1 flex-col items-center justify-center text-center">
             <h2 className="m-0 text-xl font-bold">
-              {repo.name}
+              {project.name}
             </h2>
 
-            <div className="mt-3 flex flex-wrap justify-center gap-[6px]">
-              {repo.languages.slice(0, 5).map((lang) => (
+            <div className="mt-3 flex flex-wrap justify-center gap-1.5">
+              {project.languages.slice(0, 5).map((lang) => (
                 <span
                   key={lang}
                   style={{
@@ -82,15 +82,15 @@ export function FlipCard({ repo, width = 300, height = 300 }) {
           border border-white/10
           rounded-[20px]
           overflow-hidden
-          [backface-visibility:hidden]
-          [transform:rotateY(180deg)]
+          [backface-hidden]
+          transform-[rotateY(180deg)]
           bg-zinc-600
           dark:bg-zinc-900
           text-white
           p-5 flex flex-col justify-between text-center
           will-change-transform transition-colors duration-700 ">
           <a
-            href={repo.url}
+            href={project.link}
             target="_blank"
             rel="noopener noreferrer"
             onClick={(e) => e.stopPropagation()}
@@ -100,16 +100,10 @@ export function FlipCard({ repo, width = 300, height = 300 }) {
           </a>
 
           <div>
-            <h2 className="font-semibold mt-3">{repo.name}</h2>
+            <h2 className="font-semibold mt-3">{project.name}</h2>
             <p className='mt-12 leading-[1.6]'>
-              {repo.description}
+              {project.description}
             </p>
-          </div>
-          <div>
-            {/* <hr className="border-gray-500"/> */}
-            <div className="my-3">
-              ★ {repo.stars} &nbsp; 👁 {repo.watchers} &nbsp; ⚠ {repo.issues}
-            </div>
           </div>
         </div>
 

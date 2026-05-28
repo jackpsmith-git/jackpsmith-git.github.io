@@ -10,13 +10,12 @@ const sizeClasses = {
   lg: "col-span-6 sm:col-span-6 md:col-span-6",
 }
 
-export const BentoGrid = ({children, className=""}) => {
+export const BentoGrid = ({children, className="", id=""}) => {
   return (
-    <div className={`
+    <div id={id} className={`
     ${className}
     items-stretch justify-center
-    max-w-250 mx-auto
-    px-4 sm:px-6 lg:px-10
+    mx-auto
     grid gap-4
     grid-cols-6
   `}>
@@ -62,36 +61,36 @@ export const BentoTile = ({
   );
 };
 
-export const BentoProject = ({ name, languages, description, image, link, langColors }) => {
+export const BentoProject = ({ name, languages, description, image, link, langColors, className="" }) => {
   return (
-    <BentoTile size="sm" link={link}>
-        <div className="rounded-lg p-[10px] mt-3">
-            <img src={image} alt={name} className="w-full" />
+    <BentoTile size="sm" link={link} className={`${className}`}>
+      <div className="rounded-lg p-2.5">
+        <img src={image} alt={name} className="w-full" />
 
-            <h3 className="pt-[10px] text-center text-[10pt] font-bold">
-                {name}
-            </h3>
+        <h3 className="pt-2.5 text-center text-[10pt] font-bold">
+          {name}
+        </h3>
 
-            <span className="flex flex-wrap justify-center gap-1 mt-2 mb-[15px]">
-                {languages.slice(0, 12).map((lang) => (
-                <span
-                    key={lang}
-                    className="text-xs px-2 py-[2px] rounded-sm text-white"
-                    style={{
-                    backgroundColor: langColors?.[lang] || "#000000",
-                    }}
-                >
-                    {lang}
-                </span>
-                ))}
-            </span>
+        <span className="flex flex-wrap justify-center gap-1 mt-2 mb-3.75">
+          {languages.slice(0, 12).map((lang) => (
+          <span
+            key={lang}
+            className="text-xs px-2 py-0.5 rounded-sm text-white"
+            style={{
+            backgroundColor: langColors?.[lang] || "#000000",
+            }}
+          >
+            {lang}
+          </span>
+          ))}
+        </span>
 
-            <hr className="opacity-30" />
+        <hr className="opacity-30" />
 
-            <p className="mt-[10px] mb-0 text-sm text-center">
-                {description}
-            </p>
-        </div>
+        <p className="mt-2.5 mb-0 text-sm text-center">
+          {description}
+        </p>
+      </div>
     </BentoTile>
   );
 };
@@ -110,17 +109,6 @@ export const BentoRoute = ({children, to, minHeight, target, rel}) => {
       <Link to={to} className='w-full h-full text-center'>
           {children}
       </Link>
-    </BentoTile>
-  )
-}
-
-export const BentoSkill = ({name, image, className="", id=""}) => {
-  return (
-    <BentoTile size='xs' minHeight='min-h-[0px]' className={`${className}`} id={id}>
-      <div className='flex flex-row items-center justify-center gap-2 text-center my-3'>
-        <img src={image} alt={name} className='h-7.5 w-7.5 object-contain' />
-        <h4 className='hidden md:block text-sm font-medium whitespace-nowrap'>{name}</h4>
-      </div>
     </BentoTile>
   )
 }

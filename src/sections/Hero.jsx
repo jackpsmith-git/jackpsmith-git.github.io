@@ -54,7 +54,7 @@ export const Hero = () => {
   return (
     <section
       ref={heroRef}
-      id="hero"
+      id="home"
       className="relative overflow-hidden w-screen h-dvh lg:scale-y-[1.02]"
     >
       <div className="absolute inset-0">

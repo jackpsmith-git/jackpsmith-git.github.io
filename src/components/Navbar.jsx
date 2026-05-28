@@ -49,9 +49,9 @@ export const Navbar = () => {
 
   const links = [
     { name: "Home", href: "#" },
-    { name: "About", href: "#about" },
-    { name: "Skills", href: "#skills" },
     { name: "Projects", href: "#projects" },
+    { name: "Skills", href: "#skills" },
+    { name: "About", href: "#about" },
     { name: "Widgets", href: "#widgets" },
     { name: "Contact", href: "#contact" },
   ];
@@ -128,7 +128,7 @@ export const Navbar = () => {
             <div
               className={`
                 absolute top-[120%] left-1/2 -translate-x-1/2
-                w-[220px]
+                w-55
                 rounded-2xl
                 bg-[rgba(20,20,20,0.75)]
                 backdrop-blur-[18px]
