@@ -10,7 +10,7 @@ export const Projects = () => {
         <SlidingCard key={project.name} link={project.link} fromLeft={index % 2 == 0} style={{backgroundImage: `url(${project.image})`}} className={`my-20 bg-cover bg-center w-full h-full`}>
           <h1 className="font-bold text-lg">{project.name}</h1>
 
-          <div className="mt-2 flex flex-wrap justify-center gap-1.5">
+          <div className="mt-2 flex flex-wrap justify-start gap-1.5">
             {project.languages.slice(0, 12).map((lang) => (
               <span
                 key={lang}
@@ -26,7 +26,7 @@ export const Projects = () => {
             ))}
           </div>
           <hr className="border border-white/30 w-full mt-4"/>
-          <p className="mt-2">{project.description}</p>
+          <p className="mt-2 line-clamp-3">{project.description}</p>
         </SlidingCard>
       ))}
       
