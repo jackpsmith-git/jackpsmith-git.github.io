@@ -15,7 +15,6 @@ export const BentoGrid = ({children, className="", id=""}) => {
     <div id={id} className={`
     ${className}
     items-stretch justify-center
-    mx-auto
     grid gap-4
     grid-cols-6
   `}>
@@ -38,7 +37,7 @@ export const BentoTile = ({
     return (
       <Float
         id={id}
-        className={`${className} ${sizeClasses[size]} ${minHeight} min-w-0 border border-white/10 bg-[rgba(20,20,20,0.55)] hover:bg-[rgba(20,20,20,0.99)] rounded-xl scale-100 transition-all duration-200 ease-in-out hover:scale-105 hover:shadow-[4px_4px_12px_rgba(0,0,0,0.3)]`}
+        className={`${className} ${sizeClasses[size]} ${minHeight} min-w-0 dark:border dark:border-white rounded-xl scale-100 transition-all duration-200 ease-in-out hover:scale-105 hover:shadow-[4px_4px_12px_rgba(0,0,0,0.3)]`}
       >
         <a className="pointer" href={link} target={target} rel={rel}>
           <div className="h-full w-full flex items-center justify-center">
@@ -52,7 +51,7 @@ export const BentoTile = ({
   return (
     <Float
       id={id}
-      className={`${className} ${sizeClasses[size]} ${minHeight} min-w-0 border border-white/10 bg-[rgba(20,20,20,0.55)] hover:bg-[rgba(20,20,20,0.99)] rounded-xl scale-100 transition-all duration-200 ease-in-out hover:scale-105 hover:shadow-[4px_4px_12px_rgba(0,0,0,0.3)]`}
+      className={`${className} ${sizeClasses[size]} ${minHeight} min-w-0 border border-white rounded-xl scale-100 transition-all duration-200 ease-in-out hover:scale-105 hover:shadow-[4px_4px_12px_rgba(0,0,0,0.3)]`}
     >
       <div className="h-full w-full flex items-center justify-center">
         {children}

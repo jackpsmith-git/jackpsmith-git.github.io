@@ -118,28 +118,30 @@ export const TicTacToe = () => {
   }
 
   return (
-    <div className="relative w-full h-full flex items-center justify-center bg-white dark:bg-black rounded-lg overflow-hidden transition-colors duration-700 ease-in-out">
-      <div className="grid grid-cols-3 gap-2 p-4 w-full max-w-[260px]">
-        {board.map((cell, i) => (
-          <button
-            key={i}
-            onClick={() => handleClick(i)}
-            className="
-              aspect-square rounded-xl
-              border border-black/10 dark:border-white/10
-              bg-black/[0.04] dark:bg-white/[0.06]
-              hover:bg-black/[0.08]
-              dark:hover:bg-white/[0.1]
-              transition-colors duration-700 ease-in-out
-              text-3xl font-bold
-              flex items-center justify-center
-              text-black dark:text-white
-            "
-          >
-            {cell}
-          </button>
-        ))}
+    <div className="w-full h-full flex flex-col bg-white dark:bg-black rounded-lg overflow-hidden transition-colors duration-700 ease-in-out">
+      <div className="flex-1 flex items-center justify-center">
+        <div className="grid grid-cols-3 gap-2 aspect-square w-full max-w-65">        
+          {board.map((cell, i) => (
+            <button
+              key={i}
+              onClick={() => handleClick(i)}
+              className="
+                aspect-square rounded-xl
+                border border-black/10 dark:border-white/10
+                bg-black/4 dark:bg-white/6
+                hover:bg-black/8
+                dark:hover:bg-white/10
+                transition-colors duration-700 ease-in-out
+                text-3xl font-bold
+                flex items-center justify-center
+                text-black dark:text-white
+              "
+            >
+              {cell}
+            </button>
+          ))}
 
+        </div>      
       </div>
 
       {winner && (

@@ -96,8 +96,9 @@ export const GameOfLife = () => {
   }
 
   return (
-    <div className="w-full h-full bg-white dark:bg-black rounded-lg flex flex-col overflow-hidden transition-colors duration-700 ease-in-out">
-      <div className="flex items-center justify-between pb-2 border-b border-black/10 dark:border-white/10 transition-colors duration-700 ease-in-out">
+    <div className="h-full flex flex-col bg-white dark:bg-black rounded-lg overflow-hidden transition-colors duration-700 ease-in-out">
+
+      <div className="flex-1 items-center justify-center flex p-2 border-b border-black/10 dark:border-white/10">
         <div className="flex w-full gap-2">
 
           <button
@@ -107,7 +108,6 @@ export const GameOfLife = () => {
               py-1 rounded-md
               bg-black text-white
               dark:bg-white dark:text-black
-              transition-colors duration-700 ease-in-out
             "
           >
             {running
@@ -123,7 +123,6 @@ export const GameOfLife = () => {
               py-1 rounded-md
               border border-black/10 dark:border-white/10
               text-black dark:text-white
-              transition-colors duration-700 ease-in-out
             "
           >
             <ShuffleRoundedIcon fontSize="small" />
@@ -136,7 +135,6 @@ export const GameOfLife = () => {
               py-1 rounded-md
               border border-black/10 dark:border-white/10
               text-black dark:text-white
-              transition-colors duration-700 ease-in-out
             "
           >
             <ReplayRoundedIcon fontSize="small" />
@@ -145,32 +143,34 @@ export const GameOfLife = () => {
         </div>
       </div>
 
-      <div
-        className="
-          flex-1 grid p-2 gap-[1px]
-          bg-black/5 dark:bg-white/5 transition-colors duration-700 ease-in-out
-        "
-        style={{
-          gridTemplateColumns: `repeat(${COLS}, 1fr)`
-        }}
-      >
-        {grid.map((row, y) =>
-          row.map((cell, x) => (
-            <button
-              key={`${y}-${x}`}
-              onClick={() => toggleCell(y, x)}
-              className={`
-                aspect-square rounded-[2px]
-                transition-colors duration-700 ease-in-out
-                ${
-                  cell
+      <div className="flex-1 flex items-center justify-center p-2">
+        <div
+          className="
+            grid gap-px
+            bg-black/5 dark:bg-white/5
+            w-full h-full
+            max-h-full
+            aspect-square
+          "
+          style={{
+            gridTemplateColumns: `repeat(${COLS}, 1fr)`
+          }}
+        >
+          {grid.map((row, y) =>
+            row.map((cell, x) => (
+              <button
+                key={`${y}-${x}`}
+                onClick={() => toggleCell(y, x)}
+                className={`
+                  transition-colors duration-700 ease-in-out
+                  ${cell
                     ? "bg-black dark:bg-white"
-                    : "bg-white dark:bg-zinc-900"
-                }
-              `}
-            />
-          ))
-        )}
+                    : "bg-white dark:bg-zinc-900"}
+                `}
+              />
+            ))
+          )}
+        </div>
       </div>
 
     </div>

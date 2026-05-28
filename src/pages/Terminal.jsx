@@ -463,16 +463,18 @@ export const Terminal = () => {
       flex flex-col 
       transition-colors duration-700 ease-in-out'
     >
-      <div className="w-full h-full px-4 py-1 rounded-t-xl flex items-center gap-2">
+      <div className="w-full h-full px-4 pb-2 rounded-t-xl flex items-center gap-2">
         <img
-          src="/assets/images/terminal.png"
+          // src="/assets/images/terminal.png"
+          src="/assets/icons/favicon.svg"
           className="h-4 w-4 object-contain invert brightness-100"
           alt="terminal icon"
         />
-        <p className="text-sm font-medium text-[gray]">Terminal</p>
+        <p className="text-lg font-medium text-[gray]">Terminal</p>
       </div>
       <hr className='border-white/50'/>
-      <div className='overflow-hidden whitespace-pre-wrap min-h-screen text-black dark:text-white'>
+      <div className='overflow-hidden whitespace-pre-wrap flex-1 text-black dark:text-white [&_.react-terminal-wrapper]:h-full
+[&_.react-terminal]:h-full'>
         <ReactTerminal
           commands={COMMANDS}
           themes={{

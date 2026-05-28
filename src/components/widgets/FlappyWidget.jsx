@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react"
 
-const WIDTH = 320 * 3
+const WIDTH = 1200
 const HEIGHT = 300
 
 const BIRD_SIZE = 18

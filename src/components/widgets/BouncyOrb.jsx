@@ -121,7 +121,7 @@ export const BouncyOrb = () => {
       onMouseEnter={onEnter}
       onMouseLeave={onLeave}
       onClick={onClick}
-      className="relative w-full h-full overflow-hidden rounded-lg bg-transparent"
+      className="relative w-full h-full overflow-hidden rounded-lg bg-white dark:bg-transparent transition-colors duration-700 ease-in-out"
     >
       <div
         ref={ballRef}

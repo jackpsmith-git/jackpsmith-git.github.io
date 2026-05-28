@@ -30,25 +30,26 @@ export const Homepage = () => {
 
           <div className='bg-linear-to-b from-white dark:from-black to-purple-950/80 dark:to-purple-950/60 bg-contain bg-center transition-colors duration-700 ease-in-out'>
             <Projects />
+
+
+            <div className="py-10 pb-30 text-white transition-colors duration-700 ease-in-out">
+              <BentoGrid className='mx-[5vw]'>
+                <About />
+
+                <BentoRoute size='lg' to="/terminal">
+                  {`Enter Terminal Mode`}
+                </BentoRoute>
+
+              </BentoGrid>
+            </div>
+
             <Skills />
+            <Widgets />
 
-            <section
-              className="relative z-10 bg-transparent bg-fixed text-white p-6 scroll-mt-20"
-            >
-              <div className="max-w-250 mx-auto mb-30">
-                <BentoGrid>
-                  <About />
-                  <Widgets />
-
-                  <BentoRoute size='lg' to="/terminal">
-                    Enter Terminal Mode
-                  </BentoRoute>
-
-                </BentoGrid>
-              </div>
-            </section>
           </div>
+
           <Footer/>
+          
         </div>
       </div>
       <ThemeToggle />
