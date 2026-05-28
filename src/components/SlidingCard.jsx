@@ -46,7 +46,7 @@ export const SlidingCard = ({
             }}
             animate={controls}
             transition={{
-              duration: 0.9,
+              duration: 0.3,
               ease: "easeInOut",
             }}
             style={style}
