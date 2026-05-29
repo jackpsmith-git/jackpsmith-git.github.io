@@ -22,7 +22,7 @@ export const Homepage = () => {
   
   return (
     <>
-      <div className="relative z-10 min-h-screen dark:bg-black bg-white transition-colors duration-700 ease-in-out">
+      <div id="home" className="relative z-10 min-h-screen dark:bg-black bg-white transition-colors duration-700 ease-in-out">
         <div ref={container} className="relative">
 
           <Navbar />

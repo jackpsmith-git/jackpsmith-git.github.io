@@ -50,8 +50,8 @@ export const Navbar = () => {
   const links = [
     { name: "Home", href: "#" },
     { name: "Projects", href: "#projects" },
-    { name: "Skills", href: "#skills" },
     { name: "About", href: "#about" },
+    { name: "Skills", href: "#skills" },
     { name: "Widgets", href: "#widgets" },
     { name: "Contact", href: "#contact" },
   ];
@@ -73,7 +73,7 @@ export const Navbar = () => {
         `}
       />
 
-      <header className="fixed top-5 w-full flex justify-center z-1000 px-4">
+      <header className="fixed top-5 w-full flex justify-center z-50 px-4">
         <div
           ref={menuRef}
           className={`

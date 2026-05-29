@@ -4,7 +4,7 @@ import { Float } from "../components/Float"
 
 export const Skills = () => {
   return (
-    <Float className="mx-[5vw]">
+    <Float id='skills' className="mx-[5vw]">
       <div className="flex flex-col text-center text-white">
         <h1 className="text-2xl font-semibold pb-8">Skills</h1>
         <div className="items-stretch justify-center
