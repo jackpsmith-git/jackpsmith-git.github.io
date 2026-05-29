@@ -8,7 +8,7 @@ export const Projects = () => {
     <div id="projects" className="my-40">
       {FEATURED_PROJECTS.map((project, index) => (
         <SlidingCard key={project.name} link={project.link} fromLeft={index % 2 == 0} style={{backgroundImage: `url(${project.image})`}} className={`my-20 bg-cover bg-center w-full h-full`}>
-          <h1 className="font-bold text-lg">{project.name}</h1>
+          <h1 className="font-bold text-lg text-[#faeab4]">{project.name}</h1>
 
           <div className="mt-2 flex flex-wrap justify-start gap-1.5">
             {project.languages.slice(0, 12).map((lang) => (
@@ -25,8 +25,8 @@ export const Projects = () => {
               </span>
             ))}
           </div>
-          <hr className="border border-white/30 w-full mt-4"/>
-          <p className="mt-2 line-clamp-3">{project.description}</p>
+          <hr className="border border-[#faeab4]/30 w-full mt-4"/>
+          <p className="text-[#faeab4] mt-2 line-clamp-3">{project.description}</p>
         </SlidingCard>
       ))}
       

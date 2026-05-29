@@ -4,7 +4,7 @@ import { Float } from "../components/Float"
 
 export const Skills = () => {
   return (
-    <div id='skills' className="bg-white dark:bg-black dark:text-white text-gray-700 transition-colors duration-700 ease-in-out">
+    <div id='skills' className="bg-white dark:bg-black dark:text-[#faeab4] text-gray-700 transition-colors duration-700 ease-in-out">
       <div className="max-w-500 mx-auto">
         <div className="py-12 px-[8vw]">
           <h2 className='text-2xl font-semibold'>Skills</h2>

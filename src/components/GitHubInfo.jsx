@@ -16,7 +16,7 @@ export const GitHubInfo = ({
           href="https://github.com/jackpsmith-git"
           target="_blank"
           rel="noopener noreferrer"
-          className="h-8 w-8 shrink-0 bg-black border border-white"
+          className="h-8 w-8 shrink-0 border border-[#faeab4]"
         >
           <img
             src={avatar}

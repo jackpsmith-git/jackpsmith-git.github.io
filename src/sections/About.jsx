@@ -9,7 +9,7 @@ export const About = () => {
 
   return (
     <>
-      <div id='about' className='w-full bg-gray-700 dark:bg-black text-white py-18 drop-shadow-xl transition-colors duration-700 ease-in-out'>
+      <div id='about' className='w-full bg-gray-700 dark:bg-black text-[#faeab4] py-18 drop-shadow-xl transition-colors duration-700 ease-in-out'>
         <div className='max-w-500 mx-auto'>
           <div className='mx-[8vw]'>
 
@@ -37,7 +37,7 @@ export const About = () => {
             </div>
 
             {user && (
-              <Float className='my-12 border border-white rounded-xl p-8'>
+              <Float className='my-12 border border-[#faeab4] rounded-xl p-8'>
                 <GitHubInfo username = {user.username} avatar={user.avatar} followingCount={user.followingCount} followersCount={user.followersCount} starredReposCount={user.starredReposCount} organizationsCount={user.organizationsCount}/>
               </Float>
             )}

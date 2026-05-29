@@ -53,7 +53,7 @@ export const SlidingCard = ({
             className={`
               w-screen
               shadow-2xl
-              border border-black dark:border-white transition-colors duration-700 ease-in-out
+              border border-black dark:border-[#faeab4] transition-colors duration-700 ease-in-out
               bg-zinc-400 dark:bg-zinc-900
               text-white
               p-8

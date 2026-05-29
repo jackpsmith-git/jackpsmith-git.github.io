@@ -1,5 +1,6 @@
 import { useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
+import { Link } from 'react-router-dom'
 
 import { Navbar } from '../components/Navbar.jsx'
 import { Hero } from '../sections/Hero.jsx'
@@ -34,14 +35,20 @@ export const Homepage = () => {
             <Skills />
             <Widgets />
 
-            <div className="max-w-500 mx-auto pb-20 text-white transition-colors duration-700 ease-in-out">
-              <BentoGrid className='mx-[8vw]'>
-
-                <BentoRoute size='lg' to="/terminal">
-                  {`Enter Terminal Mode`}
-                </BentoRoute>
-
-              </BentoGrid>
+            <div className="max-w-500 mx-auto pb-20 text-[#faeab4] transition-colors duration-700 ease-in-out">
+              <Link
+                to="/terminal"
+                className="
+                  block
+                  text-center
+                  border border-[#faeab4]
+                  rounded-md
+                  font-semibold
+                  py-3 mx-[8vw] scale-100 transition-all duration-200 ease-in-out hover:scale-105 hover:shadow-[4px_4px_12px_rgba(0,0,0,0.3)]
+                "
+              >
+                Enter Terminal Mode
+              </Link>
             </div>
 
 

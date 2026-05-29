@@ -51,7 +51,7 @@ export const WidgetCarousel = ({
 
   return (
     <div className="mx-[8vw] my-5 h-[50vh]">
-      <div className="relative w-full h-full overflow-hidden rounded-2xl border border-white bg-zinc-900">
+      <div className="relative w-full h-full overflow-hidden rounded-2xl border border-white dark:border-[#faeab4] bg-zinc-900 transition-colors duration-700 ease-in-out">
 
         <button
           type="button"
@@ -65,7 +65,7 @@ export const WidgetCarousel = ({
             rounded-full
             bg-black/50
             p-2
-            text-white
+            text-white dark:text-[#faeab4]
             backdrop-blur
             transition hover:scale-110
           "
@@ -73,7 +73,6 @@ export const WidgetCarousel = ({
           <ChevronLeftIcon fontSize="medium" />
         </button>
 
-        {/* Right Arrow */}
         <button
           type="button"
           onClick={nextSlide}
@@ -86,7 +85,7 @@ export const WidgetCarousel = ({
             rounded-full
             bg-black/50
             p-2
-            text-white
+            text-white dark:text-[#faeab4]
             backdrop-blur
             transition hover:scale-110
           "
