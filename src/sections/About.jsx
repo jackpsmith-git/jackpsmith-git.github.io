@@ -24,6 +24,7 @@ export const About = () => {
                     {user.bio} Click on the 'Projects' tab to browse my current and past projects, or navigate to the 'Skills' section to learn more about me.
                   </p>
                 )}
+                {/* <h3 className='text-xl font-semibold mt-8 mb-2'>Education</h3> */}
 
                 <p className="mt-5"><strong>Pace University, Seidenberg School of Computer Science and Information Systems</strong> | Pleasantville, NY</p>
                 <p>Bachelor of Science (BS) in Computer Science</p>
@@ -35,10 +36,12 @@ export const About = () => {
 
             </div>
 
-            <Float className='my-12 border border-white rounded-xl p-8'>
-              <GitHubInfo username = {user.username} avatar={user.avatar} followingCount={user.followingCount} followersCount={user.followersCount} starredReposCount={user.starredReposCount} organizationsCount={user.organizationsCount}/>
-            </Float>
-
+            {user && (
+              <Float className='my-12 border border-white rounded-xl p-8'>
+                <GitHubInfo username = {user.username} avatar={user.avatar} followingCount={user.followingCount} followersCount={user.followersCount} starredReposCount={user.starredReposCount} organizationsCount={user.organizationsCount}/>
+              </Float>
+            )}
+            
             <div className="text-sm text-center py-10 px-5">
               <p className="text-xl font-bold">"You might not think that programmers are artists, but programming is an extremely creative profession."</p>
               <p className="mt-1.25">- John Romero</p>
