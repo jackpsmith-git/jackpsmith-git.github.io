@@ -6,7 +6,7 @@ import { WidgetCarousel } from "../components/WidgetCarousel"
 
 export const Widgets = () => {
   return (
-    <div id="widgets" className="min-h-60 py-10">
+    <div id="widgets" className="min-h-60 max-w-500 mx-auto py-10">
       <WidgetCarousel
         items={[
             <TicTacToe />,

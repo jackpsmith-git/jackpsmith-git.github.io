@@ -73,7 +73,7 @@ export const Navbar = () => {
         `}
       />
 
-      <header className="fixed top-5 w-full flex justify-center z-50 px-4">
+      <header className="fixed top-5 w-full flex justify-center z-999 px-4">
         <div
           ref={menuRef}
           className={`

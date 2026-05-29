@@ -5,7 +5,7 @@ import { ExternalButton } from "../components/ExternalButton.jsx"
 
 export const Projects = () => {
   return (
-    <div id="projects" className="my-80">
+    <div id="projects" className="my-40">
       {FEATURED_PROJECTS.map((project, index) => (
         <SlidingCard key={project.name} link={project.link} fromLeft={index % 2 == 0} style={{backgroundImage: `url(${project.image})`}} className={`my-20 bg-cover bg-center w-full h-full`}>
           <h1 className="font-bold text-lg">{project.name}</h1>

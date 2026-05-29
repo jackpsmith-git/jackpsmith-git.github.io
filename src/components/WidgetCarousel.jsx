@@ -50,7 +50,7 @@ export const WidgetCarousel = ({
   }
 
   return (
-    <div className="mx-[5vw] my-5 h-[50vh]">
+    <div className="mx-[8vw] my-5 h-[50vh]">
       <div className="relative w-full h-full overflow-hidden rounded-2xl border border-white bg-zinc-900">
 
         <button

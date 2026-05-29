@@ -10,7 +10,7 @@ export const GitHubInfo = ({
   organizationsCount
 }) => {
   return (
-    <Float>
+    <div>
       <div className="flex items-center gap-3 pb-4 w-full">
         <a
           href="https://github.com/jackpsmith-git"
@@ -82,6 +82,6 @@ export const GitHubInfo = ({
         </div>
       </div>
 
-    </Float>
+    </div>
   );
 };
