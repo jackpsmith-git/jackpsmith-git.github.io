@@ -131,7 +131,7 @@ export const TicTacToe = () => {
                 bg-black/4 dark:bg-white/6
                 hover:bg-black/8
                 dark:hover:bg-white/10
-                transition-colors duration-700 ease-in-out
+                transition-col
                 text-3xl font-bold
                 flex items-center justify-center
                 text-black dark:text-white
@@ -141,7 +141,7 @@ export const TicTacToe = () => {
             </button>
           ))}
 
-        </div>      
+        </div>
       </div>
 
       {winner && (
@@ -168,7 +168,7 @@ export const TicTacToe = () => {
               bg-white text-black
               font-semibold
               hover:scale-105
-              transition-transform duration-700 ease-in-out
+              transition-col
             "
           >
             Play Again

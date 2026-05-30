@@ -1,7 +1,7 @@
 import { useRef, useLayoutEffect } from "react"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
-import { FEATURED_PROJECTS, LANG_COLS } from "../Constants.jsx"
+import { FEATURED_PROJECTS, LANG_COLS } from "../sections/Projects.jsx"
 import { BentoProject, BentoButton } from "./Bento.jsx"
 
 gsap.registerPlugin(ScrollTrigger)
@@ -54,7 +54,7 @@ export const ScrollCarousel = () => {
           <BentoButton link="https://github.com/jackpsmith-git" target="_blank">
             <div
               style={{ width: 220, height: 280 }}
-              className=" text-white font-semibold rounded-[20px] flex items-center justify-center transition-colors duration-700 ease-in-out"
+              className=" text-white font-semibold rounded-[20px] flex items-center justify-center transition-col"
             >
               SEE ALL →
             </div>

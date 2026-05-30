@@ -28,7 +28,7 @@ export const GitHubInfo = ({
           href="https://github.com/jackpsmith-git"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-sm font-semibold hover:underline whitespace-nowrap flex-shrink-0"
+          className="text-sm font-semibold hover:underline whitespace-nowrap shrink-0"
         >
           jackpsmith-git
         </a>

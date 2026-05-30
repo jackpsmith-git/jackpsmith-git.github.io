@@ -1,5 +1,6 @@
 import { ReactTerminal } from 'react-terminal'
-import { SECTIONS, FEATURED_PROJECTS } from '../Constants.jsx'
+import { SECTIONS } from '../sections/Skills.jsx'
+import { FEATURED_PROJECTS } from '../sections/Projects.jsx'
 import { useTheme } from "../hooks/useTheme"
 
 export const Terminal = () => {
@@ -459,7 +460,7 @@ export const Terminal = () => {
     <div id="terminal" key={theme} className='w-full h-full min-h-screen 
       bg-gray-700 dark:bg-black 
       flex flex-col 
-      transition-colors duration-700 ease-in-out'
+      transition-col'
     >
       <div className="w-full h-full px-4 pb-2 rounded-t-xl flex items-center gap-2">
         <img
@@ -472,7 +473,7 @@ export const Terminal = () => {
       </div>
       <hr className='border-white/50'/>
       <div className='overflow-hidden whitespace-pre-wrap flex-1 text-black dark:text-white [&_.react-terminal-wrapper]:h-full
-[&_.react-terminal]:h-full'>
+        [&_.react-terminal]:h-full'>
         <ReactTerminal
           commands={COMMANDS}
           themes={{

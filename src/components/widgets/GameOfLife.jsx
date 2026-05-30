@@ -96,7 +96,7 @@ export const GameOfLife = () => {
   }
 
   return (
-    <div className="h-full flex flex-col bg-white dark:bg-black rounded-lg overflow-hidden transition-colors duration-700 ease-in-out">
+    <div className="h-full flex flex-col bg-white dark:bg-black rounded-lg overflow-hidden transition-col">
 
       <div className="flex-1 items-center justify-center flex p-2 border-b border-black/10 dark:border-white/10">
         <div className="flex w-full gap-2">
@@ -162,7 +162,7 @@ export const GameOfLife = () => {
                 key={`${y}-${x}`}
                 onClick={() => toggleCell(y, x)}
                 className={`
-                  transition-colors duration-700 ease-in-out
+                  transition-col
                   ${cell
                     ? "bg-black dark:bg-white"
                     : "bg-white dark:bg-zinc-900"}

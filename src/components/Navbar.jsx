@@ -124,7 +124,6 @@ export const Navbar = () => {
               )}
             </button>
 
-            {/* Dropdown */}
             <div
               className={`
                 absolute top-[120%] left-1/2 -translate-x-1/2

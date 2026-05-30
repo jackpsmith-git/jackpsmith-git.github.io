@@ -53,7 +53,7 @@ export const SlidingCard = ({
             className={`
               w-screen
               shadow-2xl
-              border border-black dark:border-[#faeab4] transition-colors duration-700 ease-in-out
+              border border-black dark:border-[#faf2d8] transition-col
               bg-zinc-400 dark:bg-zinc-900
               text-white
               p-8
@@ -72,8 +72,8 @@ export const SlidingCard = ({
                   absolute inset-0 z-0
                   ${
                     fromLeft
-                      ? "bg-linear-to-r from-gray-800 dark:from-black via-gray-800 dark:via-black to-gray-800/70 dark:to-black/70 transition-colors duration-700 ease-in-out"
-                      : "bg-linear-to-l from-gray-800 dark:from-black via-gray-800 dark:via-black to-gray-800/70 dark:to-black/70 transition-colors duration-700 ease-in-out"
+                      ? "bg-linear-to-r from-gray-800 dark:from-black via-gray-800 dark:via-black to-gray-800/70 dark:to-black/70 transition-col"
+                      : "bg-linear-to-l from-gray-800 dark:from-black via-gray-800 dark:via-black to-gray-800/70 dark:to-black/70 transition-col"
                   }
                 `}
               />

@@ -1,6 +1,10 @@
 @import "tailwindcss";
 @config "../tailwind.config.js";
 
+@utility transition-col {
+  @apply transition-colors duration-500 ease-in-out;
+}
+
 .flex-col {
   flex: 1;
   width: auto;

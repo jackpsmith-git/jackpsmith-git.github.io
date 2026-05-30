@@ -73,7 +73,7 @@ export const Hero = () => {
           className="absolute inset-0 flex items-center justify-center pointer-events-none z-20"
         >
           <img
-            className="w-screen h-dvh object-cover block invert dark:invert-0 transition-all duration-700"
+            className="w-screen h-dvh object-cover block invert dark:invert-0 transition-all duration-500"
             src="assets/images/HeroImage.svg"
             alt="hero mask"
           />

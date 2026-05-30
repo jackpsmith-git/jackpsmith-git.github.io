@@ -50,7 +50,7 @@ export const ThemeToggle = () => {
         w-16 h-16 rounded-full
         flex items-center justify-center
         overflow-hidden
-        transition-colors duration-700
+        transition-col
         bg-white dark:bg-zinc-950
         border border-black/10 dark:border-white/10
         shadow-[0_8px_30px_rgba(0,0,0,0.12)]

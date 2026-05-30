@@ -51,7 +51,7 @@ export const WidgetCarousel = ({
 
   return (
     <div className="mx-[8vw] my-5 h-[50vh]">
-      <div className="relative w-full h-full overflow-hidden rounded-2xl border border-white dark:border-[#faeab4] bg-zinc-900 transition-colors duration-700 ease-in-out">
+      <div className="relative w-full h-full overflow-hidden rounded-2xl border border-gray-700 dark:border-[#faf2d8] bg-zinc-900 transition-col">
 
         <button
           type="button"
@@ -65,7 +65,7 @@ export const WidgetCarousel = ({
             rounded-full
             bg-black/50
             p-2
-            text-white dark:text-[#faeab4]
+            text-white dark:text-[#faf2d8]
             backdrop-blur
             transition hover:scale-110
           "
@@ -85,7 +85,7 @@ export const WidgetCarousel = ({
             rounded-full
             bg-black/50
             p-2
-            text-white dark:text-[#faeab4]
+            text-white dark:text-[#faf2d8]
             backdrop-blur
             transition hover:scale-110
           "

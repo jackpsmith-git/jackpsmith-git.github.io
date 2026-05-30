@@ -39,7 +39,7 @@ export function FlipCard({ project, width = 300, height = 300 }) {
           flex flex-col justify-between
           bg-[linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),var(--bg)]
           dark:bg-[linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.85)),var(--bg)]
-          will-change-transform transition-colors duration-700 
+          will-change-transform transition-col 
         "
         style={{
           "--bg": `url(${project.image})`,
@@ -88,7 +88,7 @@ export function FlipCard({ project, width = 300, height = 300 }) {
           dark:bg-zinc-900
           text-white
           p-5 flex flex-col justify-between text-center
-          will-change-transform transition-colors duration-700 ">
+          will-change-transform transition-col">
           <a
             href={project.link}
             target="_blank"

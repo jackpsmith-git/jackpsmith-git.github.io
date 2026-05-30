@@ -1,17 +1,15 @@
 import { useGitHubUser } from '../hooks/useGitHubUser.js'
 import { GitHubInfo } from '../components/GitHubInfo.jsx'
-import { BentoTile, BentoHeading } from '../components/Bento.jsx';
-import { Skills } from './Skills.jsx';
 import { Float } from '../components/Float.jsx';
+import { Content } from '../components/Content.jsx'
 
 export const About = () => {
   const user = useGitHubUser();
 
   return (
     <>
-      <div id='about' className='w-full bg-gray-700 dark:bg-black text-[#faeab4] py-18 drop-shadow-xl transition-colors duration-700 ease-in-out'>
-        <div className='max-w-500 mx-auto'>
-          <div className='mx-[8vw]'>
+      <section id='about' className='w-full bg-gray-700 dark:bg-black text-[#faf2d8] py-18 transition-col'>
+        <Content>
 
             <h2 className='text-2xl font-semibold'>About</h2>
             <hr className='mt-2 mb-10'/>
@@ -24,7 +22,6 @@ export const About = () => {
                     {user.bio} Click on the 'Projects' tab to browse my current and past projects, or navigate to the 'Skills' section to learn more about me.
                   </p>
                 )}
-                {/* <h3 className='text-xl font-semibold mt-8 mb-2'>Education</h3> */}
 
                 <p className="mt-5"><strong>Pace University, Seidenberg School of Computer Science and Information Systems</strong> | Pleasantville, NY</p>
                 <p>Bachelor of Science (BS) in Computer Science</p>
@@ -37,7 +34,7 @@ export const About = () => {
             </div>
 
             {user && (
-              <Float className='my-12 border border-[#faeab4] rounded-xl p-8'>
+              <Float className='my-12 border border-[#faf2d8] rounded-xl p-8'>
                 <GitHubInfo username = {user.username} avatar={user.avatar} followingCount={user.followingCount} followersCount={user.followersCount} starredReposCount={user.starredReposCount} organizationsCount={user.organizationsCount}/>
               </Float>
             )}
@@ -48,9 +45,8 @@ export const About = () => {
               <p className="text-gray-400">Co-Founder, id Software</p>
             </div>
 
-          </div>
-        </div>
-      </div>
+        </Content>
+      </section>
     </>
   )
 }

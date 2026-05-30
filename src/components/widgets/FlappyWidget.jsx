@@ -138,14 +138,14 @@ export const FlappyWidget = () => {
         relative w-full h-full overflow-hidden
         rounded-lg cursor-pointer select-none
         bg-white dark:bg-black
-        transition-colors duration-700 ease-in-out
+        transition-col
       "
     >
       <div
         className="
           absolute top-3 left-1/2 -translate-x-1/2
           z-30 text-sm font-bold
-          text-black dark:text-white transition-colors duration-700 ease-in-out
+          text-black dark:text-white transition-col
         "
       >
         {score}
@@ -156,7 +156,7 @@ export const FlappyWidget = () => {
           absolute rounded-full
           bg-black dark:bg-white
           shadow-[0_0_18px_rgba(255,255,255,0.2)]
-          transition-colors duration-700 ease-in-out
+          transition-col
         "
         style={{
           width: BIRD_SIZE,
@@ -175,7 +175,7 @@ export const FlappyWidget = () => {
             className="
               absolute bg-black dark:bg-white
               rounded-b-xl
-              transition-colors duration-700 ease-in-out
+              transition-col
             "
             style={{
               left: pipe.x,
@@ -190,7 +190,7 @@ export const FlappyWidget = () => {
             className="
               absolute bg-black dark:bg-white
               rounded-t-xl
-              transition-colors duration-700 ease-in-out
+              transition-col
             "
             style={{
               left: pipe.x,
@@ -210,7 +210,7 @@ export const FlappyWidget = () => {
             flex items-center justify-center
             text-black dark:text-white
             text-sm font-medium
-            backdrop-blur-[2px] transition-colors duration-700 ease-in-out
+            backdrop-blur-[2px] transition-col
           "
         >
           Click to start
@@ -225,19 +225,19 @@ export const FlappyWidget = () => {
             flex flex-col items-center justify-center
             gap-3
             bg-white/70 dark:bg-black/70
-            backdrop-blur-md transition-colors duration-700 ease-in-out
+            backdrop-blur-md transition-col
           "
         >
           <div className="text-center">
-            <p className="text-lg font-bold text-black dark:text-white transition-colors duration-700 ease-in-out">
+            <p className="text-lg font-bold text-black dark:text-white transition-col">
               Game Over
             </p>
 
-            <p className="text-sm text-black/70 dark:text-white/70 transition-colors duration-700 ease-in-out">
+            <p className="text-sm text-black/70 dark:text-white/70 transition-col">
               Score: {score}
             </p>
 
-            <p className="text-sm text-black/70 dark:text-white/70 transition-colors duration-700 ease-in-out">
+            <p className="text-sm text-black/70 dark:text-white/70 transition-col">
               Best: {best}
             </p>
           </div>
@@ -251,7 +251,7 @@ export const FlappyWidget = () => {
               px-4 py-2 rounded-md text-sm
               bg-black text-white
               dark:bg-white dark:text-black
-              transition-colors duration-700 ease-in-out
+              transition-col
             "
           >
             Play Again

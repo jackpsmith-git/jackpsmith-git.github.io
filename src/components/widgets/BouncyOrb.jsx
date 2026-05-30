@@ -121,11 +121,11 @@ export const BouncyOrb = () => {
       onMouseEnter={onEnter}
       onMouseLeave={onLeave}
       onClick={onClick}
-      className="relative w-full h-full overflow-hidden rounded-lg bg-white dark:bg-transparent transition-colors duration-700 ease-in-out"
+      className="relative w-full h-full overflow-hidden rounded-lg bg-white dark:bg-transparent transition-col"
     >
       <div
         ref={ballRef}
-        className="absolute w-3 h-3 rounded-full bg-gray dark:bg-zinc-300 shadow-[0_0_12px_rgba(255,255,255,0.4)] transition-colors duration-700 ease-in-out"
+        className="absolute w-3 h-3 rounded-full bg-gray dark:bg-zinc-300 shadow-[0_0_12px_rgba(255,255,255,0.4)] transition-col"
         style={{
           left: 0,
           top: 0,
