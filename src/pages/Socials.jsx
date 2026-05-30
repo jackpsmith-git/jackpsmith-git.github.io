@@ -4,7 +4,7 @@ import { IconButton } from '../components/IconButton'
 export const Socials = () => {
   return (
     <>
-    <div className='h-screen bg-white dark:bg-gray-700 relative z-10 transition-col'>
+    <div id='socials' className='h-screen bg-white dark:bg-gray-700 relative z-10 transition-col'>
       <div className='flex flex-col w-full h-full items-center justify-center'>
         <img className="h-25 w-25 mx-auto rounded-full aspect-square object-cover object-top mb-2" src="./assets/images/headshot.jpeg"></img>
         <h1 className='text-gray-700 dark:text-[#faf2d8] transition-col font-bold text-2xl'>Jack P Smith</h1>
